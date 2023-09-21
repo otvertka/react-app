@@ -12,9 +12,11 @@ const Header = (props) => {
         <nav className="text-white flex justify-between">
           {/* основные */}
           <div>
-            <ul className="flex px-4">
+            <ul className="flex px-6">
               <li>
-                <a href="#">Trade In</a>
+                <a className="px-4" href="#">
+                  Trade In
+                </a>
               </li>
               <li>
                 <a href="#">Велосипеды</a>
