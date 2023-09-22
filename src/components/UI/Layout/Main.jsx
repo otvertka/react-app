@@ -1,5 +1,5 @@
-import mainImage from "./UI/images/main_images/1.png";
-import partnersImage from "./UI/images/main_images/partner.png";
+import mainImage from "../images/main_images/1.png";
+import partnersImage from "../images/main_images/partner.png";
 
 const Main = (props) => {
   return (
@@ -50,7 +50,7 @@ const Main = (props) => {
           </a>
         </section>
 
-        <section className="h-2 py-6">
+        <section className=" py-6">
           <img src={partnersImage} alt="partners" />
         </section>
       </main>
