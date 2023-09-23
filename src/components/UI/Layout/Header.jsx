@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import mainLogo from "../images/header_images/main_logo.png";
+import mainLogo from "../svg/logo.svg";
 
 const Header = (props) => {
   return (
