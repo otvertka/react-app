@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         primary: "#ff4800",
       },
+      flexGrow: {
+        2: "2",
+      },
     },
   },
   plugins: [],
