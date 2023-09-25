@@ -1,5 +1,6 @@
 import "./App.css";
 import Advantages from "./components/UI/Layout/Advantages";
+import BestWinterModels from "./components/UI/Layout/BestWinterModels";
 import Catalog from "./components/UI/Layout/Catalog";
 import Header from "./components/UI/Layout/Header";
 import Main from "./components/UI/Layout/Main";
@@ -18,6 +19,7 @@ function App() {
       <Unstoppable />
       <Video_section />
       <Advantages />
+      <BestWinterModels />
     </div>
   );
 }
