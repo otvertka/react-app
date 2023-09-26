@@ -1,7 +1,7 @@
-import Bike_img from "../UI/images/Bikes-img/image 23.png";
-import Flag_img from "../UI/images/Flags-img/image 59.png";
+import bikesImage from "../../Assets/images/bikes-img/image 23.png";
+import canadianFlag from "../../Assets/images/flags-img/image 59.png";
 
-const Bikes_card = (props) => {
+const BikesCard = (props) => {
   const bike = {
     id: 1,
     name: "Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022",
@@ -25,4 +25,4 @@ const Bikes_card = (props) => {
   );
 };
 
-export default Bikes_card;
+export default BikesCard;

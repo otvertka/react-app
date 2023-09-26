@@ -1,6 +1,6 @@
 module.exports = {
   htmlWhitespaceSensitivity: "ignore",
   jsxBracketSameLine: true,
-  printWidth: 250,
+  printWidth: 5000,
   endOfLine: "lf",
 };
