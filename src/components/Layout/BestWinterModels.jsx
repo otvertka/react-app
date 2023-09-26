@@ -4,7 +4,7 @@
 const BestWinterModels = (props) => {
   return (
     <section className="relative w-full bg-[url('/splashBlack.png')]">
-      <h2 className="uppercase absolute pt-20 z-20 text-white text-4xl w-1/4">Лучшие модели для зимней езды</h2>
+      <h2 className="uppercase absolute pt-20 z-15 text-white text-4xl w-1/4">Лучшие модели для зимней езды</h2>
     </section>
   );
 };
