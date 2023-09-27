@@ -3,6 +3,7 @@ import BestWinterModels from "./BestWinterModels";
 import Catalog from "./Catalog";
 import Header from "./Header";
 import Main from "./Main";
+import MoutainBikes from "./MoutainBikes";
 import NewBikes from "./NewBikes";
 import Unstoppable from "./Unstoppable";
 import VideoSection from "./VideoSection";
@@ -18,6 +19,7 @@ const AppWrapper = (props) => {
       <VideoSection />
       <Advantages />
       <BestWinterModels />
+      <MoutainBikes />
     </div>
   );
 };

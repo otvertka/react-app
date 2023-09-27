@@ -9,6 +9,9 @@ module.exports = {
       flexGrow: {
         2: "2",
       },
+      backgroundImage: {
+        winter: "url('/src/splaschblack.png')",
+      },
     },
   },
   plugins: [],

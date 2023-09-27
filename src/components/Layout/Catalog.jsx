@@ -5,8 +5,6 @@ import zubehorImage from "../../Assets/images/catalog-img/zubehor.png";
 import outfitImage from "../../Assets/images/catalog-img/outfit.png";
 import fahrradstanderImage from "../../Assets/images/catalog-img/fahrradstander.png";
 
-import classes from "./Catalog.module.css";
-
 const Catalog = (props) => {
   return (
     <section className="min-h-[458px] mx-5 lg:mx-20">
@@ -20,7 +18,7 @@ const Catalog = (props) => {
           </div>
         </a>
 
-        <div className={`flex space-x-2 ${classes.catalogSize}`}>
+        <div className="flex space-x-2 ">
           <a className="w-1/3 rounded bg-black relative flex flex-col justify-end items-end" href="#">
             <img className="object-cover rounded" src={tradeinImage} alt="trade-in" />
             <div className="absolute inset-0 flex items-center justify-center text-4xl text-white uppercase">
