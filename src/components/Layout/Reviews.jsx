@@ -5,14 +5,17 @@ import ReviewsCard from "../Cards/ReviewsCard";
 
 const Reviews = (props) => {
   return (
-    <section className="my-40">
+    <section className="my-40 flex flex-col">
       <h2>Последние обзоры</h2>
-      <div>
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 container mx-auto mt-10 mb-12">
+        <ReviewsCard />
+        <ReviewsCard />
+        <ReviewsCard />
         <ReviewsCard />
       </div>
 
       <div className="flex justify-center">
-        <button className="uppercase align-items-center">Показать все</button>
+        <button className=" text-blue-500 uppercase">Показать все</button>
       </div>
     </section>
   );
