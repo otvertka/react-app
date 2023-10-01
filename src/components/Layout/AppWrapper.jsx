@@ -3,11 +3,13 @@ import Benefits from "./Benefits";
 import BestWinterModels from "./BestWinterModels";
 import Catalog from "./Catalog";
 import Equipment from "./Equipment";
+import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
 import MoutainBikes from "./MoutainBikes";
 import NewBikes from "./NewBikes";
 import Reviews from "./Reviews";
+import Subscribe from "./Subscribe";
 import Unstoppable from "./Unstoppable";
 import VideoSection from "./VideoSection";
 
@@ -26,6 +28,8 @@ const AppWrapper = (props) => {
       <Benefits />
       <Equipment />
       <Reviews />
+      <Subscribe />
+      <Footer />
     </div>
   );
 };

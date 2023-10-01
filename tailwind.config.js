@@ -11,6 +11,7 @@ module.exports = {
       },
       backgroundImage: {
         winter: "url('/src/splaschblack.png')",
+        subsribe_backgroundImage: "url('/src/subscribe-bckg.png')",
       },
     },
   },
