@@ -4,7 +4,7 @@ import equipImage from "../../Assets/images/equip-img/equipment.png";
 const Equipment = () => {
   return (
     <section className="bg-gray-200">
-      <h2>Экипировка</h2>
+      <h2 className="py-11 uppercase text-[40px]">Экипировка</h2>
       <div>
         <img src={equipImage} alt="equip" />
       </div>

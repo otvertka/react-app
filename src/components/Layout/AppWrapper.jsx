@@ -6,6 +6,7 @@ import Equipment from "./Equipment";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
+import Map from "./Map";
 import MoutainBikes from "./MoutainBikes";
 import NewBikes from "./NewBikes";
 import Reviews from "./Reviews";
@@ -28,6 +29,7 @@ const AppWrapper = (props) => {
       <Benefits />
       <Equipment />
       <Reviews />
+      <Map />
       <Subscribe />
       <Footer />
     </div>
