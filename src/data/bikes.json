@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021",
-    "country": "countryImages/italy.png",
-    "image": "newBikesImages/bianchi1.png",
+    "country": "../../data/countryimages/italy.png",
+    "image": "/newBikesImages/bianchi1.png",
     "price": 1200
   }
 ]
