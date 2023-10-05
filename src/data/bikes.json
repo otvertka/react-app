@@ -2,8 +2,29 @@
   {
     "id": 1,
     "title": "Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021",
-    "country": "../../data/countryimages/italy.png",
-    "image": "/newBikesImages/bianchi1.png",
+    "country": "../../images/flags/italy.png",
+    "image": "../../images/newBikesImages/bianchi1.png",
     "price": 1200
+  },
+  {
+    "id": 2,
+    "title": "Trek Verve 2 Disc Lithium Grey HYBD 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/newBikesImages/verve.png",
+    "price": 1300
+  },
+  {
+    "id": 3,
+    "title": "Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/newBikesImages/marlin.png",
+    "price": 1400
+  },
+  {
+    "id": 3,
+    "title": "Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/newBikesImages/marlin.png",
+    "price": 1400
   }
 ]
