@@ -1,6 +1,6 @@
 const MainSVGLogo = (props) => {
   return (
-    <div className="hover:scale-105">
+    <div className="transition-all duration-300 hover:scale-105 hover:translate-x-2">
       <svg width="87" height="48" viewBox="0 0 87 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.8637 21.3305C23.0006 21.3305 24.7328 19.5545 24.7328 17.3638C24.7328 15.1731 23.0006 13.3972 20.8637 13.3972C18.7269 13.3972 16.9946 15.1731 16.9946 17.3638C16.9946 19.5545 18.7269 21.3305 20.8637 21.3305Z" stroke="white" stroke-width="0.731399" stroke-miterlimit="10" />
         <path d="M23.9585 9.27218C26.0953 9.27218 27.8276 7.49626 27.8276 5.30555C27.8276 3.11485 26.0953 1.33893 23.9585 1.33893C21.8216 1.33893 20.0894 3.11485 20.0894 5.30555C20.0894 7.49626 21.8216 9.27218 23.9585 9.27218Z" stroke="white" stroke-width="0.731399" stroke-miterlimit="10" />

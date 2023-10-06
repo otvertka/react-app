@@ -1,38 +1,26 @@
 import mainImage from "../../Assets/images/main_images/1.png";
 import partnersImage from "../../Assets/images/main_images/partner.png";
+import CarouselMain from "./CarouselMain";
 
 const Main = (props) => {
   return (
     <>
-      <main>
-        <div className="relative">
-          <img className=" w-full h-full" src={mainImage} alt="main-img" />
+      <main className="min-h-[650px]">
+        <div className="relative ">
+          <img className=" w-full h-full min-h-[850px] object-cover" src={mainImage} alt="main-img" />
 
-          <div className="absolute top-12 left-0 w-1/2 flex flex-col text-white">
-            <h1 className="text-4xl">
-              Электро
+          <div className=" absolute top-60 lg:absolute lg:top-20 left-5 lg:left-2 md:w-1/2 flex flex-col text-white">
+            <h1 className="text-6xl lg:text-h1 uppercase font-normal tracking-tighter mb-6 lg:mb-12">
+              electro
               <br />
-              велосипеды
+              bikes
             </h1>
-            <p>Cento10 Hybrid — это гоночный велосипед с помогающим педалированию электроприводом, который устанавливает новый, очень высокий стандарт для данной категории</p>
-            <button className="mx-5 w-40 rounded bg-orange-600">Подробнее</button>
+            <p className="text-lg font-light ml-2 mb-8 md:mb-10">Cento10 Hybrid — это гоночный велосипед с помогающим педалированию электроприводом, который устанавливает новый, очень высокий стандарт для данной категории</p>
+            <button className="w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:scale-110 transition-all duration-300 ">Подробнее</button>
           </div>
         </div>
 
-        <section>
-          <a className="h-52 w-1/3 bg-gray-800 inline-block items-center " href="#">
-            <h2 className="text-white">Экстремальное вождение на горном велосипеде</h2>
-            <button className="text-orange-500">Подробнее</button>
-          </a>
-          <a className="h-52 w-1/3 bg-gray-800 inline-block items-center " href="#">
-            <h2 className="text-white">Велосипеды для профессионалов</h2>
-            <button className="text-orange-500">Подробнее</button>
-          </a>
-          <a className="h-52 w-1/3 bg-gray-800 inline-block items-center " href="#">
-            <h2 className="text-white">Долгая поездка на шоссейном велосипеде</h2>
-            <button className="text-orange-500">Подробнее</button>
-          </a>
-        </section>
+        <CarouselMain />
 
         <section className=" py-6">
           <img src={partnersImage} alt="partners" />

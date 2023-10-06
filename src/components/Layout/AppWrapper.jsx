@@ -16,7 +16,7 @@ import VideoSection from "./VideoSection";
 
 const AppWrapper = (props) => {
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto font-main">
       <Header />
       <Main />
       <NewBikes />
