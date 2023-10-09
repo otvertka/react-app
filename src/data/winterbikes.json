@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Bianchi ARCADEX GRX600 40 Синий 2022",
+    "country": "../../images/flags/italy.png",
+    "image": "../../images/bestWinterBikesImages/Bianchi_ARCADEX.png",
+    "price": 1500
+  },
+  {
+    "id": 2,
+    "title": "Trek Verve 1 Disc Low Step Era White HYBD 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/bestWinterBikesImages/Trek_verve.png",
+    "price": 1600
+  },
+  {
+    "id": 3,
+    "title": "Trek Dual Sport 1 Quicksilver Hybrid 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/bestWinterBikesImages/Trek_dual.png",
+    "price": 1700
+  },
+  {
+    "id": 3,
+    "title": "Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/newBikesImages/marlin.png",
+    "price": 1400
+  }
+]
