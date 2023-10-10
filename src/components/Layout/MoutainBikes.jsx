@@ -45,7 +45,7 @@ const MoutainBikes = () => {
         <div className="min-w-[350px]">
           <img className="w-full mb-8" src={mountBikerImage} alt="mountain_biker" />
           <p className="mb-10">Горный велосипед несмотря на свое название часто и активно используются в условиях города, так как обладает рядом характеристик, позволяющих сделать велопрогулку максимально приятной и комфортной</p>
-          <button className="w-44 h-12 rounded-xl bg-orange-500 text-white">Каталог</button>
+          <button className="w-44 h-12 rounded-xl bg-orange-600 hover:bg-orange-500 active:bg-orange-700 text-white hover:scale-110 transition-all duration-300">Каталог</button>
         </div>
       </div>
     </section>

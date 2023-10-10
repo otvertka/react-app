@@ -16,7 +16,7 @@ const Main = (props) => {
               bikes
             </h1>
             <p className="text-lg font-light ml-2 mb-8 md:mb-10">Cento10 Hybrid — это гоночный велосипед с помогающим педалированию электроприводом, который устанавливает новый, очень высокий стандарт для данной категории</p>
-            <button className="w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:scale-110 transition-all duration-300 ">Подробнее</button>
+            <button className="w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:bg-orange-500 active:bg-orange-700 hover:scale-110 transition-all duration-300 ">Подробнее</button>
           </div>
         </div>
 

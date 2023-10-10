@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Rudy Project Airstorm Lime Fluo White Shiny",
+    "country": "../../images/flags/italy.png",
+    "image": "../../images/equipImages/h1_airstorm.png",
+    "price": 500
+  },
+  {
+    "id": 2,
+    "title": "Rudy Project Protera Blue Orange Matt",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/equipImages/h2_protera.png",
+    "price": 600
+  },
+  {
+    "id": 3,
+    "title": "Rudy Project Avenger Titanium Lime Matt",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/equipImages/h3_avenger.png",
+    "price": 700
+  },
+  {
+    "id": 4,
+    "title": "Rudy Project Protera Orange Matt",
+    "country": "../../images/flags/usa.png",
+    "image": "../../images/equipImages/h2_protera.png",
+    "price": 900
+  }
+]

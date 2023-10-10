@@ -7,15 +7,15 @@ import MainSVGLogo from "../UI/svg-components/MainSVGLogo";
 const Footer = (props) => {
   return (
     <footer className="bg-black py-24">
-      <div className="flex text-white mx-5">
-        <div className="w-2/5">
+      <div className="flex flex-col lg:flex-row text-white mx-10 lg:mx-5">
+        <div className="lg:w-2/5">
           <a href="#">
             <MainSVGLogo />
           </a>
-          <p className="text-gray-500 w-2/3 mt-10">Компания World-bikes специализируется на продаже товаров для велосипедного спорта.</p>
+          <p className="text-gray-500 lg:w-2/3 mt-10">Компания World-bikes специализируется на продаже товаров для велосипедного спорта.</p>
         </div>
 
-        <div className="w-1/5">
+        <div className="hidden lg:block lg:w-1/5">
           <h2 className="mb-9 text-2xl font-semibold">Каталог</h2>
           <ul className="text-lg space-y-4">
             <li>
@@ -51,7 +51,7 @@ const Footer = (props) => {
           </ul>
         </div>
 
-        <div className="w-1/5">
+        <div className="hidden lg:block lg:w-1/5">
           <h2 className="mb-9 text-2xl font-semibold">Для клиента</h2>
           <ul className="text-lg space-y-4">
             <li>
@@ -92,8 +92,8 @@ const Footer = (props) => {
           </ul>
         </div>
 
-        <div className="w-1/5">
-          <h2 className="mb-9 text-2xl font-semibold">Контакты</h2>
+        <div className="lg:w-1/5">
+          <h2 className="invisible lg:visible mb-9 text-2xl font-semibold">Контакты</h2>
           <ul className="text-lg space-y-4 ">
             <li>
               <a className="flex items-center gap-4" href="#">

@@ -4,13 +4,13 @@ import benefits_image from "../../Assets/images/benefits-img/benefits-img.png";
 
 const Benefits = () => {
   return (
-    <section className="my-40">
-      <h2 className="py-11 uppercase text-[40px]">Преимущества</h2>
-      <div className="lg:flex">
-        <div className="mr-20">
+    <section className="lg:my-40 flex flex-col items-center lg:items-baseline">
+      <h2 className="lg:py-11 uppercase text-[40px]">Преимущества</h2>
+      <div className="lg:flex flex-row">
+        <div className="hidden lg:block lg:mr-20">
           <img className="rounded-r-xl h-full w-full object-cover" src={benefits_image} alt="benefits-biker" />
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 gap-x-20 gap-y-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 gap-x-20 gap-y-5 lg:gap-x-36">
           <a className="inline-block w-72 h-64 p-8 rounded-xl bg-orange-500 " href="#">
             <h3 className="uppercase text-white mb-4 font-bold">
               БЕСПЛАТНАЯ <br />
