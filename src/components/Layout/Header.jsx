@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import MainSVGLogo from "../UI/svg-components/MainSVGLogo";
+
+import { Link } from "react-router-dom";
 // import BurgerSVG from "../UI/svg-components/BurgerSVG";
 
 // import mainLogo from "../../Assets/svg/logo.svg";
@@ -8,9 +10,9 @@ const Header = (props) => {
   return (
     <navbar>
       <header className="bg-black flex items-center justify-between pt-5">
-        <a href="#">
+        <Link to="/">
           <MainSVGLogo />
-        </a>
+        </Link>
         <nav className="text-white flex justify-between ">
           {/* основные */}
           <div className="hidden md:inline-block w-5/8 mx-12 ">
@@ -21,9 +23,9 @@ const Header = (props) => {
                 </a>
               </li>
               <li>
-                <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
+                <Link to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
                   Велосипеды
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">

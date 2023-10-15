@@ -5,18 +5,20 @@ import zubehorImage from "../../Assets/images/catalog-img/zubehor.png";
 import outfitImage from "../../Assets/images/catalog-img/outfit.png";
 import fahrradstanderImage from "../../Assets/images/catalog-img/fahrradstander.png";
 
+import { Link } from "react-router-dom";
+
 const Catalog = (props) => {
   return (
     <section className="min-h-[458px] mx-4 lg:mx-20">
       <h2 className="py-11 uppercase text-[40px] ">Каталог</h2>
 
       <div className="flex space-y-2 flex-col">
-        <a className="w-full bg-orange-500 rounded relative flex flex-col justify-end items-end" href="#">
+        <Link to="/bikes" className="w-full bg-orange-500 rounded relative flex flex-col justify-end items-end">
           <img className="w-full object-cover" src={bikesImage} alt="bikes" />
           <div className="absolute inset-0 flex items-center justify-start text-white uppercase">
             <h2 className="text-xl font-medium md:text-4xl max-w-[90%]">Велосипеды</h2>
           </div>
-        </a>
+        </Link>
 
         <div className="flex flex-col lg:flex-row space-x-2 ">
           <a className="lg:w-1/3 rounded bg-black relative flex flex-col justify-end items-end" href="#">

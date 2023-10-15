@@ -4,6 +4,8 @@ import NavigationSVG from "../UI/svg-components/NavigationSVG";
 import EmailSVG from "../UI/svg-components/EmailSVG";
 import MainSVGLogo from "../UI/svg-components/MainSVGLogo";
 
+import { Link } from "react-router-dom";
+
 const Footer = (props) => {
   return (
     <footer className="bg-black py-24">
@@ -24,9 +26,9 @@ const Footer = (props) => {
               </a>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <Link to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
                 Велосипеды
-              </a>
+              </Link>
             </li>
             <li>
               <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
