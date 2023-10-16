@@ -17,7 +17,7 @@ import VideoSection from "../components/Layout/VideoSection";
 const HomePage = (props) => {
   return (
     <div className="max-w-screen-xl mx-auto font-main">
-      <Header />
+      {/* <Header /> */}
       <Main />
       <NewBikes />
       <Catalog />

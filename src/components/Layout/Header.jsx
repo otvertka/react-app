@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import MainSVGLogo from "../UI/svg-components/MainSVGLogo";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import BurgerSVG from "../UI/svg-components/BurgerSVG";
 
 // import mainLogo from "../../Assets/svg/logo.svg";
@@ -10,9 +10,9 @@ const Header = (props) => {
   return (
     <navbar>
       <header className="bg-black flex items-center justify-between pt-5">
-        <Link to="/">
-          <MainSVGLogo />
-        </Link>
+        <NavLink to="/" style={({ isActive }) => ({ textDecoration: isActive ? "underline" : "none" })}>
+          {/* <MainSVGLogo /> */} HOME
+        </NavLink>
         <nav className="text-white flex justify-between ">
           {/* основные */}
           <div className="hidden md:inline-block w-5/8 mx-12 ">
@@ -23,9 +23,9 @@ const Header = (props) => {
                 </a>
               </li>
               <li>
-                <Link to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
+                <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
                   Велосипеды
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
