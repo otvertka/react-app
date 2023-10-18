@@ -23,7 +23,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li>
-                <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" href="#">
+                <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                   Велосипеды
                 </NavLink>
               </li>
