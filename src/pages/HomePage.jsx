@@ -31,7 +31,7 @@ const HomePage = (props) => {
       <Reviews />
       <Map />
       <Subscribe />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

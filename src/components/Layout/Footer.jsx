@@ -4,7 +4,7 @@ import NavigationSVG from "../UI/svg-components/NavigationSVG";
 import EmailSVG from "../UI/svg-components/EmailSVG";
 import MainSVGLogo from "../UI/svg-components/MainSVGLogo";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = (props) => {
   return (
@@ -21,34 +21,34 @@ const Footer = (props) => {
           <h2 className="mb-9 text-2xl font-semibold">Каталог</h2>
           <ul className="text-lg space-y-4">
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Trade-in
-              </a>
+              </NavLink>
             </li>
             <li>
-              <Link to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Велосипеды
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Экипировка
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Запчасти
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Велостанки
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Аксессуары
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -57,39 +57,39 @@ const Footer = (props) => {
           <h2 className="mb-9 text-2xl font-semibold">Для клиента</h2>
           <ul className="text-lg space-y-4">
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/about" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 О нас
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/delivery" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Доставка и оплата
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/blog" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Блог
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/contacts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Контакты
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/workshop" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Веломастерская
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/keeping" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Хранение
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="#">
+              <NavLink to="/quarantees" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
                 Гарантии
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
