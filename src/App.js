@@ -20,6 +20,7 @@ import KeepingPage from "./pages/KeepingPage";
 import GuaranteesPage from "./pages/GuaranteesPage";
 
 import AuthenticationPage from "./pages/AuthenticationPage";
+import MyAccauntPage from "./pages/MyAccauntPage";
 
 // import Admin from "./pages/Admin";
 // import {BasketPage} from "./pages/BasketPage";
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: "/quarantees", element: <GuaranteesPage /> },
 
       { path: "/auth", element: <AuthenticationPage /> },
+      { path: "/myaccaunt", element: <MyAccauntPage /> },
     ],
   },
 ]);
