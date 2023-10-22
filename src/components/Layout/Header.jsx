@@ -18,33 +18,38 @@ const Header = (props) => {
           <div className="hidden md:inline-block w-5/8 mx-12 ">
             <ul className="flex gap-8 text-xs whitespace-nowrap ">
               <li>
-                <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Trade In
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Велосипеды
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Запчасти
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Экипировка
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Аксессуары
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+                <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                   Велостанки
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/devicepage" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
+                  КАРТОЧКА ВЕЛОСИПЕДА
                 </NavLink>
               </li>
             </ul>

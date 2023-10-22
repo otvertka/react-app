@@ -21,32 +21,32 @@ const Footer = (props) => {
           <h2 className="mb-9 text-2xl font-semibold">Каталог</h2>
           <ul className="text-lg space-y-4">
             <li>
-              <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Trade-in
               </NavLink>
             </li>
             <li>
-              <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Велосипеды
               </NavLink>
             </li>
             <li>
-              <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Экипировка
               </NavLink>
             </li>
             <li>
-              <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Запчасти
               </NavLink>
             </li>
             <li>
-              <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Велостанки
               </NavLink>
             </li>
             <li>
-              <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Аксессуары
               </NavLink>
             </li>
@@ -57,37 +57,37 @@ const Footer = (props) => {
           <h2 className="mb-9 text-2xl font-semibold">Для клиента</h2>
           <ul className="text-lg space-y-4">
             <li>
-              <NavLink to="/about" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/about" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 О нас
               </NavLink>
             </li>
             <li>
-              <NavLink to="/delivery" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/delivery" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Доставка и оплата
               </NavLink>
             </li>
             <li>
-              <NavLink to="/blog" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/blog" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Блог
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contacts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/contacts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Контакты
               </NavLink>
             </li>
             <li>
-              <NavLink to="/workshop" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/workshop" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Веломастерская
               </NavLink>
             </li>
             <li>
-              <NavLink to="/keeping" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/keeping" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Хранение
               </NavLink>
             </li>
             <li>
-              <NavLink to="/quarantees" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "white" })}>
+              <NavLink to="/quarantees" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
                 Гарантии
               </NavLink>
             </li>

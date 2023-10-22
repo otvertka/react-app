@@ -21,6 +21,7 @@ import GuaranteesPage from "./pages/GuaranteesPage";
 
 import AuthenticationPage from "./pages/AuthenticationPage";
 import MyAccauntPage from "./pages/MyAccauntPage";
+import DevicePage from "./pages/DevicePage";
 
 // import Admin from "./pages/Admin";
 // import {BasketPage} from "./pages/BasketPage";
@@ -45,6 +46,8 @@ const router = createBrowserRouter([
       { path: "/workshop", element: <WorkshopPage /> },
       { path: "/keeping", element: <KeepingPage /> },
       { path: "/quarantees", element: <GuaranteesPage /> },
+
+      { path: "/devicepage", element: <DevicePage /> },
 
       { path: "/auth", element: <AuthenticationPage /> },
       { path: "/myaccaunt", element: <MyAccauntPage /> },
