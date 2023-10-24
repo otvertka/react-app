@@ -6,10 +6,10 @@ import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 
 const DevicePage = () => {
   return (
-    <div className="mx-5">
+    <div className="mx-10">
       <section>
-        <div>
-          <h2>Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
+        <div className="flex flex-col md:flex-row">
+          <h2 className="text-3xl md:text-4xl">Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
           <h4>Scott</h4>
           <div className="flex">
             <h4>Артикул : 7655-188</h4>
@@ -17,7 +17,7 @@ const DevicePage = () => {
             <span>В наличии</span>
           </div>
 
-          <div>
+          <div className=" md:order-first md:justify-center">
             <img src={bikeImg} alt="bike" />
           </div>
 

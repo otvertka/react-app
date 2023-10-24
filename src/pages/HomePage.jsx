@@ -30,7 +30,7 @@ const HomePage = (props) => {
       <Equipment />
       <Reviews />
       <Map />
-      <Subscribe />
+      {/* <Subscribe /> */}
       {/* <Footer /> */}
     </div>
   );
