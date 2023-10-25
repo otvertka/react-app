@@ -17,7 +17,7 @@ const DevicePage = () => {
             <span>В наличии</span>
           </div>
 
-          <div className=" md:order-first md:justify-center">
+          <div className=" md:order-first md:items-center">
             <img src={bikeImg} alt="bike" />
           </div>
 
