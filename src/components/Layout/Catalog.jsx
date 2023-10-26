@@ -21,7 +21,7 @@ const Catalog = (props) => {
         </Link>
 
         <div className="flex flex-col lg:flex-row space-x-2 ">
-          <a className="lg:w-1/3 rounded bg-black relative flex flex-col justify-end items-end" href="#">
+          <a className="lg:w-1/3 rounded bg-black relative flex flex-col justify-end items-end mb-2 md:mb-4" href="#">
             <img className="object-cover rounded" src={tradeinImage} alt="trade-in" />
             <div className="absolute inset-0 flex items-center justify-center text-white uppercase">
               <h2 className="text-xl font-medium md:text-4xl max-w-[90%]">Trade-in</h2>
@@ -53,7 +53,7 @@ const Catalog = (props) => {
                 </div>
               </a>
 
-              <a className="w-full rounded bg-gray-700 relative flex flex-col justify-end items-end max-h-[130px] sm:max-h-full" href="#">
+              <a className="w-full rounded bg-gray-700 relative flex flex-col justify-end items-end h-full" href="#">
                 <img className=" rounded object-cover max-h-[130px] sm:max-h-full" src={fahrradstanderImage} alt="fahrradstander-img" />
                 <div className="absolute lg:inset-0 flex items-center justify-center z-20 text-white uppercase">
                   <h2 className="text-l font-medium md:text-4xl">Велостанки</h2>

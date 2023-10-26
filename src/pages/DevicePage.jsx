@@ -9,72 +9,82 @@ const DevicePage = () => {
     <div className="mx-10">
       <section>
         <div className="flex flex-col md:flex-row">
-          <h2 className="text-3xl md:text-4xl">Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
-          <h4>Scott</h4>
-          <div className="flex">
-            <h4>Артикул : 7655-188</h4>
-            <img src={socialImg} alt="soc" />
-            <span>В наличии</span>
+          {/*див1 картинка */}
+          <div className="md:order-first">
+            <div className=" md:items-center">
+              <img src={bikeImg} alt="bike" />
+            </div>
           </div>
 
-          <div className=" md:order-first md:items-center">
-            <img src={bikeImg} alt="bike" />
+          {/*див2 текст */}
+
+          <div className="flex flex-col order-first md:order-2">
+            <h2 className="text-3xl md:text-4xl">Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
+            <h4>Scott</h4>
+            <div className="flex">
+              <h4>Артикул : 7655-188</h4>
+              <img className="inline-block" src={socialImg} alt="soc" />
+              <h5>В наличии</h5>
+            </div>
           </div>
-
-          <h2>4350 €</h2>
-          <span>5220 €</span>
-          <p>Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов для кросс-кантри.</p>
-        </div>
-
-        <div>
-          <h2>Размер:</h2>
-          <ul className="flex gap-4">
-            <li>
-              <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
-                S
-              </a>
-            </li>
-            <li>
-              <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
-                M-L
-              </a>
-            </li>
-            <li>
-              <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
-                M
-              </a>
-            </li>
-            <li>
-              <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
-                L
-              </a>
-            </li>
-            <li>
-              <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
-                XL
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>Цвет:</h2>
-          <ul className="flex gap-4">
-            <li>
-              <a className="inline-block w-8 h-8 bg-yellow-200 hover:border hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
-            </li>
-            <li>
-              <a className="inline-block w-8 h-8 bg-green-600 hover:border hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
-            </li>
-            <li>
-              <a className="inline-block w-8 h-8 bg-orange-500 hover:border hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
-            </li>
-            <li>
-              <a className="inline-block w-8 h-8 bg-amber-700 hover:border hover:border-gray-300 hover:border-4 rounded-full" href="#"></a>
-            </li>
-            <li>
-              <a className="inline-block w-8 h-8 bg-red-600 hover:border hover:border-gray-300 hover:border-4 rounded-full" href="#"></a>
-            </li>
-          </ul>
+          {/* див 3 */}
+          <div className="md:order-3">
+            <h2>4350 €</h2>
+            <span>5220 €</span>
+            <p>Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов для кросс-кантри.</p>
+          </div>
+          <div className="md:order-4">
+            <div>
+              <h2>Размер:</h2>
+              <ul className="flex gap-4">
+                <li>
+                  <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
+                    S
+                  </a>
+                </li>
+                <li>
+                  <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
+                    M-L
+                  </a>
+                </li>
+                <li>
+                  <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
+                    M
+                  </a>
+                </li>
+                <li>
+                  <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
+                    L
+                  </a>
+                </li>
+                <li>
+                  <a className="inline-block w-12 h-12 border border-gray-400 hover:border-black hover:bg-black hover:text-white text-center rounded " href="#">
+                    XL
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2>Цвет:</h2>
+              <ul className="flex gap-4">
+                <li>
+                  <a className="inline-block w-8 h-8 bg-yellow-200  hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
+                </li>
+                <li>
+                  <a className="inline-block w-8 h-8 bg-green-600 hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
+                </li>
+                <li>
+                  <a className="inline-block w-8 h-8 bg-orange-500 hover:border-gray-300 hover:border-4 rounded-full " href="#"></a>
+                </li>
+                <li>
+                  <a className="inline-block w-8 h-8 bg-amber-700 hover:border-gray-300 hover:border-4 rounded-full" href="#"></a>
+                </li>
+                <li>
+                  <a className="inline-block w-8 h-8 bg-red-600 hover:border-gray-300 hover:border-4 rounded-full" href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
