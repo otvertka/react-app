@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./DevicePage.module.css";
 
 import socialImg from "../../src/Assets/images/social_demo.png";
 import bikeImg from "../../src/Assets/images/card_bike.png";
@@ -7,18 +8,16 @@ import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 const DevicePage = () => {
   return (
     <div className="mx-10">
-      <section>
-        <div className="flex flex-col md:flex-row">
+      <section className="mb-40">
+        <div className={classes.wrapper}>
           {/*див1 картинка */}
-          <div className="md:order-first">
-            <div className=" md:items-center">
-              <img src={bikeImg} alt="bike" />
-            </div>
+          <div className={classes.block1}>
+            <img src={bikeImg} alt="bike" />
           </div>
 
           {/*див2 текст */}
 
-          <div className="flex flex-col order-first md:order-2">
+          <div className={classes.block2}>
             <h2 className="text-3xl md:text-4xl">Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
             <h4>Scott</h4>
             <div className="flex">
@@ -28,12 +27,11 @@ const DevicePage = () => {
             </div>
           </div>
           {/* див 3 */}
-          <div className="md:order-3">
+          <div className={classes.block3}>
             <h2>4350 €</h2>
             <span>5220 €</span>
             <p>Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов для кросс-кантри.</p>
-          </div>
-          <div className="md:order-4">
+
             <div>
               <h2>Размер:</h2>
               <ul className="flex gap-4">
