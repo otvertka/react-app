@@ -1,11 +1,21 @@
 import React from "react";
-// import classes from "./DevicePage.module.css";
+import classes from "./DevicePage.module.css";
 
 import socialImg from "../../src/Assets/images/social_demo.png";
 import bikeImg from "../../src/Assets/images/card_bike.png";
 import delivImg from "../../src/Assets/images/devicePage/deliv.png";
+import prefImg from "../../src/Assets/images/prefHeart.png";
 
 const DevicePage = () => {
+  function decrement() {
+    let input = document.getElementById("quantity");
+    input.stepDown();
+  }
+  function increment() {
+    let input = document.getElementById("quantity");
+    input.stepUp();
+  }
+
   return (
     <div className="mx-10">
       <section>
@@ -64,7 +74,7 @@ const DevicePage = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="mb-8">
               <h2 className="text-lg font-medium mb-6">Цвет:</h2>
               <ul className="flex gap-4">
                 <li>
@@ -86,6 +96,27 @@ const DevicePage = () => {
                   <a className="inline-block w-8 h-8 bg-red-600 hover:border-gray-300 hover:border-4 rounded-full" href="#"></a>
                 </li>
               </ul>
+            </div>
+            <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-4 mb-12">
+              <div className="md:col-start-1 flex justify-between items-center border rounded-lg w-[252px] h-[52px] md:w-[123px]">
+                <button className="inline-block px-4 py-2 cursor-pointer" onClick={decrement}>
+                  -
+                </button>
+                <input className=" text-center font-bold" style={{ WebkitAppearance: "textfield", MozAppearance: "textfield", appearance: "textfield" }} type="number" placeholder="1" id="quantity" min="1" max="100" />
+                <button className="inline-block px-4 py-2 cursor-pointer" onClick={increment}>
+                  +
+                </button>
+              </div>
+              <div className="md:col-start-3 md:row-start-1 w-[52px] h-[52px] bg-gray-100 rounded flex justify-center items-center">
+                <a className="inline-block" href="#">
+                  <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.67757 13.34L14.5 25.4464L26.3224 13.34C27.6367 11.9941 28.375 10.1688 28.375 8.26553C28.375 4.30217 25.2374 1.08923 21.367 1.08923C19.5084 1.08923 17.7259 1.84531 16.4117 3.19112L14.5 5.14876L12.5883 3.19112C11.274 1.84531 9.49156 1.08923 7.63294 1.08923C3.76255 1.08923 0.625 4.30217 0.625 8.26553C0.625 10.1688 1.36333 11.9941 2.67757 13.34Z" stroke="#F57520" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <div className="col-span-2 md:col-start-2 md:row-start-1">
+                <button className=" bg-orange-500 rounded-lg w-[320px] h-[52px] text-white">В корзину</button>
+              </div>
             </div>
           </div>
         </div>
