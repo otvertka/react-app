@@ -22,6 +22,7 @@ import GuaranteesPage from "./pages/GuaranteesPage";
 import AuthenticationPage from "./pages/AuthenticationPage";
 import MyAccauntPage from "./pages/MyAccauntPage";
 import DevicePage from "./pages/DevicePage";
+import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
 // import {BasketPage} from "./pages/BasketPage";
@@ -56,7 +57,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router}>
+      <BikesStore.Provider store={new BikesStore()}>
+        <RootLayout />
+      </BikesStore.Provider>
+    </RouterProvider>
+  );
 }
 
 export default App;

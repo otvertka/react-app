@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { Routes, Route, redirect } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../routes";
+import { Context } from "..";
 const AppRouter = () => {
+  const { bikes } = useContext(Context);
   const isAuth = false;
 
   return (
