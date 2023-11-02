@@ -1,7 +1,8 @@
 import React from "react";
 import { Accordion } from "flowbite-react";
 
-const DefaultAccordion = () => {
+const DefaultAccordion = ({ item }) => {
+  console.log(item);
   return (
     <Accordion>
       <Accordion.Panel>
@@ -17,16 +18,9 @@ const DefaultAccordion = () => {
       <Accordion.Panel>
         <Accordion.Title>Бренд</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            <p>Check out the</p>
-            <a className="text-cyan-600 hover:underline dark:text-cyan-500" href="https://flowbite.com/figma/">
-              <p>Figma design system</p>
-            </a>
-            <p>based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-          </p>
+          <ul>
+            <li>{item}</li>
+          </ul>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>

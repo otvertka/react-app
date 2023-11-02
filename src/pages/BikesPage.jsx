@@ -10,12 +10,15 @@ const store = new BikesStore();
 
 const BikesPage = observer(() => {
   const { types, brands, bikes } = store;
+  console.log(brands);
   return (
     <section>
       <h1>ВСЕ ВЕЛОСИПЕДЫ</h1>
       <div className="flex justify-between">
         <div className="w-1/4">
-          <DefaultAccordion />
+          {brands.map((brand) => (
+            <DefaultAccordion key={brand.id} item={brand.name} />
+          ))}
         </div>
 
         <div className="3/4">
