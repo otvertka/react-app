@@ -11,6 +11,7 @@ const store = new BikesStore();
 const BikesPage = observer(() => {
   const { types, brands, bikes } = store;
   console.log(brands);
+
   return (
     <section>
       <h1>ВСЕ ВЕЛОСИПЕДЫ</h1>

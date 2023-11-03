@@ -2,11 +2,17 @@ import React from "react";
 import { Accordion } from "flowbite-react";
 
 const DefaultAccordion = ({ item }) => {
-  console.log(item);
+  // console.log(Array.from(item));
+  const totalArray = [];
+  const itemArray = item.split(",");
+
+  console.log([...itemArray]);
+
   return (
     <Accordion>
       <Accordion.Panel>
         <Accordion.Title>Категории товара</Accordion.Title>
+
         <Accordion.Content>
           <ul>
             <li>
@@ -19,7 +25,9 @@ const DefaultAccordion = ({ item }) => {
         <Accordion.Title>Бренд</Accordion.Title>
         <Accordion.Content>
           <ul>
-            <li>{item}</li>
+            {itemArray.map((i) => (
+              <li key={i}>{i}</li>
+            ))}
           </ul>
         </Accordion.Content>
       </Accordion.Panel>
