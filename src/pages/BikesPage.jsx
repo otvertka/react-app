@@ -16,7 +16,7 @@ const BikesPage = observer(() => {
   const brandNames = brands.map((brand, index) => ({ name: brand.name, index }));
   const frameNames = frames.map((frame, index) => ({ name: frame.name, index }));
 
-  const bikesStorage = bikes.map((bike, index) => ({ index, title: bike.title, price: bike.price, image: bike.image }));
+  // const bikesStorage = bikes.map((bike, index) => ({ index, title: bike.title, price: bike.price, image: bike.image }));
   // console.log(store);
 
   return (
@@ -29,16 +29,6 @@ const BikesPage = observer(() => {
 
         <div className="3/4">
           <div className="grid grid-cols-3 ">
-            {/* <ul>
-              {bikes.map((bike) => (
-                <li key={bike.id}>
-                  <img src={bike.img} alt={bike.name} />
-                  <p>{bike.name}</p>
-                  <p>{bike.price}</p>
-                </li>
-              ))}
-            </ul> */}
-            {/* <BikesCard bikesInfo={{ bikesStorage }} /> */}
             <ul>
               {bikes.map((bike, index) => (
                 <BikesCard key={index} bikesInfo={bike} />

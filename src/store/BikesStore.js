@@ -22,10 +22,11 @@ export default class BikesStore {
       { id: 3, name: "Сталь" },
     ];
     this._bikes = [
-      { id: 1, title: "AQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 100, image: "https://kinderfahrzeugwelt.de/wp-content/uploads/2021/02/8900481-1.jpg" },
-      { id: 2, title: "BAQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 200, image: "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw524f4c48/images/full/full_2023_/2023/full_2023_3285_pathlite-4_bu_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2" },
-      { id: 3, title: "CAQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 300, image: "https://lenta.servicecdn.ru/globalassets/1/-/60/23/03/402664_2.png?preset=fulllossywhite" },
+      { id: 1, type: "Велосипеды для триатлона", brand: "Bianci", frame: "Алюминий", title: "AQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 100, image: "https://kinderfahrzeugwelt.de/wp-content/uploads/2021/02/8900481-1.jpg" },
+      { id: 2, type: "Горные велосипеды", brand: "BMC", frame: " Карбон", title: "BAQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 200, image: "https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw524f4c48/images/full/full_2023_/2023/full_2023_3285_pathlite-4_bu_P5.jpg?sw=1300&sfrm=png&q=90&bgcolor=F2F2F2" },
+      { id: 3, type: "Городские велосипеды", brand: "Ciclistino", frame: "Сталь", title: "CAQUILA L DURA ACE DI2 TEAM JUMBO 2021", price: 300, image: "https://lenta.servicecdn.ru/globalassets/1/-/60/23/03/402664_2.png?preset=fulllossywhite" },
     ];
+    this._selectedType = {};
     // this._color = []
     makeAutoObservable(this);
   }
@@ -43,6 +44,16 @@ export default class BikesStore {
     this._bikes = bikes;
   }
 
+  setSelectedType(type) {
+    this._selectedType = type;
+  }
+  setSelectedBrand(brand) {
+    this._selectedBrand = brand;
+  }
+  setSelectedFrame(frame) {
+    this._selectedFrame = frame;
+  }
+
   get types() {
     return this._types;
   }
@@ -54,5 +65,16 @@ export default class BikesStore {
   }
   get bikes() {
     return this._bikes;
+  }
+
+  get selectedType() {
+    return this._selectedType;
+  }
+
+  get selectedBrand() {
+    return this._selectedFrame;
+  }
+  get selectedFrame() {
+    return this._selectedFrame;
   }
 }
