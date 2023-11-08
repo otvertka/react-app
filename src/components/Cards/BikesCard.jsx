@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import OneclickSVG from "../UI/svg-components/OneclickSVG";
 
+import { DEVICE_ROUTE } from "../../utils/consts";
+
+import { useNavigate } from "react-router-dom";
+
 const BikesCard = ({ bikesInfo }) => {
-  // const { id, title, country, image, price } = bikesInfo;
+  const history = useNavigate();
+  console.log(history);
+
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -16,7 +22,7 @@ const BikesCard = ({ bikesInfo }) => {
         <h3 className="text-lg mb-6 ">{bikesInfo.title}</h3>
         <p className="text-gray-600 mb-8">{bikesInfo.price} €</p>
         {isHovered && (
-          <button className="bg-orange-500 rounded-lg py-4 text-white ">
+          <button onClick={() => history.push(DEVICE_ROUTE + "/" + bikesInfo.id)} className="bg-orange-500 rounded-lg py-4 text-white ">
             <div className="flex justify-center gap-1">
               <OneclickSVG /> В 1 клик
             </div>
