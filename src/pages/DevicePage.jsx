@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./DevicePage.module.css";
 
 import socialImg from "../../src/Assets/images/social_demo.png";
@@ -7,33 +7,38 @@ import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 import prefImg from "../../src/Assets/images/prefHeart.png";
 import Counter from "../components/Counter";
 // import counter from "../store/counter";
+import { useParams } from "react-router-dom";
+import { Context } from "..";
+import { observer } from "mobx-react-lite";
+import BikesStore from "../store/BikesStore";
 
-const DevicePage = () => {
-  // function decrement() {
-  //   let input = document.getElementById("quantity");
-  //   input.stepDown();
-  // }
-  // function increment() {
-  //   let input = document.getElementById("quantity");
-  //   input.stepUp();
-  // }
+const DevicePage = observer(() => {
+  const { bikes } = useContext(Context);
+  // const selectedBike = bikes.getSelectedBike();
+  const selectedBike = BikesStore.selectedBike;
 
+  // const selectedBike = { id: 1, type: "Велосипеды для триатлона", brand: "Bianci", frame: "Алюминий", title: "BIANCHI NITRON 9.2 XT/SLX 1X12 ", price: 100, image: "../../images/allBikes/Bianci/b1.png", country: "../../images/flags/italy.png" };
+  const params = useParams();
+
+  console.log(bikes);
   return (
+    // {bikes.bikesAll.map((device)=> ) }
     <div className="mx-10">
+      <p>{params.id}</p>
       <section>
         <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-1 lg:grid-rows-1 pt-10">
           {/*див1 картинка */}
           <div className="items-center row-end-2 lg:col-end-1 lg:row-span-2 lg:mr-20">
-            <img src={bikeImg} alt="bike" />
+            <img className="w-[790px]" src={selectedBike.image} alt="bike" />
           </div>
 
           {/*див2 текст */}
 
           <div className="row-end-1 lg:row-end-1 lg:col-end-2">
-            <h2 className="text-3xl md:text-4xl font-medium mb-3">Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018</h2>
-            <h4 className="mb-3 text-gray-400">Scott</h4>
+            <h2 className="text-3xl md:text-4xl font-medium mb-3">{selectedBike.title}</h2>
+            <h4 className="mb-3 text-gray-400">{selectedBike.brand}</h4>
             <div className="flex justify-between mb-3">
-              <h4 className="text-gray-400">Артикул : 7655-188</h4>
+              <h4 className="text-gray-400">Артикул : {selectedBike.id}</h4>
               <img className="inline-block" src={socialImg} alt="soc" />
             </div>
             <h5 className="text-green-500 md:mb-10">В наличии</h5>
@@ -41,7 +46,7 @@ const DevicePage = () => {
           {/* див 3 */}
           <div className="lg:col-end-2 lg:row-end-2">
             <div className="flex mb-6 md:mb-10">
-              <h2 className="text-4xl font-medium mr-4">4350 €</h2>
+              <h2 className="text-4xl font-medium mr-4">{selectedBike.price} €</h2>
               <span className="text-lg text-gray-400 line-through inline">5220 €</span>
             </div>
             <p className="mb-6 md:mb-8">Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов для кросс-кантри.</p>
@@ -122,12 +127,10 @@ const DevicePage = () => {
           </div>
         </div>
       </section>
-
       <section>
         <h1 className="uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10">Описание</h1>
         <p className="mb-8 md:mb-10">Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов для кросс-кантри. Scott Scale 700 RC — это рама из композитного волокна HMX, гоночная трансмиссия Sram XX1/X01 1×11, дисковые тормоза Shimano XTR M9000 и гоночные колеса Syncros XR RC. Байк Нино Шуртера для шорт-трек кросс-кантри.</p>
       </section>
-
       <section>
         <h1 className="uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10">Характеристика</h1>
         <ul>
@@ -225,7 +228,6 @@ const DevicePage = () => {
           </li>
         </ul>
       </section>
-
       <section>
         <h1 className="my-10 text-3xl uppercase font-semibold">Доставка</h1>
         <img src={delivImg} alt="delivery" />
@@ -247,6 +249,6 @@ const DevicePage = () => {
       </section>
     </div>
   );
-};
+});
 
 export default DevicePage;

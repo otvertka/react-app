@@ -49,7 +49,7 @@ export default class BikesStore {
       { id: 19, type: "Городские велосипеды", brand: "Colnago", frame: "Сталь", title: "COLNAGO C68 DISC FORCE AXS W400 HRWH ", price: 2000, image: "../../images/allBikes/Colnago/col2.jpg", country: "../../images/flags/italy.png" },
       { id: 20, type: "Гравийные велосипеды", brand: "Colnago", frame: "Алюминий", title: "COLNAGO C68 DISC ULTEGRA DI2 12V W400 ", price: 2100, image: "../../images/allBikes/Colnago/col10.jpg", country: "../../images/flags/italy.png" },
       { id: 21, type: "Двухподвесные велосипеды", brand: "Colnago", frame: "Карбон", title: "COLNAGO C68 DISC DURA-ACE DI2 12V", price: 2200, image: "../../images/allBikes/Colnago/col4.jpg", country: "../../images/flags/italy.png" },
-      { id: 22, type: "Горные велосипеды", brand: "Colnago", frame: "Карбон", title: "COLNAGO V3 RIM 105", price: 2300, image: "../../images/allBikes/Colnago/col1.jpg", country: "../../images/flags/italy.png" },
+      { id: 22, type: "Горные велосипеды", brand: "Colnago", frame: "Карбон", title: "COLNAGO V3 RIM 105", price: 2300, image: "../../images/allBikes/Colnago/col1.jpeg", country: "../../images/flags/italy.png" },
       { id: 23, type: "Городские велосипеды", brand: "Colnago", frame: "Сталь", title: "COLNAGO V3RS DISC ULTEGRA DI2 12V R600 ", price: 2400, image: "../../images/allBikes/Colnago/col7.jpg", country: "../../images/flags/italy.png" },
       { id: 24, type: "Горные велосипеды", brand: "Colnago", frame: "Карбон", title: "COLNAGO V3RS DISC ULTEGRA DI2 12V R600", price: 2500, image: "../../images/allBikes/Colnago/col2.jpg", country: "../../images/flags/italy.png" },
       { id: 25, type: "Городские велосипеды", brand: "Colnago", frame: "Сталь", title: "COLNAGO V3RS DISC ULTEGRA DI2 12V R600 ", price: 2600, image: "../../images/allBikes/Colnago/col9.jpg", country: "../../images/flags/italy.png" },
@@ -96,6 +96,7 @@ export default class BikesStore {
     this._selectedType = {};
     this._selectedBrand = {};
     this._selectedFrame = {};
+    this._selectedBike = {};
     // this._color = []
     makeAutoObservable(this);
   }
@@ -122,6 +123,9 @@ export default class BikesStore {
   setSelectedFrame(frame) {
     this._selectedFrame = frame;
   }
+  setSelectedBike(bike) {
+    this._selectedBike = bike;
+  }
 
   get types() {
     return this._types;
@@ -145,5 +149,8 @@ export default class BikesStore {
   }
   get selectedFrame() {
     return this._selectedFrame;
+  }
+  get selectedBike() {
+    return this._selectedBike;
   }
 }

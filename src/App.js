@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       { path: "/keeping", element: <KeepingPage /> },
       { path: "/quarantees", element: <GuaranteesPage /> },
 
-      { path: "/devicepage", element: <DevicePage /> },
+      { path: "/devicepage/:id", element: <DevicePage /> },
 
       { path: "/auth", element: <AuthenticationPage /> },
       { path: "/myaccaunt", element: <MyAccauntPage /> },
