@@ -1,27 +1,18 @@
 import React, { useContext } from "react";
-import classes from "./DevicePage.module.css";
-
 import socialImg from "../../src/Assets/images/social_demo.png";
-import bikeImg from "../../src/Assets/images/card_bike.png";
 import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 import prefImg from "../../src/Assets/images/prefHeart.png";
 import Counter from "../components/Counter";
-// import counter from "../store/counter";
 import { useParams } from "react-router-dom";
 import { Context } from "..";
 import { observer } from "mobx-react-lite";
-import BikesStore from "../store/BikesStore";
-
 const DevicePage = observer(() => {
   const params = useParams();
   const { bikes } = useContext(Context);
 
   const selectedBike = bikes.bikesAll.find((bike) => parseInt(bike.id) === parseInt(params.id));
 
-  console.log(selectedBike);
-
   return (
-    // {bikes.bikesAll.map((device)=> ) }
     <div className="mx-10">
       <p>{params.id}</p>
       <section>
