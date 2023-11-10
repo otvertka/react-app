@@ -13,14 +13,13 @@ import { observer } from "mobx-react-lite";
 import BikesStore from "../store/BikesStore";
 
 const DevicePage = observer(() => {
-  const { bikes } = useContext(Context);
-  // const selectedBike = bikes.getSelectedBike();
-  const selectedBike = BikesStore.selectedBike;
-
-  // const selectedBike = { id: 1, type: "Велосипеды для триатлона", brand: "Bianci", frame: "Алюминий", title: "BIANCHI NITRON 9.2 XT/SLX 1X12 ", price: 100, image: "../../images/allBikes/Bianci/b1.png", country: "../../images/flags/italy.png" };
   const params = useParams();
+  const { bikes } = useContext(Context);
 
-  console.log(bikes);
+  const selectedBike = bikes.bikesAll.find((bike) => parseInt(bike.id) === parseInt(params.id));
+
+  console.log(selectedBike);
+
   return (
     // {bikes.bikesAll.map((device)=> ) }
     <div className="mx-10">
