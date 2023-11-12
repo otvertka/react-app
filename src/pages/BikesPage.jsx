@@ -1,12 +1,9 @@
 import React from "react";
-// import BikesCard from "../components/Cards/BikesCard";
-
-// import bikesData from "../data/bikes.json";
 import { observer } from "mobx-react-lite";
-import DefaultAccordion from "../components/Layout/DefaultAccordion";
+
 import BikesStore from "../store/BikesStore";
-// import BikesCard from "../components/Cards/BikesCard";
 import DeviceList from "../components/DeviceList";
+import DefaultAccordion from "../components/Layout/DefaultAccordion";
 
 const store = new BikesStore();
 
@@ -16,9 +13,6 @@ const BikesPage = observer(() => {
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
   const brandNames = brands.map((brand, index) => ({ name: brand.name, index }));
   const frameNames = frames.map((frame, index) => ({ name: frame.name, index }));
-
-  // const bikesStorage = bikes.map((bike, index) => ({ index, title: bike.title, price: bike.price, image: bike.image }));
-  // console.log(store);
 
   return (
     <section>

@@ -1,28 +1,20 @@
 import React, { useContext } from "react";
-import classes from "./DevicePage.module.css";
-
-import socialImg from "../../src/Assets/images/social_demo.png";
-import bikeImg from "../../src/Assets/images/card_bike.png";
-import delivImg from "../../src/Assets/images/devicePage/deliv.png";
-import prefImg from "../../src/Assets/images/prefHeart.png";
-import Counter from "../components/Counter";
-// import counter from "../store/counter";
 import { useParams } from "react-router-dom";
 import { Context } from "..";
 import { observer } from "mobx-react-lite";
-import BikesStore from "../store/BikesStore";
+import Counter from "../components/Counter";
+
+import delivImg from "../../src/Assets/images/devicePage/deliv.png";
+import socialImg from "../../src/Assets/images/social_demo.png";
+import prefImg from "../../src/Assets/images/prefHeart.png";
 
 const DevicePage = observer(() => {
-  const { bikes } = useContext(Context);
-  // const selectedBike = bikes.getSelectedBike();
-  const selectedBike = BikesStore.selectedBike;
-
-  // const selectedBike = { id: 1, type: "Велосипеды для триатлона", brand: "Bianci", frame: "Алюминий", title: "BIANCHI NITRON 9.2 XT/SLX 1X12 ", price: 100, image: "../../images/allBikes/Bianci/b1.png", country: "../../images/flags/italy.png" };
   const params = useParams();
+  const { bikes } = useContext(Context);
 
-  console.log(bikes);
+  const selectedBike = bikes.bikesAll.find((bike) => parseInt(bike.id) === parseInt(params.id));
+
   return (
-    // {bikes.bikesAll.map((device)=> ) }
     <div className="mx-10">
       <p>{params.id}</p>
       <section>
