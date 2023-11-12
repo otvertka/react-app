@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import OneclickSVG from "../UI/svg-components/OneclickSVG";
 import { useNavigate } from "react-router-dom";
+
+import OneclickSVG from "../UI/svg-components/OneclickSVG";
 
 const BikesCard = ({ bikesInfo }) => {
   const navigate = useNavigate();

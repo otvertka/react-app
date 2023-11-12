@@ -1,6 +1,7 @@
-import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
+import { observer } from "mobx-react-lite";
 import { Context } from "..";
+
 import BikesCard from "./Cards/BikesCard";
 
 const DeviceList = observer(() => {

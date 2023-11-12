@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
-import socialImg from "../../src/Assets/images/social_demo.png";
-import delivImg from "../../src/Assets/images/devicePage/deliv.png";
-import prefImg from "../../src/Assets/images/prefHeart.png";
-import Counter from "../components/Counter";
 import { useParams } from "react-router-dom";
 import { Context } from "..";
 import { observer } from "mobx-react-lite";
+import Counter from "../components/Counter";
+
+import delivImg from "../../src/Assets/images/devicePage/deliv.png";
+import socialImg from "../../src/Assets/images/social_demo.png";
+import prefImg from "../../src/Assets/images/prefHeart.png";
+
 const DevicePage = observer(() => {
   const params = useParams();
   const { bikes } = useContext(Context);
