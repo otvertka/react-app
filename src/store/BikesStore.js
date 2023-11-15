@@ -111,7 +111,7 @@ export default class BikesStore {
     this._frames = frames;
   }
   setBikes(bikesAll) {
-    this._bikes = bikesAll;
+    this._bikesAll = bikesAll;
   }
 
   setSelectedType(type) {
