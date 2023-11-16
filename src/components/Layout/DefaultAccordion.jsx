@@ -9,7 +9,13 @@ const DefaultAccordion = observer(() => {
 
   const handleTypeChange = (type) => {
     console.log("Выбран тип:", type.name);
-    bikes.setSelectedType(type);
+    console.log(bikes.selectedType.name);
+
+    if (bikes.selectedType.name && bikes.setSelectedType.name === type.name) {
+      bikes.setSelectedType({});
+    } else {
+      bikes.setSelectedType(type);
+    }
   };
 
   return (
@@ -20,8 +26,8 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.types.map((type) => (
-              <li key={type.id} active={type.id === bikes.setSelectedType.id} className="cursor-pointer">
-                <input type="checkbox" checked={type.id === bikes.selectedType.id} onChange={() => handleTypeChange(type)} />
+              <li key={type.id} className="cursor-pointer">
+                <input type="checkbox" value={type.name === bikes.selectedType?.name} onChange={() => handleTypeChange(type)} />
                 {type.name}
               </li>
             ))}

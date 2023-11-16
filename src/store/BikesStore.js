@@ -115,7 +115,7 @@ export default class BikesStore {
   }
 
   setSelectedType(type) {
-    this._selectedType = type;
+    this._selectedType = { ...type };
   }
   setSelectedBrand(brand) {
     this._selectedBrand = brand;

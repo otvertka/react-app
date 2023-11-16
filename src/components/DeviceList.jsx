@@ -12,26 +12,10 @@ const DeviceList = observer(() => {
   console.log("bikes.selectedFrame:", bikes.selectedFrame);
   console.log("bikes.bikesAll:", bikes.bikesAll);
 
-  // bikes.bikesAll.target.map((bike) => console.log(bike));
-  // const realArray = bikes.bikesAll[ObservableArrayAdministration.target];
-  // console.log(realArray)
-
-  // const filteredBikes = bikes.bikesAll.filter((bike) => (!bikes.selectedType || bike.type.name === bikes.selectedType.name) && (!bikes.selectedBrand || bike.brand.name === bikes.selectedBrand.name) && (!bikes.selectedFrame || bike.frame.name === bikes.selectedFrame.name));
-
-  // const filteredBikes = bikes.bikesAll.filter((bike) =>
-  // (bikes.selectedType.name === bike.type)&&
-  // (bikes.selectedBrand.name === bike.brand)&&
-  // (bikes.selectedFrame.name === bike.frame));
-  // const filteredBikes = bikes.bikesAll
-  //   .filter((bike) => bikes.selectedType.name === bike.type)
-  //   .filter((bike) => bikes.selectedBrand.name === bike.brand)
-  //   .filter((bike) => bikes.selectedFrame.name === bike.frame);
   const filteredBikes = bikes.bikesAll
     .filter((bike) => !bikes.selectedType.name || bikes.selectedType.name === bike.type)
     .filter((bike) => !bikes.selectedBrand.name || bikes.selectedBrand.name === bike.brand)
     .filter((bike) => !bikes.selectedFrame.name || bikes.selectedFrame.name === bike.frame);
-
-  // const filteredBikes = bikes.bikesAll.filter((bike) => bikes.selectedType.name === bike.type);
 
   console.log("filteredBikes:", filteredBikes);
   return (
