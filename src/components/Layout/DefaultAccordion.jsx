@@ -8,26 +8,16 @@ const DefaultAccordion = observer(() => {
   console.log(bikes);
 
   const handleTypeChange = (type) => {
-    // console.log("Выбран тип:", type.name);
+    console.log("Выбран тип:", type.name);
 
-    if (bikes.selectedType.id === type.id) {
-      bikes.setSelectedType({});
+    if (bikes.selectedTypes.includes(type)) {
+      bikes.removeSelectedType(type);
     } else {
-      bikes.setSelectedType(type);
+      bikes.addSelectedType(type);
       console.log(type.name);
-      console.log(bikes.selectedType.name);
+      // console.log(bikes.addSelectedType(type));
     }
   };
-  // const handleTypeChange = (type) => {
-  //   console.log("Выбран тип:", type.name);
-
-  //   console.log(bikes.selectedType.name);
-  //   if (bikes.selectedType.name && bikes.setSelectedType.name === type.name) {
-  //     bikes.setSelectedType({});
-  //   } else {
-  //     bikes.setSelectedType(type);
-  //   }
-  // };
 
   return (
     <Accordion>
@@ -39,7 +29,7 @@ const DefaultAccordion = observer(() => {
             {bikes.types.map((type) => (
               // <li key={type.id} className={type.id === bikes.selectedType.id ? "border border-blue-500" : ""} onClick={() => handleTypeChange(type)}>
               <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" value={type.name === bikes.selectedType?.name} onChange={() => handleTypeChange(type)} />
+                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" onChange={() => handleTypeChange(type)} />
                 {type.name}
               </li>
             ))}
