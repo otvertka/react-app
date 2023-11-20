@@ -13,11 +13,10 @@ export default class BikesStore {
       { id: 1, name: "Bianci" },
       { id: 2, name: "BMC" },
       { id: 3, name: "Ciclistino" },
-      { id: 4, name: "Cipollini" },
-      { id: 5, name: "Colnago" },
-      { id: 6, name: "Giant" },
-      { id: 7, name: "Pinarello" },
-      { id: 8, name: "Orbea" },
+      { id: 4, name: "Colnago" },
+      { id: 5, name: "Giant" },
+      { id: 6, name: "Pinarello" },
+      { id: 7, name: "Orbea" },
     ];
     this._frames = [
       { id: 1, name: "Алюминий" },
@@ -114,9 +113,9 @@ export default class BikesStore {
     this._bikesAll = bikesAll;
   }
 
-  setSelectedTypes(types) {
-    this._selectedTypes = types;
-  }
+  // setSelectedTypes(types) {
+  //   this._selectedTypes = types;
+  // }
 
   addSelectedType(type) {
     // if (!this._selectedTypes.includes(type)) {

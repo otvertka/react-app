@@ -12,7 +12,10 @@ module.exports = {
       },
       backgroundImage: {
         winter: "url('/src/splaschblack.png')",
-        subsribe_backgroundImage: "url('/src/subscribe-bckg.png')",
+        // subsribe_backgroundImage: "url('/src/Assets/images/subscribe-bckg.png')",
+        frameBrown: "url('/src/Assets/images/pageAbout/frameBrown.png')",
+        frameGray: "url('/src/Assets/images/pageAbout/frameGray.png')",
+        frameOrange: "url('/src/Assets/images/pageAbout/frameOrange.png')",
       },
       fontSize: {
         h1: "110px",

@@ -42,7 +42,7 @@ const CarouselAboutUs = () => {
 
         <div className="p-8 bg-frameOrange bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg ">
           <h2 className="text-white mb-4 text-2xl font-medium">Гарантия</h2>
-          <p className="text-gray-300 font-light mb-8">Также, для удобства покупателей, наш магазин помогает (участвует) в формирование гарантийных запросов по всем нижеперечисленным брендам. При любом гарантийном случае можно обращаться напрямую к нам</p>
+          <p className="text-gray-100 font-light mb-8">Также, для удобства покупателей, наш магазин помогает (участвует) в формирование гарантийных запросов по всем нижеперечисленным брендам. При любом гарантийном случае можно обращаться напрямую к нам</p>
           <a className="text-white">Подробнее</a>
         </div>
       </Carousel>
