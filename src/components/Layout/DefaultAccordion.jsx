@@ -8,14 +8,19 @@ const DefaultAccordion = observer(() => {
   console.log(bikes);
 
   const handleTypeChange = (type) => {
-    console.log("Выбран тип:", type.name);
-
-    if (bikes.selectedTypes.includes(type)) {
+    // console.log("Выбран тип:", type.name);
+    if (bikes.selectedTypes.includes(type.name)) {
       bikes.removeSelectedType(type.name);
     } else {
       bikes.addSelectedType(type.name);
-      console.log(type.name);
-      // console.log(bikes.addSelectedType(type));
+    }
+  };
+
+  const handleBrandChange = (brand) => {
+    if (bikes.selectedBrands.includes(brand.name)) {
+      bikes.removeSelectedBrand(brand.name);
+    } else {
+      bikes.addSelectedBrand(brand.name);
     }
   };
 
@@ -27,7 +32,6 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.types.map((type) => (
-              // <li key={type.id} className={type.id === bikes.selectedType.id ? "border border-blue-500" : ""} onClick={() => handleTypeChange(type)}>
               <li>
                 <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" onChange={() => handleTypeChange(type)} />
                 {type.name}
@@ -41,15 +45,8 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.brands.map((brand) => (
-              <li
-                className={brand.id === bikes.selectedBrand.id ? "border border-red-800" : ""}
-                key={brand.id}
-                onClick={() => {
-                  bikes.setSelectedBrand(brand);
-                  console.log("Выбран бренд:", brand.name);
-                  console.log(brand.id);
-                  console.log(bikes.selectedBrand.name);
-                }}>
+              <li>
+                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={brand.id} type="checkbox" onChange={() => handleBrandChange(brand)} />
                 {brand.name}
               </li>
             ))}

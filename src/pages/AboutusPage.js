@@ -7,6 +7,7 @@ import bikerImg from "../Assets/images/pageAbout/biker.png";
 import teamPhoto from "../Assets/images/pageAbout/teamPhoto.png";
 import bikerBridge from "../Assets/images/pageAbout/bikerBridge.png";
 import socImg from "../Assets/images/social_demo.png";
+import CarouselAboutGalery from "../components/Layout/AboutUs/CarouselAboutGalery";
 
 const Aboutus = () => {
   return (
@@ -72,6 +73,10 @@ const Aboutus = () => {
             </ul>
           </div>
         </div>
+      </section>
+      <section>
+        <h2 className="uppercase text-5xl	font-medium pl-5 mb-8">Фотогалерея</h2>
+        <CarouselAboutGalery />
       </section>
     </div>
   );

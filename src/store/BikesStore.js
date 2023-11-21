@@ -93,7 +93,7 @@ export default class BikesStore {
       { id: 61, type: "Горные велосипеды", brand: "Pinarello", frame: "Карбон", title: "PINARELLO X9 SHIMANO DURA ACE DI2", price: 4900, image: "../../images/allBikes/Pinarello/p12.jpg", country: "../../images/flags/italy.png" },
     ];
     this._selectedTypes = [];
-    this._selectedBrand = {};
+    this._selectedBrands = [];
     this._selectedFrame = {};
     this._selectedBike = {};
     // this._color = []
@@ -113,22 +113,22 @@ export default class BikesStore {
     this._bikesAll = bikesAll;
   }
 
-  // setSelectedTypes(types) {
-  //   this._selectedTypes = types;
-  // }
-
   addSelectedType(typeName) {
-    // if (!this._selectedTypes.includes(type)) {
     this._selectedTypes.push(typeName);
-    console.log("После добавления:", this._selectedTypes);
-    // }
   }
   removeSelectedType(typeName) {
     this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== typeName);
-    console.log("После удаления:", this._selectedTypes);
   }
+
   clearSelectedTypes() {
     this._selectedTypes = [];
+  }
+
+  addSelectedBrand(brandName) {
+    this._selectedBrands.push(brandName);
+  }
+  removeSelectedBrand(brandName) {
+    this._selectedBrands = this._selectedBrands.filter((selectedBrand) => selectedBrand !== brandName);
   }
   setSelectedBrand(brand) {
     this._selectedBrand = brand;
@@ -157,8 +157,8 @@ export default class BikesStore {
     return this._selectedTypes;
   }
 
-  get selectedBrand() {
-    return this._selectedBrand;
+  get selectedBrands() {
+    return this._selectedBrands;
   }
   get selectedFrame() {
     return this._selectedFrame;
