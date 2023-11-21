@@ -13,11 +13,10 @@ export default class BikesStore {
       { id: 1, name: "Bianci" },
       { id: 2, name: "BMC" },
       { id: 3, name: "Ciclistino" },
-      { id: 4, name: "Cipollini" },
-      { id: 5, name: "Colnago" },
-      { id: 6, name: "Giant" },
-      { id: 7, name: "Pinarello" },
-      { id: 8, name: "Orbea" },
+      { id: 4, name: "Colnago" },
+      { id: 5, name: "Giant" },
+      { id: 6, name: "Pinarello" },
+      { id: 7, name: "Orbea" },
     ];
     this._frames = [
       { id: 1, name: "Алюминий" },
@@ -93,7 +92,7 @@ export default class BikesStore {
       { id: 60, type: "Городские велосипеды", brand: "Pinarello", frame: "Сталь", title: "PINARELLO BOLIDE F HR 3D REPLICA HOUR ", price: 5000, image: "../../images/allBikes/Pinarello/p11.jpg", country: "../../images/flags/italy.png" },
       { id: 61, type: "Горные велосипеды", brand: "Pinarello", frame: "Карбон", title: "PINARELLO X9 SHIMANO DURA ACE DI2", price: 4900, image: "../../images/allBikes/Pinarello/p12.jpg", country: "../../images/flags/italy.png" },
     ];
-    this._selectedType = {};
+    this._selectedTypes = [];
     this._selectedBrand = {};
     this._selectedFrame = {};
     this._selectedBike = {};
@@ -111,11 +110,25 @@ export default class BikesStore {
     this._frames = frames;
   }
   setBikes(bikesAll) {
-    this._bikes = bikesAll;
+    this._bikesAll = bikesAll;
   }
 
-  setSelectedType(type) {
-    this._selectedType = type;
+  // setSelectedTypes(types) {
+  //   this._selectedTypes = types;
+  // }
+
+  addSelectedType(type) {
+    // if (!this._selectedTypes.includes(type)) {
+    this._selectedTypes.push(type);
+    console.log("После добавления:", this._selectedTypes);
+    // }
+  }
+  removeSelectedType(type) {
+    this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== type);
+    console.log("После удаления:", this._selectedTypes);
+  }
+  clearSelectedTypes() {
+    this._selectedTypes = [];
   }
   setSelectedBrand(brand) {
     this._selectedBrand = brand;
@@ -140,8 +153,8 @@ export default class BikesStore {
     return this._bikesAll;
   }
 
-  get selectedType() {
-    return this._selectedType;
+  get selectedTypes() {
+    return this._selectedTypes;
   }
 
   get selectedBrand() {
