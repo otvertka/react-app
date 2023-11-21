@@ -11,9 +11,9 @@ const DefaultAccordion = observer(() => {
     console.log("Выбран тип:", type.name);
 
     if (bikes.selectedTypes.includes(type)) {
-      bikes.removeSelectedType(type);
+      bikes.removeSelectedType(type.name);
     } else {
-      bikes.addSelectedType(type);
+      bikes.addSelectedType(type.name);
       console.log(type.name);
       // console.log(bikes.addSelectedType(type));
     }

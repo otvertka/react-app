@@ -10,17 +10,20 @@ const DeviceList = observer(() => {
   // console.log("bikes.selectedType:", bikes.selectedType.name);
   // console.log("bikes.selectedBrand:", bikes.selectedBrand);
   // console.log("bikes.selectedFrame:", bikes.selectedFrame);
-  // console.log("bikes.bikesAll:", bikes.bikesAll);
+  console.log("bikes.bikesAll:", bikes.bikesAll);
+  console.log("bikes.selectedTypes:", bikes.selectedTypes);
 
   // const filteredBikes = bikes.bikesAll
   //   .filter((bike) => !bikes.selectedType.name || bikes.selectedType.name === bike.type)
   //   .filter((bike) => !bikes.selectedBrand.name || bikes.selectedBrand.name === bike.brand)
   //   .filter((bike) => !bikes.selectedFrame.name || bikes.selectedFrame.name === bike.frame);
 
-  const filteredBikes = bikes.bikesAll
-    .filter((bike) => !bikes.selectedTypes.length || bikes.selectedTypes.includes(bike.type))
-    .filter((bike) => !bikes.selectedBrand.name || bikes.selectedBrand.name === bike.brand)
-    .filter((bike) => !bikes.selectedFrame.name || bikes.selectedFrame.name === bike.frame);
+  const filteredBikes = bikes.bikesAll.filter((bike) => {
+    // console.log(bikes.selectedTypes[0]);
+    return !bikes.selectedTypes.length || bikes.selectedTypes.includes(bike.type);
+  });
+  // .filter((bike) => !bikes.selectedBrand.name || bikes.selectedBrand.name === bike.brand)
+  // .filter((bike) => !bikes.selectedFrame.name || bikes.selectedFrame.name === bike.frame);
   // const filteredBikes = bikes.bikesAll
   //   .filter((bike) => !bikes.selectedTypes.length || bikes.selectedTypes.includes(bike.type))
   //   .filter((bike) => !bikes.selectedBrand.name || bikes.selectedBrand.name === bike.brand)

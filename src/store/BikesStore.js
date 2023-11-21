@@ -117,14 +117,14 @@ export default class BikesStore {
   //   this._selectedTypes = types;
   // }
 
-  addSelectedType(type) {
+  addSelectedType(typeName) {
     // if (!this._selectedTypes.includes(type)) {
-    this._selectedTypes.push(type);
+    this._selectedTypes.push(typeName);
     console.log("После добавления:", this._selectedTypes);
     // }
   }
-  removeSelectedType(type) {
-    this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== type);
+  removeSelectedType(typeName) {
+    this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== typeName);
     console.log("После удаления:", this._selectedTypes);
   }
   clearSelectedTypes() {
