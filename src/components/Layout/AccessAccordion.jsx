@@ -3,32 +3,24 @@ import { Accordion } from "flowbite-react";
 import { observer } from "mobx-react-lite";
 import { Context } from "../..";
 
-const DefaultAccordion = observer(() => {
-  const { bikes } = useContext(Context);
-  console.log(bikes);
+const AccessAccordion = observer(() => {
+  const { accessories } = useContext(Context);
+  console.log(accessories);
 
   const handleTypeChange = (type) => {
     // console.log("Выбран тип:", type.name);
-    if (bikes.selectedTypes.includes(type.name)) {
-      bikes.removeSelectedType(type.name);
+    if (accessories.selectedTypes.includes(type.name)) {
+      accessories.removeSelectedType(type.name);
     } else {
-      bikes.addSelectedType(type.name);
+      accessories.addSelectedType(type.name);
     }
   };
 
   const handleBrandChange = (brand) => {
-    if (bikes.selectedBrands.includes(brand.name)) {
-      bikes.removeSelectedBrand(brand.name);
+    if (accessories.selectedBrands.includes(brand.name)) {
+      accessories.removeSelectedBrand(brand.name);
     } else {
-      bikes.addSelectedBrand(brand.name);
-    }
-  };
-
-  const handleFrameChange = (frame) => {
-    if (bikes.selectedFrames.includes(frame.name)) {
-      bikes.removeSelectedFrame(frame.name);
-    } else {
-      bikes.addSelectedFrame(frame.name);
+      accessories.addSelectedBrand(brand.name);
     }
   };
 
@@ -39,7 +31,7 @@ const DefaultAccordion = observer(() => {
 
         <Accordion.Content>
           <ul>
-            {bikes.types.map((type) => (
+            {accessories.types.map((type) => (
               <li>
                 <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" onChange={() => handleTypeChange(type)} />
                 {type.name}
@@ -52,23 +44,10 @@ const DefaultAccordion = observer(() => {
         <Accordion.Title>Бренд</Accordion.Title>
         <Accordion.Content>
           <ul>
-            {bikes.brands.map((brand) => (
+            {accessories.brands.map((brand) => (
               <li>
                 <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={brand.id} type="checkbox" onChange={() => handleBrandChange(brand)} />
                 {brand.name}
-              </li>
-            ))}
-          </ul>
-        </Accordion.Content>
-      </Accordion.Panel>
-      <Accordion.Panel>
-        <Accordion.Title>Материал рамы</Accordion.Title>
-        <Accordion.Content>
-          <ul>
-            {bikes.frames.map((frame) => (
-              <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={frame.id} type="checkbox" onChange={() => handleFrameChange(frame)} />
-                {frame.name}
               </li>
             ))}
           </ul>
@@ -78,4 +57,4 @@ const DefaultAccordion = observer(() => {
   );
 });
 
-export default DefaultAccordion;
+export default AccessAccordion;

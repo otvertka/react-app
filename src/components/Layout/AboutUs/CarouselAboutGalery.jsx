@@ -33,19 +33,19 @@ const CarouselAboutGalery = () => {
   return (
     <section>
       <Carousel className="mb-12 px-5" showDots={true} responsive={responsive}>
-        <div className="h-[228px] md:w-[400px] h-[334px] rounded-lg ">
+        <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto3} alt="photo1" />
         </div>
-        <div className="h-[228px] md:w-[400px] h-[334px] rounded-lg ">
+        <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto2} alt="photo2" />
         </div>
-        <div className="h-[228px] md:w-[400px] h-[334px] rounded-lg ">
+        <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto3} alt="photo3" />
         </div>
-        <div className="h-[228px] md:w-[400px] h-[334px] rounded-lg ">
+        <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto4} alt="photo4" />
         </div>
-        <div className="h-[228px] md:w-[400px] h-[334px] rounded-lg ">
+        <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto2} alt="photo5" />
         </div>
       </Carousel>

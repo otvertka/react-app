@@ -2,7 +2,7 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 
 import BikesStore from "../store/BikesStore";
-import DeviceList from "../components/DeviceList";
+import BikesList from "../components/BikesList";
 import DefaultAccordion from "../components/Layout/DefaultAccordion";
 
 const store = new BikesStore();
@@ -17,13 +17,13 @@ const BikesPage = observer(() => {
   return (
     <section>
       <h1>ВСЕ ВЕЛОСИПЕДЫ</h1>
-      <div className="flex justify-between">
-        <div className="w-1/4 border border-red-700">
+      <div className="flex">
+        <div className="border border-red-700">
           <DefaultAccordion items={{ brands: brandNames, types: typesNames, frames: frameNames }} />
         </div>
 
-        <div className="3/4">
-          <DeviceList />
+        <div className="pl-2">
+          <BikesList />
         </div>
       </div>
     </section>

@@ -94,7 +94,7 @@ export default class BikesStore {
     ];
     this._selectedTypes = [];
     this._selectedBrands = [];
-    this._selectedFrame = {};
+    this._selectedFrames = [];
     this._selectedBike = {};
     // this._color = []
     makeAutoObservable(this);
@@ -109,9 +109,9 @@ export default class BikesStore {
   setFrames(frames) {
     this._frames = frames;
   }
-  setBikes(bikesAll) {
-    this._bikesAll = bikesAll;
-  }
+  // setBikes(bikesAll) {
+  //   this._bikesAll = bikesAll;
+  // }
 
   addSelectedType(typeName) {
     this._selectedTypes.push(typeName);
@@ -120,9 +120,9 @@ export default class BikesStore {
     this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== typeName);
   }
 
-  clearSelectedTypes() {
-    this._selectedTypes = [];
-  }
+  // clearSelectedTypes() {
+  //   this._selectedTypes = [];
+  // }
 
   addSelectedBrand(brandName) {
     this._selectedBrands.push(brandName);
@@ -130,15 +130,21 @@ export default class BikesStore {
   removeSelectedBrand(brandName) {
     this._selectedBrands = this._selectedBrands.filter((selectedBrand) => selectedBrand !== brandName);
   }
-  setSelectedBrand(brand) {
-    this._selectedBrand = brand;
+  // setSelectedBrand(brand) {
+  //   this._selectedBrand = brand;
+  // }
+  addSelectedFrame(frameName) {
+    this._selectedFrames.push(frameName);
   }
-  setSelectedFrame(frame) {
-    this._selectedFrame = frame;
+  removeSelectedFrame(frameName) {
+    this._selectedFrames = this._selectedFrames.filter((selectedFrame) => selectedFrame !== frameName);
   }
-  setSelectedBike(bike) {
-    this._selectedBike = bike;
-  }
+  // setSelectedFrame(frame) {
+  //   this._selectedFrame = frame;
+  // }
+  // setSelectedBike(bike) {
+  //   this._selectedBike = bike;
+  // }
 
   get types() {
     return this._types;
@@ -160,10 +166,10 @@ export default class BikesStore {
   get selectedBrands() {
     return this._selectedBrands;
   }
-  get selectedFrame() {
-    return this._selectedFrame;
+  get selectedFrames() {
+    return this._selectedFrames;
   }
-  get selectedBike() {
-    return this._selectedBike;
-  }
+  // get selectedBike() {
+  //   return this._selectedBike;
+  // }
 }
