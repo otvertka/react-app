@@ -93,8 +93,8 @@ export default class BikesStore {
       { id: 61, type: "Горные велосипеды", brand: "Pinarello", frame: "Карбон", title: "PINARELLO X9 SHIMANO DURA ACE DI2", price: 4900, image: "../../images/allBikes/Pinarello/p12.jpg", country: "../../images/flags/italy.png" },
     ];
     this._selectedTypes = [];
-    this._selectedBrand = {};
-    this._selectedFrame = {};
+    this._selectedBrands = [];
+    this._selectedFrames = [];
     this._selectedBike = {};
     // this._color = []
     makeAutoObservable(this);
@@ -109,36 +109,42 @@ export default class BikesStore {
   setFrames(frames) {
     this._frames = frames;
   }
-  setBikes(bikesAll) {
-    this._bikesAll = bikesAll;
-  }
-
-  // setSelectedTypes(types) {
-  //   this._selectedTypes = types;
+  // setBikes(bikesAll) {
+  //   this._bikesAll = bikesAll;
   // }
 
-  addSelectedType(type) {
-    // if (!this._selectedTypes.includes(type)) {
-    this._selectedTypes.push(type);
-    console.log("После добавления:", this._selectedTypes);
-    // }
+  addSelectedType(typeName) {
+    this._selectedTypes.push(typeName);
   }
-  removeSelectedType(type) {
-    this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== type);
-    console.log("После удаления:", this._selectedTypes);
+  removeSelectedType(typeName) {
+    this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== typeName);
   }
-  clearSelectedTypes() {
-    this._selectedTypes = [];
+
+  // clearSelectedTypes() {
+  //   this._selectedTypes = [];
+  // }
+
+  addSelectedBrand(brandName) {
+    this._selectedBrands.push(brandName);
   }
-  setSelectedBrand(brand) {
-    this._selectedBrand = brand;
+  removeSelectedBrand(brandName) {
+    this._selectedBrands = this._selectedBrands.filter((selectedBrand) => selectedBrand !== brandName);
   }
-  setSelectedFrame(frame) {
-    this._selectedFrame = frame;
+  // setSelectedBrand(brand) {
+  //   this._selectedBrand = brand;
+  // }
+  addSelectedFrame(frameName) {
+    this._selectedFrames.push(frameName);
   }
-  setSelectedBike(bike) {
-    this._selectedBike = bike;
+  removeSelectedFrame(frameName) {
+    this._selectedFrames = this._selectedFrames.filter((selectedFrame) => selectedFrame !== frameName);
   }
+  // setSelectedFrame(frame) {
+  //   this._selectedFrame = frame;
+  // }
+  // setSelectedBike(bike) {
+  //   this._selectedBike = bike;
+  // }
 
   get types() {
     return this._types;
@@ -157,13 +163,13 @@ export default class BikesStore {
     return this._selectedTypes;
   }
 
-  get selectedBrand() {
-    return this._selectedBrand;
+  get selectedBrands() {
+    return this._selectedBrands;
   }
-  get selectedFrame() {
-    return this._selectedFrame;
+  get selectedFrames() {
+    return this._selectedFrames;
   }
-  get selectedBike() {
-    return this._selectedBike;
-  }
+  // get selectedBike() {
+  //   return this._selectedBike;
+  // }
 }

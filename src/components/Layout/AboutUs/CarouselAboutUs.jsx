@@ -27,7 +27,7 @@ const CarouselAboutUs = () => {
 
   return (
     <section>
-      <Carousel className="mb-12" showDots={true} responsive={responsive}>
+      <Carousel className="mb-12 " showDots={true} responsive={responsive}>
         <div className="p-8 bg-frameBrown bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg ">
           <h2 className="text-white mb-4 text-2xl font-medium">Хранение</h2>
           <p className="text-gray-300 font-light mb-8">Любишь кататься — люби и велосипед в квартире на зиму парковать или сдавай к нам на хранение и обслуживание.</p>
