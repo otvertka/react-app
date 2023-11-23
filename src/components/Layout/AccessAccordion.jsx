@@ -8,7 +8,7 @@ const AccessAccordion = observer(() => {
   console.log(accessories);
 
   const handleTypeChange = (type) => {
-    // console.log("Выбран тип:", type.name);
+    console.log("Выбран тип:", type.name);
     if (accessories.selectedTypes.includes(type.name)) {
       accessories.removeSelectedType(type.name);
     } else {
@@ -17,6 +17,8 @@ const AccessAccordion = observer(() => {
   };
 
   const handleBrandChange = (brand) => {
+    console.log("Выбран brand:", brand.name);
+
     if (accessories.selectedBrands.includes(brand.name)) {
       accessories.removeSelectedBrand(brand.name);
     } else {

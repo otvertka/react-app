@@ -6,8 +6,9 @@ import BikesCard from "../Cards/BikesCard";
 
 const AccessList = observer(() => {
   const { accessories } = useContext(Context);
+  console.log("accessories:", accessories);
 
-  console.log(accessories);
+  console.log("accessesAll:", accessories.accessesAll);
 
   const filteredAccess = accessories.accessesAll.filter((acc) => !accessories.selectedTypes.length || accessories.selectedTypes.includes(acc.type)).filter((acc) => !accessories.selectedBrands.length || accessories.selectedBrands.includes(acc.brand));
 
