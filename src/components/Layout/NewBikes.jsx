@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import BikesCard from "../Cards/BikesCard";
+import DeviceCard from "../Cards/DeviceCard";
 
 import bikesData from "../../data/bikes.json";
 
@@ -32,7 +32,7 @@ const NewBikes = (bikesInfo) => {
         <h2 className="py-11 uppercase text-6xl">Новинки</h2>
         <Carousel responsive={responsive}>
           {bikesData.map((bike) => (
-            <BikesCard key={bike.id} bikesInfo={bike} />
+            <DeviceCard key={bike.id} bikesInfo={bike} />
           ))}
         </Carousel>
       </div>

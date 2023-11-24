@@ -21,7 +21,9 @@ import GuaranteesPage from "./pages/GuaranteesPage";
 
 import AuthenticationPage from "./pages/AuthenticationPage";
 import MyAccauntPage from "./pages/MyAccauntPage";
-import DevicePage from "./pages/DevicePage";
+
+import SingleAccsessPage from "./pages/SingleAccsessPage";
+import SingleBikePage from "./pages/SingleBikePage";
 // import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
@@ -35,10 +37,12 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/bikes", element: <BikesPage /> },
+      { path: "/bikes/:id", element: <SingleBikePage /> },
       { path: "/tradein", element: <TradeinPage /> },
       { path: "/parts", element: <PartsPage /> },
       { path: "/equipments", element: <EquipmentsPage /> },
       { path: "/accessorries", element: <AccessoriesPage /> },
+      { path: "/accessorries/:id", element: <SingleAccsessPage /> },
       { path: "/bicyclestands", element: <BicyclestandsPage /> },
       { path: "/about", element: <AboutusPage /> },
       { path: "/delivery", element: <DeliveryPage /> },
@@ -47,8 +51,6 @@ const router = createBrowserRouter([
       { path: "/workshop", element: <WorkshopPage /> },
       { path: "/keeping", element: <KeepingPage /> },
       { path: "/quarantees", element: <GuaranteesPage /> },
-
-      { path: "/devicepage/:id", element: <DevicePage /> },
 
       { path: "/auth", element: <AuthenticationPage /> },
       { path: "/myaccaunt", element: <MyAccauntPage /> },

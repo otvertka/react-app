@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { observer } from "mobx-react-lite";
 import { Context } from "..";
 
-import BikesCard from "./Cards/BikesCard";
+import DeviceCard from "./Cards/DeviceCard";
 
 const BikesList = observer(() => {
   const { bikes } = useContext(Context);
@@ -16,7 +16,7 @@ const BikesList = observer(() => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
       {filteredBikes.map((bike) => (
-        <BikesCard key={bike.id} bikesInfo={bike} />
+        <DeviceCard key={bike.id} bikesInfo={bike} pathTo={"bikes"} />
       ))}
     </div>
   );

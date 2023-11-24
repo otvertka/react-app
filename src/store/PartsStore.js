@@ -1,11 +1,13 @@
 import { makeAutoObservable } from "mobx";
 
-export default class AccessoriesStore {
+export default class PartsStore {
   constructor() {
     this._types = [
-      { id: 1, name: "Велочехлы" },
-      { id: 2, name: "Рюкзаки" },
-      { id: 3, name: "Фляги, держатели" },
+      { id: 1, name: "Камеры" },
+      { id: 2, name: "Касеты" },
+      { id: 3, name: "Колёса" },
+      { id: 4, name: "Педали" },
+      { id: 5, name: "Переключатели скоростей" },
     ];
     this._brands = [
       { id: 1, name: "Assos" },

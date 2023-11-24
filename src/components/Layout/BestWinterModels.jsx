@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import BikesCard from "../Cards/BikesCard";
+import DeviceCard from "../Cards/DeviceCard";
 
 import winterBikesData from "../../data/winterbikes.json";
 
@@ -32,7 +32,7 @@ const BestWinterModels = (props) => {
         <h2 className="lg:p-20 uppercase text-white text-4xl w-1/2">Лучшие модели для зимней езды</h2>
         <Carousel className="mx-5" responsive={responsive}>
           {winterBikesData.map((bike) => (
-            <BikesCard key={bike.id} bikesInfo={bike} />
+            <DeviceCard key={bike.id} bikesInfo={bike} />
           ))}
         </Carousel>
         <div className="flex justify-center mt-6">

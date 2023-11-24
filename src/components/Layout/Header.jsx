@@ -47,11 +47,6 @@ const Header = (props) => {
                   Велостанки
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/devicepage" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                  КАРТОЧКА ВЕЛОСИПЕДА
-                </NavLink>
-              </li>
             </ul>
           </div>
           {/* поиск, логин, избранное, корзина */}

@@ -8,7 +8,7 @@ import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 import socialImg from "../../src/Assets/images/social_demo.png";
 import prefImg from "../../src/Assets/images/prefHeart.png";
 
-const DevicePage = observer(() => {
+const SingleBikePage = observer(() => {
   const params = useParams();
   const { bikes } = useContext(Context);
 
@@ -243,4 +243,4 @@ const DevicePage = observer(() => {
   );
 });
 
-export default DevicePage;
+export default SingleBikePage;
