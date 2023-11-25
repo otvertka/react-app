@@ -24,6 +24,8 @@ import MyAccauntPage from "./pages/MyAccauntPage";
 
 import SingleAccsessPage from "./pages/SingleAccsessPage";
 import SingleBikePage from "./pages/SingleBikePage";
+import SinglePartPage from "./pages/SinglePartPage";
+import SingleEquipPage from "./pages/SingleEquipPage";
 // import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
@@ -40,7 +42,9 @@ const router = createBrowserRouter([
       { path: "/bikes/:id", element: <SingleBikePage /> },
       { path: "/tradein", element: <TradeinPage /> },
       { path: "/parts", element: <PartsPage /> },
+      { path: "/parts/:id", element: <SinglePartPage /> },
       { path: "/equipments", element: <EquipmentsPage /> },
+      { path: "/equipments/:id", element: <SingleEquipPage /> },
       { path: "/accessorries", element: <AccessoriesPage /> },
       { path: "/accessorries/:id", element: <SingleAccsessPage /> },
       { path: "/bicyclestands", element: <BicyclestandsPage /> },

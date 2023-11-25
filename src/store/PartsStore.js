@@ -10,23 +10,26 @@ export default class PartsStore {
       { id: 5, name: "Переключатели скоростей" },
     ];
     this._brands = [
-      { id: 1, name: "Assos" },
-      { id: 2, name: "Elite" },
-      { id: 3, name: "Scicon" },
+      { id: 1, name: "Shimano" },
+      { id: 2, name: "Continental" },
+      { id: 3, name: "Pirelli" },
+      { id: 4, name: "Lightweight" },
+      { id: 5, name: "Miche" },
+      { id: 6, name: "Look" },
     ];
-    this._accessesAll = [
-      { id: 333, type: "Велочехлы", brand: "Scicon", title: "SCICON AEROTECH EVOLUTION 3.0 TSA", price: 94, image: "../../images/allAccessories/cases/s1.jpg", country: "../../images/flags/italy.png" },
-      { id: 2, type: "Велочехлы", brand: "Scicon", title: "SCICON AEROCOMFORT TRIATHLON 3.0 TSA", price: 69, image: "../../images/allAccessories/cases/s2.jpg", country: "../../images/flags/italy.png" },
-      { id: 3, type: "Велочехлы", brand: "Scicon", title: "SCICON AEROCOMFORT ROAD 3.0 TSA", price: 70, image: "../../images/allAccessories/cases/s3.jpg", country: "../../images/flags/italy.png" },
-      { id: 4, type: "Велочехлы", brand: "Scicon", title: "SCICON AEROTECH EVOLUTION 3.0 TSA", price: 54, image: "../../images/allAccessories/cases/s4.jpg", country: "../../images/flags/italy.png" },
-      { id: 5, type: "Велочехлы", brand: "Scicon", title: "SCICON AEROTECH EVOLUTION 3.0 TSA", price: 59, image: "../../images/allAccessories/cases/s5.jpg", country: "../../images/flags/italy.png" },
+    this._partsAll = [
+      { id: 1, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 27.5 S42", price: 20, image: "../../images/allParts/tyres/c1.jpeg", country: "../../images/flags/italy.png" },
+      { id: 2, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 29 S42", price: 21, image: "../../images/allParts/tyres/c2.jpeg", country: "../../images/flags/italy.png" },
+      { id: 3, type: "Камеры", brand: "Continental", title: "CONTINENTAL RACE 28 S60", price: 22, image: "../../images/allParts/tyres/c3.jpeg", country: "../../images/flags/italy.png" },
+      { id: 4, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X28/35С)", price: 23, image: "../../images/allParts/tyres/p1.jpg", country: "../../images/flags/italy.png" },
+      { id: 5, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X33/45С)", price: 24, image: "../../images/allParts/tyres/p2.png", country: "../../images/flags/italy.png" },
+      { id: 6, type: "Камеры", brand: "Pirelli", title: "PIRELLI ROADTUBE (700X23/30C)", price: 25, image: "../../images/allParts/tyres/p3.png", country: "../../images/flags/italy.png" },
+      { id: 7, type: "Камеры", brand: "Pirelli", title: "PIRELLI SPORTUBE (26-27.5″X2.5/2.8", price: 26, image: "../../images/allParts/tyres/p4.png", country: "../../images/flags/italy.png" },
 
-      { id: 6, type: "Рюкзаки", brand: "Assos", title: "ASSOS ASSOSOIRES SPIDER BAG G2 BLACKSERIES", price: 135, image: "../../images/allAccessories/rucksack/rs1.jpg", country: "../../images/flags/italy.png" },
-      { id: 7, type: "Рюкзаки", brand: "Assos", title: "ASSOS UNISEX SPIDER BAG G2 BLACKSERIES", price: 59, image: "../../images/allAccessories/rucksack/rs2.jpg", country: "../../images/flags/italy.png" },
-      { id: 8, type: "Рюкзаки", brand: "Assos", title: "ASSOS SPIDERBAG", price: 140, image: "../../images/allAccessories/rucksack/rs3.jpg", country: "../../images/flags/italy.png" },
-
-      { id: 9, type: "Фляги, держатели", brand: "Elite", title: "ELITE CUSTOM RACE, FIBERGLASS", price: 20, image: "../../images/allAccessories/bottles/elite/fe2.jpg", country: "../../images/flags/italy.png" },
-      { id: 10, type: "Фляги, держатели", brand: "Elite", title: "ELITE CUSTOM RACE", price: 23, image: "../../images/allAccessories/bottles/elite/fe1.jpg", country: "../../images/flags/italy.png" },
+      { id: 8, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-28 11СК.", price: 140, image: "../../images/allParts/kasets/s1.jpg", country: "../../images/flags/italy.png" },
+      { id: 9, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-32 11СК.", price: 20, image: "../../images/allParts/kasets/s2.jpg", country: "../../images/flags/italy.png" },
+      { id: 10, type: "Касеты", brand: "Shimano", title: "SHIMANO ULTEGRA 14-28 11СК.", price: 23, image: "../../images/allParts/kasets/s3.jpeg", country: "../../images/flags/italy.png" },
+      { id: 11, type: "Касеты", brand: "Shimano", title: "SHIMANO DEORE M6100 10-51 12V", price: 23, image: "../../images/allParts/kasets/s4.jpg", country: "../../images/flags/italy.png" },
     ];
 
     this._selectedTypes = [];
@@ -39,8 +42,8 @@ export default class PartsStore {
   setBrands(brands) {
     this._brands = brands;
   }
-  // setAccess(accessesAll) {
-  //   this._accessesAll = accessesAll;
+  // setAccess(partsAll) {
+  //   this._partsAll = partsAll;
   // }
 
   addSelectedType(typeName) {
@@ -63,8 +66,8 @@ export default class PartsStore {
   get brands() {
     return this._brands;
   }
-  get accessesAll() {
-    return this._accessesAll;
+  get partsAll() {
+    return this._partsAll;
   }
   get selectedTypes() {
     return this._selectedTypes;

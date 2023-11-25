@@ -5,6 +5,8 @@ import "./index.css";
 import App from "./App";
 import BikesStore from "./store/BikesStore";
 import AccessoriesStore from "./store/AccsessoriesStore";
+import PartsStore from "./store/PartsStore";
+import EquipmentsStore from "./store/EquipmentsStore";
 // import reportWebVitals from './reportWebVitals';
 
 export const Context = createContext(null);
@@ -15,6 +17,8 @@ root.render(
     value={{
       bikes: new BikesStore(),
       accessories: new AccessoriesStore(),
+      parts: new PartsStore(),
+      equipments: new EquipmentsStore(),
     }}>
     <App />
   </Context.Provider>
