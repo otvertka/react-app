@@ -26,6 +26,7 @@ import SingleAccsessPage from "./pages/SingleAccsessPage";
 import SingleBikePage from "./pages/SingleBikePage";
 import SinglePartPage from "./pages/SinglePartPage";
 import SingleEquipPage from "./pages/SingleEquipPage";
+import Cart from "./pages/Cart";
 // import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
@@ -57,6 +58,7 @@ const router = createBrowserRouter([
       { path: "/quarantees", element: <GuaranteesPage /> },
 
       { path: "/auth", element: <AuthenticationPage /> },
+      { path: "/cart", element: <Cart /> },
       { path: "/myaccaunt", element: <MyAccauntPage /> },
     ],
   },
@@ -65,9 +67,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <RouterProvider router={router}>
-      {/* <BikesStore.Provider store={new BikesStore()}> */}
       <RootLayout />
-      {/* </BikesStore.Provider> */}
     </RouterProvider>
   );
 }

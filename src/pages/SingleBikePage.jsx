@@ -4,6 +4,8 @@ import { Context } from "..";
 import { observer } from "mobx-react-lite";
 import Counter from "../components/Counter";
 
+import CartContext from "../store/CartContext";
+
 import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 import socialImg from "../../src/Assets/images/social_demo.png";
 import prefImg from "../../src/Assets/images/prefHeart.png";
@@ -13,6 +15,11 @@ const SingleBikePage = observer(() => {
   const { bikes } = useContext(Context);
 
   const selectedBike = bikes.bikesAll.find((bike) => parseInt(bike.id) === parseInt(params.id));
+  const cartCtx = useContext(CartContext);
+
+  function handleAddBikeToCart() {
+    cartCtx.addItem(selectedBike);
+  }
 
   return (
     <div className="mx-10">
@@ -113,7 +120,9 @@ const SingleBikePage = observer(() => {
                 </a>
               </div>
               <div className="col-span-2 md:col-start-2 md:row-start-1">
-                <button className=" bg-orange-500 rounded-lg w-[320px] h-[52px] text-white">В корзину</button>
+                <button onClick={handleAddBikeToCart} className=" bg-orange-500 rounded-lg w-[320px] h-[52px] text-white">
+                  В корзину
+                </button>
               </div>
             </div>
           </div>
