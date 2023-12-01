@@ -103,15 +103,15 @@ const SingleBikePage = observer(() => {
                 </li>
               </ul>
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-4 mb-12">
-              {/* счётчик количества товаров */}
+            <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-4 mb-12">
+              {/* счётчик количества товаров
               {/* <div className="md:col-start-1 flex justify-between items-center border rounded-lg w-[252px] h-[52px] md:w-[123px]">
                 {"Count = " + counter.count}
                 <button className="inline-block px-4 py-2 cursor-pointer"onClick={()=> counter.decrement()}>-</button>
                 <input className=" text-center font-bold" style={{ WebkitAppearance: "textfield", MozAppearance: "textfield", appearance: "textfield" }} type="number" placeholder="1" id="quantity" min="1" max="100" />
                 <button className="inline-block px-4 py-2 cursor-pointer" onClick={()=> counter.increment()}>+</button>
               </div> */}
-              <Counter />
+              {/* <Counter /> */}
               <div className="md:col-start-3 md:row-start-1 w-[52px] h-[52px] bg-gray-100 rounded flex justify-center items-center">
                 <a className="inline-block" href="#">
                   <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
