@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Counter = ({ updateQuant }) => {
-  const [count, setCount] = useState(1);
+const Counter = ({ quant, onDecrease, onIncrease }) => {
+  // const [count, setCount] = useState(1);
 
-  const increment = () => {
-    setCount(count + 1);
-    updateQuant(count + 1);
-  };
-  const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-      updateQuant(count - 1);
-    }
-  };
+  // const increment = () => {
+  //   setCount(count + 1);
+  //   updateQuant(count + 1);
+  // };
+  // const decrement = () => {
+  //   if (count > 1) {
+  //     setCount(count - 1);
+  //     updateQuant(count - 1);
+  //   }
+  // };
   return (
     <div className="border flex justify-between">
-      <button className="inline-block px-4 py-2 cursor-pointer" onClick={decrement}>
+      <button className="inline-block px-4 py-2 cursor-pointer" onClick={onDecrease}>
         -
       </button>
-      <span classNames="text-xl">{count}</span>
-      <button className="inline-block px-4 py-2 cursor-pointer" onClick={increment}>
+      <span classNames="text-xl">{quant}</span>
+      <button className="inline-block px-4 py-2 cursor-pointer" onClick={onIncrease}>
         +
       </button>
     </div>
