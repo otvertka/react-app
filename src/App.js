@@ -27,6 +27,7 @@ import SingleBikePage from "./pages/SingleBikePage";
 import SinglePartPage from "./pages/SinglePartPage";
 import SingleEquipPage from "./pages/SingleEquipPage";
 import Cart from "./pages/Cart";
+import CheckoutPage from "./pages/CheckoutPage";
 // import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
 
       { path: "/auth", element: <AuthenticationPage /> },
       { path: "/cart", element: <Cart /> },
+      { path: "/checkout", element: <CheckoutPage /> },
       { path: "/myaccaunt", element: <MyAccauntPage /> },
     ],
   },

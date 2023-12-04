@@ -18,18 +18,18 @@ export default class PartsStore {
       { id: 6, name: "Look" },
     ];
     this._partsAll = [
-      { id: 1, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 27.5 S42", price: 20, image: "../../images/allParts/tyres/c1.jpeg", country: "../../images/flags/italy.png" },
-      { id: 2, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 29 S42", price: 21, image: "../../images/allParts/tyres/c2.jpeg", country: "../../images/flags/italy.png" },
-      { id: 3, type: "Камеры", brand: "Continental", title: "CONTINENTAL RACE 28 S60", price: 22, image: "../../images/allParts/tyres/c3.jpeg", country: "../../images/flags/italy.png" },
-      { id: 4, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X28/35С)", price: 23, image: "../../images/allParts/tyres/p1.jpg", country: "../../images/flags/italy.png" },
-      { id: 5, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X33/45С)", price: 24, image: "../../images/allParts/tyres/p2.png", country: "../../images/flags/italy.png" },
-      { id: 6, type: "Камеры", brand: "Pirelli", title: "PIRELLI ROADTUBE (700X23/30C)", price: 25, image: "../../images/allParts/tyres/p3.png", country: "../../images/flags/italy.png" },
-      { id: 7, type: "Камеры", brand: "Pirelli", title: "PIRELLI SPORTUBE (26-27.5″X2.5/2.8", price: 26, image: "../../images/allParts/tyres/p4.png", country: "../../images/flags/italy.png" },
+      { id: 201, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 27.5 S42", price: 20, image: "../../images/allParts/tyres/c1.jpeg", country: "../../images/flags/italy.png" },
+      { id: 202, type: "Камеры", brand: "Continental", title: "CONTINENTAL MTB 29 S42", price: 21, image: "../../images/allParts/tyres/c2.jpeg", country: "../../images/flags/italy.png" },
+      { id: 203, type: "Камеры", brand: "Continental", title: "CONTINENTAL RACE 28 S60", price: 22, image: "../../images/allParts/tyres/c3.jpeg", country: "../../images/flags/italy.png" },
+      { id: 204, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X28/35С)", price: 23, image: "../../images/allParts/tyres/p1.jpg", country: "../../images/flags/italy.png" },
+      { id: 205, type: "Камеры", brand: "Pirelli", title: "PIRELLI CINTURATO SMARTUBE (700X33/45С)", price: 24, image: "../../images/allParts/tyres/p2.png", country: "../../images/flags/italy.png" },
+      { id: 206, type: "Камеры", brand: "Pirelli", title: "PIRELLI ROADTUBE (700X23/30C)", price: 25, image: "../../images/allParts/tyres/p3.png", country: "../../images/flags/italy.png" },
+      { id: 207, type: "Камеры", brand: "Pirelli", title: "PIRELLI SPORTUBE (26-27.5″X2.5/2.8", price: 26, image: "../../images/allParts/tyres/p4.png", country: "../../images/flags/italy.png" },
 
-      { id: 8, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-28 11СК.", price: 140, image: "../../images/allParts/kasets/s1.jpg", country: "../../images/flags/italy.png" },
-      { id: 9, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-32 11СК.", price: 20, image: "../../images/allParts/kasets/s2.jpg", country: "../../images/flags/italy.png" },
-      { id: 10, type: "Касеты", brand: "Shimano", title: "SHIMANO ULTEGRA 14-28 11СК.", price: 23, image: "../../images/allParts/kasets/s3.jpeg", country: "../../images/flags/italy.png" },
-      { id: 11, type: "Касеты", brand: "Shimano", title: "SHIMANO DEORE M6100 10-51 12V", price: 23, image: "../../images/allParts/kasets/s4.jpg", country: "../../images/flags/italy.png" },
+      { id: 208, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-28 11СК.", price: 140, image: "../../images/allParts/kasets/s1.jpg", country: "../../images/flags/italy.png" },
+      { id: 209, type: "Касеты", brand: "Shimano", title: "SHIMANO 105 R7000 11-32 11СК.", price: 20, image: "../../images/allParts/kasets/s2.jpg", country: "../../images/flags/italy.png" },
+      { id: 210, type: "Касеты", brand: "Shimano", title: "SHIMANO ULTEGRA 14-28 11СК.", price: 23, image: "../../images/allParts/kasets/s3.jpeg", country: "../../images/flags/italy.png" },
+      { id: 211, type: "Касеты", brand: "Shimano", title: "SHIMANO DEORE M6100 10-51 12V", price: 23, image: "../../images/allParts/kasets/s4.jpg", country: "../../images/flags/italy.png" },
     ];
 
     this._selectedTypes = [];

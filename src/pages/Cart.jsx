@@ -5,6 +5,7 @@ import CartContext from "../store/CartContext";
 
 // import deleteSvg from "../../src/Assets/svg/deleteSVG.svg";
 import CartItem from "../components/UI/CartItem";
+import { NavLink } from "react-router-dom";
 // import UserProgressContext from "../store/UserProgressContext";
 
 export default function Cart() {
@@ -28,7 +29,16 @@ export default function Cart() {
             <CartItem key={item.id} image={item.image} title={item.title} quantity={item.quantity} price={item.price} onIncrease={() => cartCtx.addItem(item)} onDecrease={() => cartCtx.removeItem(item.id)} onDelete={() => cartCtx.deleteItem(item.id)} />
           ))}
         </ul>
-        <p>Итого: {cartTotal}</p>
+        <div className="flex justify-between">
+          {cartCtx.items.length > 0 && (
+            <>
+              <p>Итого: {cartTotal}</p>
+              <NavLink to="/checkout" className="w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:bg-orange-500 active:bg-orange-700 hover:scale-110 transition-all duration-300 text-white flex items-center justify-center">
+                Перейти к заказу
+              </NavLink>
+            </>
+          )}
+        </div>
       </section>
     </section>
   );

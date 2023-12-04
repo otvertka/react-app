@@ -7,12 +7,19 @@ import Counter from "../components/Counter";
 import delivImg from "../../src/Assets/images/devicePage/deliv.png";
 import socialImg from "../../src/Assets/images/social_demo.png";
 import prefImg from "../../src/Assets/images/prefHeart.png";
+import CartContext from "../store/CartContext";
 
 const SinglePartPage = observer(() => {
   const params = useParams();
   const { parts } = useContext(Context);
 
+  const cartCtx = useContext(CartContext);
+
   const selectedPart = parts.partsAll.find((part) => parseInt(part.id) === parseInt(params.id));
+
+  function handleAddPartToCard() {
+    cartCtx.addItem(selectedPart);
+  }
 
   return (
     <div className="mx-10">
@@ -97,7 +104,7 @@ const SinglePartPage = observer(() => {
               </ul>
             </div>
             <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-4 mb-12">
-              <Counter />
+              {/* <Counter /> */}
               <div className="md:col-start-3 md:row-start-1 w-[52px] h-[52px] bg-gray-100 rounded flex justify-center items-center">
                 <a className="inline-block" href="#">
                   <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +113,9 @@ const SinglePartPage = observer(() => {
                 </a>
               </div>
               <div className="col-span-2 md:col-start-2 md:row-start-1">
-                <button className=" bg-orange-500 rounded-lg w-[320px] h-[52px] text-white">В корзину</button>
+                <button onClick={handleAddPartToCard} className=" bg-orange-500 rounded-lg w-[320px] h-[52px] text-white">
+                  В корзину
+                </button>
               </div>
             </div>
           </div>
