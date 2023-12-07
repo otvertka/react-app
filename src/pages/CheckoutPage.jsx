@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import CartContext from "../store/CartContext";
 import CheckoutInput from "../components/UI/CheckoutInput";
+import ModalConfirmOrder from "../components/UI/ModalConfirmOrder";
 
 export default function CheckoutPage() {
   const cartCtx = useContext(CartContext);
@@ -24,10 +25,15 @@ export default function CheckoutPage() {
     localStorage.setItem("orderData", JSON.stringify(orderData));
 
     setOrderConfirmed(true);
+    cartCtx.clearCart();
   }
 
+  const handleCloseModal = () => {
+    setOrderConfirmed(false);
+  };
+
   if (orderConfirmed) {
-    return <>Заказ подтверждён</>;
+    return <ModalConfirmOrder onClose={handleCloseModal} />;
   }
 
   return (
