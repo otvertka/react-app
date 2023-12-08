@@ -27,7 +27,6 @@ export default function CheckoutPage() {
     setOrderConfirmed(true);
     cartCtx.clearCart();
   }
-
   const handleCloseModal = () => {
     setOrderConfirmed(false);
   };
