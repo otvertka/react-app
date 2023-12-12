@@ -2,12 +2,18 @@ import mainImage from "../../Assets/images/main_images/1.png";
 import partnersImage from "../../Assets/images/main_images/partner.png";
 import CarouselMain from "./CarouselMain";
 
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Main = (props) => {
+  const { scrollY } = useScroll();
+
+  const opacityBiker = useTransform(scrollY, [0, 200, 300, 500], [1, 0.5, 0.5, 0]);
+  const scaleText = useTransform(scrollY, [0, 400], [1, 1.3]);
   return (
     <>
       <main className="min-h-[650px]">
-        <div className="relative ">
-          <img className=" w-full h-full min-h-[850px] object-cover" src={mainImage} alt="main-img" />
+        <motion.div className="relative bg-black">
+          <motion.img style={{ opacity: opacityBiker, scale: scaleText }} className=" w-full h-full min-h-[850px] object-cover" src={mainImage} alt="main-img" />
 
           <div className=" absolute top-60 lg:absolute lg:top-20 left-5 lg:left-2 md:w-1/2 flex flex-col text-white">
             <h1 className="text-6xl lg:text-h1 uppercase font-normal tracking-tighter mb-6 lg:mb-12">
@@ -18,7 +24,7 @@ const Main = (props) => {
             <p className="text-lg font-light ml-2 mb-8 md:mb-10">Cento10 Hybrid — это гоночный велосипед с помогающим педалированию электроприводом, который устанавливает новый, очень высокий стандарт для данной категории</p>
             <button className="w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:bg-orange-500 active:bg-orange-700 hover:scale-110 transition-all duration-300 ">Подробнее</button>
           </div>
-        </div>
+        </motion.div>
 
         <CarouselMain />
 
