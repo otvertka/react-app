@@ -4,6 +4,8 @@ import { observer } from "mobx-react-lite";
 import BikesStore from "../store/BikesStore";
 import BikesList from "../components/BikesList";
 import DefaultAccordion from "../components/Layout/DefaultAccordion";
+import Pages from "../components/UI/Pages";
+// import Paginanion from "../components/UI/Paginanion";
 
 const store = new BikesStore();
 
@@ -26,6 +28,7 @@ const BikesPage = observer(() => {
           <BikesList />
         </div>
       </div>
+      <Pages />
     </section>
   );
 });
