@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function Modal({ children, open, onClose }) {
   const dialog = useRef();
@@ -16,9 +16,9 @@ export default function Modal({ children, open, onClose }) {
   };
 
   return createPortal(
-    <dialog ref={dialog}>
+    <dialog className='rounded-xl' ref={dialog}>
       <div>{children}</div>
     </dialog>,
-    document.getElementById("modal")
+    document.getElementById('modal')
   );
 }

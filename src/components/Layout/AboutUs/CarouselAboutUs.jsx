@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 // import CarouselItem from "./CarouselItem";
 
 const CarouselAboutUs = () => {
@@ -27,23 +27,23 @@ const CarouselAboutUs = () => {
 
   return (
     <section>
-      <Carousel className="mb-12 " showDots={true} responsive={responsive}>
-        <div className="p-8 bg-frameBrown bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg ">
-          <h2 className="text-white mb-4 text-2xl font-medium">Хранение</h2>
-          <p className="text-gray-300 font-light mb-8">Любишь кататься — люби и велосипед в квартире на зиму парковать или сдавай к нам на хранение и обслуживание.</p>
-          <a className="text-white">Подробнее</a>
+      <Carousel className='mb-12 mx-auto px-10' showDots={true} responsive={responsive}>
+        <div className='p-8 bg-frameBrown bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg '>
+          <h2 className='text-white mb-4 text-2xl font-medium'>Хранение</h2>
+          <p className='text-gray-300 font-light mb-8'>Любишь кататься — люби и велосипед в квартире на зиму парковать или сдавай к нам на хранение и обслуживание.</p>
+          <a className='text-white'>Подробнее</a>
         </div>
 
-        <div className="p-8 bg-frameGray bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg ">
-          <h2 className="text-white mb-4 text-2xl font-medium">Веломастерская</h2>
-          <p className="text-gray-300 font-light mb-8">Если вы купили велосипед в нашем магазине, то то можете не волноваться о настройке и проверке, так как мы это выполняем в рамках предпродажной подготовки.</p>
-          <a className="text-white">Подробнее</a>
+        <div className='p-8 bg-frameGray bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg '>
+          <h2 className='text-white mb-4 text-2xl font-medium'>Веломастерская</h2>
+          <p className='text-gray-300 font-light mb-8'>Если вы купили велосипед в нашем магазине, то то можете не волноваться о настройке и проверке, так как мы это выполняем в рамках предпродажной подготовки.</p>
+          <a className='text-white'>Подробнее</a>
         </div>
 
-        <div className="p-8 bg-frameOrange bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg ">
-          <h2 className="text-white mb-4 text-2xl font-medium">Гарантия</h2>
-          <p className="text-gray-100 font-light mb-8">Также, для удобства покупателей, наш магазин помогает (участвует) в формирование гарантийных запросов по всем нижеперечисленным брендам. При любом гарантийном случае можно обращаться напрямую к нам</p>
-          <a className="text-white">Подробнее</a>
+        <div className='p-8 bg-frameOrange bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg '>
+          <h2 className='text-white mb-4 text-2xl font-medium'>Гарантия</h2>
+          <p className='text-gray-100 font-light mb-8'>Также, для удобства покупателей, наш магазин помогает (участвует) в формирование гарантийных запросов по всем нижеперечисленным брендам. При любом гарантийном случае можно обращаться напрямую к нам</p>
+          <a className='text-white'>Подробнее</a>
         </div>
       </Carousel>
     </section>
