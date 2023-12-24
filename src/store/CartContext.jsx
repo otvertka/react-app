@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer } from 'react';
 
 const CartContext = createContext({
   items: [],
@@ -6,10 +6,13 @@ const CartContext = createContext({
   removeItem: (id) => {},
   deleteItem: (id) => {},
   clearCart: () => {},
+  favorites: [],
+  addToFavorites: (item) => {},
+  removeFromFavorites: (id) => {},
 });
 
 function cartReducer(state, action) {
-  if (action.type === "ADD_ITEM") {
+  if (action.type === 'ADD_ITEM') {
     const existingCartItemIndex = state.items.findIndex((item) => item.id === action.item.id);
 
     const updatedItems = [...state.items];
@@ -28,7 +31,7 @@ function cartReducer(state, action) {
     return { ...state, items: updatedItems };
   }
 
-  if (action.type === "REMOVE_ITEM") {
+  if (action.type === 'REMOVE_ITEM') {
     const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id);
     const existingCartItem = state.items[existingCartItemIndex];
 
@@ -47,33 +50,63 @@ function cartReducer(state, action) {
     return { ...state, items: updatedItems };
   }
 
-  if (action.type === "DELETE_ITEM") {
+  if (action.type === 'DELETE_ITEM') {
     const updatedItems = state.items.filter((item) => item.id !== action.id);
     return { ...state, items: updatedItems };
   }
-  if (action.type === "CLEAR_CART") {
+  if (action.type === 'CLEAR_CART') {
     return { items: [] }; // Clear the cart by resetting items array
   }
 
   return state;
 }
 
+function favoritesReducer(state, action) {
+  switch (action.type) {
+    case 'ADD_TO_FAVORITES':
+      // добавление в избранное
+      return { ...state, favorites: [...state.favorites, action.item] };
+
+    case 'REMOVE_FROM_FAVORITES':
+      // удаление товара из избранного
+      const updatedFavorites = state.favorites.filter((item) => item.id !== action.id);
+      return { ...state, favorites: updatedFavorites };
+
+    default:
+      return state;
+  }
+}
+
 export function CartContextProvider({ children }) {
   const [cart, dispatchCartAction] = useReducer(cartReducer, { items: [] });
+  const [favorites, dispatchFavoritesAction] = useReducer(favoritesReducer, { favorites: [] });
 
   function addItem(item) {
-    dispatchCartAction({ type: "ADD_ITEM", item });
+    dispatchCartAction({ type: 'ADD_ITEM', item });
   }
 
   function removeItem(id) {
-    dispatchCartAction({ type: "REMOVE_ITEM", id });
+    dispatchCartAction({ type: 'REMOVE_ITEM', id });
   }
   function deleteItem(id) {
-    dispatchCartAction({ type: "DELETE_ITEM", id });
+    dispatchCartAction({ type: 'DELETE_ITEM', id });
   }
   function clearCart() {
-    dispatchCartAction({ type: "CLEAR_CART" });
+    dispatchCartAction({ type: 'CLEAR_CART' });
   }
+  function addToFavorites(item) {
+    dispatchFavoritesAction({ type: 'ADD_TO_FAVORITES', item });
+  }
+  function removeFromFavorites(id) {
+    dispatchFavoritesAction({ type: 'REMOVE_FROM_FAVORITES', id });
+  }
+
+  const favoritesContext = createContext({
+    favorites: favorites.favorites,
+    addToFavorites: (item) => dispatchFavoritesAction({ type: 'ADD_TO_FAVORITES', item }),
+    removeFromFavorites: (id) => dispatchFavoritesAction({ type: 'REMOVE_FROM_FAVORITES', id }),
+  });
+  console.log(favoritesContext);
 
   const cartContext = {
     items: cart.items,
@@ -81,6 +114,9 @@ export function CartContextProvider({ children }) {
     removeItem,
     deleteItem,
     clearCart,
+    favorites: favorites.favorites,
+    addToFavorites,
+    removeFromFavorites,
   };
 
   console.log(cartContext);
