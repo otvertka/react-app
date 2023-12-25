@@ -65,7 +65,12 @@ function favoritesReducer(state, action) {
   switch (action.type) {
     case 'ADD_TO_FAVORITES':
       // добавление в избранное
-      return { ...state, favorites: [...state.favorites, action.item] };
+      if (!state.favorites.some((item) => item.id === action.item.id)) {
+        return { ...state, favorites: [...state.favorites, action.item] };
+      } else {
+        console.log('Уже в избранном');
+        return state;
+      }
 
     case 'REMOVE_FROM_FAVORITES':
       // удаление товара из избранного
