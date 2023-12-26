@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Context } from '..';
 import { observer } from 'mobx-react-lite';
@@ -14,6 +14,7 @@ const AccsessSinglePage = observer(() => {
   const params = useParams();
   const { accessories } = useContext(Context);
   const cartCtx = useContext(CartContext);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const selectedAccessory = accessories.accessesAll.find((acc) => parseInt(acc.id) === parseInt(params.id));
 
@@ -21,9 +22,17 @@ const AccsessSinglePage = observer(() => {
     cartCtx.addItem(selectedAccessory);
   }
 
-  function handleAddToFavorites() {
-    cartCtx.addToFavorites(selectedAccessory);
+  function handleToggleFavorites() {
+    if (cartCtx.favorites.some((item) => item.id === selectedAccessory.id)) {
+      cartCtx.removeFromFavorites(selectedAccessory.id);
+    } else {
+      cartCtx.addToFavorites(selectedAccessory);
+    }
+    setIsFavorite(!isFavorite);
   }
+  // function handleAddToFavorites() {
+  //   cartCtx.addToFavorites(selectedAccessory);
+  // }
 
   return (
     <div className='mx-10'>
@@ -113,8 +122,8 @@ const AccsessSinglePage = observer(() => {
                 В корзину
               </button>
 
-              <button onClick={handleAddToFavorites} className='max-w-[29px]'>
-                <svg width='29' height='26' viewBox='0 0 29 26' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <button onClick={handleToggleFavorites} className='max-w-[29px]'>
+                <svg width='29' height='26' viewBox='0 0 29 26' fill={isFavorite ? '#F57520' : 'none'} xmlns='http://www.w3.org/2000/svg'>
                   <path d='M2.67757 13.34L14.5 25.4464L26.3224 13.34C27.6367 11.9941 28.375 10.1688 28.375 8.26553C28.375 4.30217 25.2374 1.08923 21.367 1.08923C19.5084 1.08923 17.7259 1.84531 16.4117 3.19112L14.5 5.14876L12.5883 3.19112C11.274 1.84531 9.49156 1.08923 7.63294 1.08923C3.76255 1.08923 0.625 4.30217 0.625 8.26553C0.625 10.1688 1.36333 11.9941 2.67757 13.34Z' stroke='#F57520' stroke-linecap='round' stroke-linejoin='round' />
                 </svg>
               </button>

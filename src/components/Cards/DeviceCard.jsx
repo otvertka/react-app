@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import OneclickSVG from '../UI/svg-components/OneclickSVG';
@@ -7,14 +7,31 @@ import CartContext from '../../store/CartContext';
 
 const DeviceCard = ({ bikesInfo, pathTo }) => {
   const navigate = useNavigate();
-  const { addToFavorites } = useContext(CartContext);
+  const { addToFavorites, favorites, removeFromFavorites } = useContext(CartContext);
+
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    setIsFavorite(
+      favorites.some((item) => item.id === bikesInfo.id),
+      [favorites, bikesInfo.id]
+    );
+  });
 
   const handleSelectItem = () => {
     // navigate(`/accessorries/${bikesInfo.id}`);
     navigate(`/${pathTo}/${bikesInfo.id}`);
   };
 
-  const [isHovered, setIsHovered] = useState(false);
+  const handleAddToFavorites = () => {
+    if (isFavorite) {
+      removeFromFavorites(bikesInfo.id);
+    } else {
+      addToFavorites(bikesInfo);
+    }
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <div className='bg-white rounded-md border-2 border-black  flex flex-col justify-around max-w-sm' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -25,16 +42,20 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
       <div className='flex flex-col justify-center m-4'>
         <img className='' src={bikesInfo.image} alt='photo-bike' />
         <h3 className='text-lg mb-6 '>{bikesInfo.title}</h3>
-        <p className='text-gray-600 mb-8'>{bikesInfo.price} €</p>
+        <div className='flex justify-between items-center mb-3'>
+          <p className='text-gray-600 '>{bikesInfo.price} €</p>
+          <button onClick={handleAddToFavorites}>
+            <svg width='29' height='26' viewBox='0 0 29 26' fill={isFavorite ? '#F57520' : 'none'} xmlns='http://www.w3.org/2000/svg'>
+              <path d='M2.67757 13.34L14.5 25.4464L26.3224 13.34C27.6367 11.9941 28.375 10.1688 28.375 8.26553C28.375 4.30217 25.2374 1.08923 21.367 1.08923C19.5084 1.08923 17.7259 1.84531 16.4117 3.19112L14.5 5.14876L12.5883 3.19112C11.274 1.84531 9.49156 1.08923 7.63294 1.08923C3.76255 1.08923 0.625 4.30217 0.625 8.26553C0.625 10.1688 1.36333 11.9941 2.67757 13.34Z' stroke='#F57520' stroke-linecap='round' stroke-linejoin='round' />
+            </svg>
+          </button>
+        </div>
         {isHovered && (
           <>
             <button onClick={handleSelectItem} className='bg-orange-500 rounded-lg py-4 text-white'>
               <div className='flex justify-center gap-1'>
                 <OneclickSVG /> В 1 клик
               </div>
-            </button>
-            <button onClick={() => addToFavorites(bikesInfo)} className='bg-yellow text-yellow-500 font-bold text-5xl'>
-              Добавить в избранное
             </button>
           </>
         )}

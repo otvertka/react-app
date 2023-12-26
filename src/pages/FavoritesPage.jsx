@@ -12,7 +12,7 @@ const FavoritesPage = () => {
       <ul className='grid grid-cols-3 '>
         {favorites.map((item) => (
           <li className='' key={item.id}>
-            <DeviceCard bikesInfo={item} />
+            <DeviceCard bikesInfo={item} pathTo={item.type} />
           </li>
         ))}
       </ul>
