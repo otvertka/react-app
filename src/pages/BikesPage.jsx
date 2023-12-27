@@ -1,10 +1,10 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
+import React from 'react';
+import { observer } from 'mobx-react-lite';
 
-import BikesStore from "../store/BikesStore";
-import BikesList from "../components/BikesList";
-import DefaultAccordion from "../components/Layout/DefaultAccordion";
-import Pages from "../components/UI/Pages";
+import BikesStore from '../store/BikesStore';
+import BikesList from '../components/BikesList';
+import DefaultAccordion from '../components/Layout/DefaultAccordion';
+import Pages from '../components/UI/Pages';
 // import Paginanion from "../components/UI/Paginanion";
 
 const store = new BikesStore();
@@ -19,12 +19,12 @@ const BikesPage = observer(() => {
   return (
     <section>
       <h1>ВСЕ ВЕЛОСИПЕДЫ</h1>
-      <div className="flex">
-        <div className="border border-red-700">
+      <div className='flex'>
+        <div className='border border-red-700'>
           <DefaultAccordion items={{ brands: brandNames, types: typesNames, frames: frameNames }} />
         </div>
 
-        <div className="pl-2">
+        <div className='pl-2'>
           <BikesList />
         </div>
       </div>
