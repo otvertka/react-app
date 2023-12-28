@@ -34,15 +34,15 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
   };
 
   return (
-    <div className='bg-white rounded-md border-2 border-black  flex flex-col justify-around max-w-sm' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div className='relative w-full h-[506px] md:w-[290px] md:h-[373px] bg-white rounded-md border-2 border-black flex flex-col justify-around max-w-sm md:max-w-none transition-transform transform-gpu' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className='flex justify-between'>
-        <img height={46} width={88} src={bikesInfo.country} alt='flag' />
+        <img className='h-8 w-16 md:h-6 md:w-12' src={bikesInfo.country} alt='flag' />
         <span className='text-green-600 m-4'>В наличии</span>
       </div>
-      <div className='flex flex-col justify-center m-4'>
-        <img className='' src={bikesInfo.image} alt='photo-bike' />
-        <h3 className='text-lg mb-6 '>{bikesInfo.title}</h3>
-        <div className='flex justify-between items-center mb-3'>
+      <div className='flex flex-col justify-center p-4'>
+        <img className='w-full h-48 md:h-32 object-contain mb-4' src={bikesInfo.image} alt='photo-bike' />
+        <h3 className='text-lg mb-2 '>{bikesInfo.title}</h3>
+        <div className='flex justify-between items-center mb-2'>
           <p className='text-gray-600 '>{bikesInfo.price} €</p>
           <button onClick={handleAddToFavorites}>
             <svg width='29' height='26' viewBox='0 0 29 26' fill={isFavorite ? '#F57520' : 'none'} xmlns='http://www.w3.org/2000/svg'>
@@ -51,13 +51,13 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
           </button>
         </div>
         {isHovered && (
-          <>
-            <button onClick={handleSelectItem} className='bg-orange-500 rounded-lg py-4 text-white'>
+          <div className='mt-auto'>
+            <button onClick={handleSelectItem} className='bg-orange-500 rounded-lg py-2 px-4 text-white'>
               <div className='flex justify-center gap-1'>
                 <OneclickSVG /> В 1 клик
               </div>
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>
