@@ -1,9 +1,9 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
+import React from 'react';
+import { observer } from 'mobx-react-lite';
 
-import PartsStore from "../store/PartsStore";
-import PartsAccordion from "../components/Layout/PartsAccordion";
-import PartsList from "../components/UI/PartsList";
+import PartsStore from '../store/PartsStore';
+import PartsAccordion from '../components/Layout/PartsAccordion';
+import PartsList from '../components/UI/PartsList';
 
 const store = new PartsStore();
 
@@ -16,12 +16,12 @@ const PartsPage = observer(() => {
   return (
     <section>
       <h1>PARTS PAGE</h1>
-      <div className="flex">
-        <div className="border border-red-700">
+      <div className='flex'>
+        <div className='border border-red-700 w-[220px]'>
           <PartsAccordion items={{ brands: brandNames, types: typesNames }} />
         </div>
 
-        <div className="pl-2">
+        <div className='pl-2'>
           <PartsList />
         </div>
       </div>

@@ -1,7 +1,8 @@
 {
   "htmlWhitespaceSensitivity": "ignore",
   "jsxBracketSameLine": true,
-  "printWidth": 1000,
+  "printWidth": 80,
+  "tabWidth": 2,
   "endOfLine": "lf",
   "singleQuote": true,
   "jsxSingleQuote": true
