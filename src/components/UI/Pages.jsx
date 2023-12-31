@@ -1,11 +1,11 @@
 import React from 'react';
 // import { Pagination } from 'flowbite-react';
-import { observer } from 'mobx-react-lite';
-import { useContext } from 'react';
-import { Context } from '../..';
+// import { observer } from 'mobx-react-lite';
+// import { useContext } from 'react';
+// import { Context } from '../..';
 
-const Pages = ({ bikesPerPage, totalBikes, currentPage, paginate }) => {
-  const { bikes } = useContext(Context);
+const Pages = ({ bikesPerPage, totalBikes, setCurrentPage, currentPage }) => {
+  // const { bikes } = useContext(Context);
   // console.log(bikes.bikesAll.length);
   const pageNumbers = [];
 
@@ -18,17 +18,13 @@ const Pages = ({ bikesPerPage, totalBikes, currentPage, paginate }) => {
       <ul className='flex justify-center'>
         {pageNumbers.map((page) => (
           <li key={page}>
-            <a
+            <button
               className={`inline-block py-1 px-3 border border-gray-300 text-gray-700 hover:bg-orange-500 hover:text-white ${
                 currentPage === page ? 'bg-orange-500 text-white' : ''
               } `}
-              href='#'
-              onClick={(e) => {
-                e.preventDefault();
-                paginate(page);
-              }}>
+              onClick={() => setCurrentPage(page)}>
               {page}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
