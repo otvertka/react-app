@@ -13,8 +13,10 @@ const BikesPage = observer(() => {
   const { types, brands, frames, bikesAll } = store;
 
   console.log(bikesAll);
-  const [currentPage, setCurrentPage] = useState(2);
+  const [currentPage, setCurrentPage] = useState(1);
   const [bikesPerPage, setBikesPerPage] = useState(4);
+
+  const [filteredBikes, setFilteredBikes] = useState([]);
   console.log(brands);
   console.log(currentPage);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
@@ -30,7 +32,7 @@ const BikesPage = observer(() => {
   const indexOfLastBike = currentPage * bikesPerPage;
   const indexOfFirstBike = indexOfLastBike - bikesPerPage;
   const currentBikes = bikesAll.slice(indexOfFirstBike, indexOfLastBike);
-  console.log(currentBikes);
+  console.log('currentBikes:', currentBikes);
 
   // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -49,7 +51,7 @@ const BikesPage = observer(() => {
         </div>
 
         <div className='pl-2'>
-          <BikesList filteredBikes={currentBikes} />
+          <BikesList setFilteredBikes={setFilteredBikes} />
         </div>
       </div>
       <Pages

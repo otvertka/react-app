@@ -4,7 +4,7 @@ import { Context } from '..';
 
 import DeviceCard from './Cards/DeviceCard';
 
-const BikesList = observer(({ filteredBikes }) => {
+const BikesList = observer(({ setFilteredBikes }) => {
   const { bikes } = useContext(Context);
 
   const filteredBikes = bikes.bikesAll
@@ -22,6 +22,7 @@ const BikesList = observer(({ filteredBikes }) => {
         !bikes.selectedFrames.length ||
         bikes.selectedFrames.includes(bike.frame)
     );
+  setFilteredBikes(filteredBikes);
 
   console.log('filteredBikes:', filteredBikes);
   return (
