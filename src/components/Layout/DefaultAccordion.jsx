@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { Accordion } from "flowbite-react";
-import { observer } from "mobx-react-lite";
-import { Context } from "../..";
+import React, { useContext } from 'react';
+import { Accordion } from 'flowbite-react';
+import { observer } from 'mobx-react-lite';
+import { Context } from '../..';
 
 const DefaultAccordion = observer(() => {
   const { bikes } = useContext(Context);
@@ -40,8 +40,13 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.types.map((type) => (
-              <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" onChange={() => handleTypeChange(type)} />
+              <li key={type.id}>
+                <input
+                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  key={type.id}
+                  type='checkbox'
+                  onChange={() => handleTypeChange(type)}
+                />
                 {type.name}
               </li>
             ))}
@@ -53,8 +58,13 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.brands.map((brand) => (
-              <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={brand.id} type="checkbox" onChange={() => handleBrandChange(brand)} />
+              <li key={brand.id}>
+                <input
+                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  key={brand.id}
+                  type='checkbox'
+                  onChange={() => handleBrandChange(brand)}
+                />
                 {brand.name}
               </li>
             ))}
@@ -66,8 +76,13 @@ const DefaultAccordion = observer(() => {
         <Accordion.Content>
           <ul>
             {bikes.frames.map((frame) => (
-              <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={frame.id} type="checkbox" onChange={() => handleFrameChange(frame)} />
+              <li key={frame.id}>
+                <input
+                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  key={frame.id}
+                  type='checkbox'
+                  onChange={() => handleFrameChange(frame)}
+                />
                 {frame.name}
               </li>
             ))}
