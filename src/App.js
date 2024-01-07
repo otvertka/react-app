@@ -19,7 +19,9 @@ import WorkshopPage from './pages/WorkshopPage';
 import KeepingPage from './pages/KeepingPage';
 import GuaranteesPage from './pages/GuaranteesPage';
 
-import AuthenticationPage from './pages/AuthenticationPage';
+import AuthenticationPage, {
+  action as authAction,
+} from './pages/AuthenticationPage';
 import MyAccauntPage from './pages/MyAccauntPage';
 
 import SingleAccsessPage from './pages/SingleAccsessPage';
@@ -59,7 +61,7 @@ const router = createBrowserRouter([
       { path: '/keeping', element: <KeepingPage /> },
       { path: '/quarantees', element: <GuaranteesPage /> },
 
-      { path: '/auth', element: <AuthenticationPage /> },
+      { path: '/auth', element: <AuthenticationPage />, action: authAction },
       { path: '/favorites', element: <FavoritesPage /> },
       { path: '/cart', element: <Cart /> },
       { path: '/checkout', element: <CheckoutPage /> },
