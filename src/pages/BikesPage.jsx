@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { observer } from 'mobx-react-lite';
+import { Context } from '..';
 
 import BikesStore from '../store/BikesStore';
 import BikesList from '../components/BikesList';
@@ -7,16 +8,38 @@ import DefaultAccordion from '../components/Layout/DefaultAccordion';
 import Pages from '../components/UI/Pages';
 // import Paginanion from "../components/UI/Paginanion";
 
-const store = new BikesStore();
+// const store = new BikesStore();
 
 const BikesPage = observer(() => {
-  const { types, brands, frames, bikesAll } = store;
+  const { bikes } = useContext(Context);
+  const {
+    types,
+    brands,
+    frames,
+    bikesAll,
+    selectedBrands,
+    selectedFrames,
+    selectedTypes,
+  } = bikes;
 
+  console.log('selectedBrands:', selectedBrands);
   console.log(bikesAll);
   const [currentPage, setCurrentPage] = useState(1);
   const [bikesPerPage, setBikesPerPage] = useState(4);
 
-  const [filteredBikes, setFilteredBikes] = useState([]);
+  // const [filteredBikes, setFilteredBikes] = useState([]);
+
+  const filteredBikes = bikesAll
+    .filter(
+      (bike) => !selectedTypes.length || selectedTypes.includes(bike.type)
+    )
+    .filter(
+      (bike) => !selectedBrands.length || selectedBrands.includes(bike.brand)
+    )
+    .filter(
+      (bike) => !selectedFrames.length || selectedFrames.includes(bike.frame)
+    );
+
   console.log(brands);
   console.log(currentPage);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
@@ -31,7 +54,8 @@ const BikesPage = observer(() => {
 
   const indexOfLastBike = currentPage * bikesPerPage;
   const indexOfFirstBike = indexOfLastBike - bikesPerPage;
-  const currentBikes = bikesAll.slice(indexOfFirstBike, indexOfLastBike);
+
+  const currentBikes = filteredBikes.slice(indexOfFirstBike, indexOfLastBike);
   console.log('currentBikes:', currentBikes);
 
   // const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -51,7 +75,7 @@ const BikesPage = observer(() => {
         </div>
 
         <div className='pl-2'>
-          <BikesList setFilteredBikes={setFilteredBikes} />
+          <BikesList bikes={currentBikes} />
         </div>
       </div>
       <Pages
