@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Context } from '..';
 
@@ -27,8 +27,6 @@ const BikesPage = observer(() => {
   const [currentPage, setCurrentPage] = useState(1);
   const [bikesPerPage, setBikesPerPage] = useState(4);
 
-  // const [filteredBikes, setFilteredBikes] = useState([]);
-
   const filteredBikes = bikesAll
     .filter(
       (bike) => !selectedTypes.length || selectedTypes.includes(bike.type)
@@ -41,7 +39,7 @@ const BikesPage = observer(() => {
     );
 
   console.log(brands);
-  console.log(currentPage);
+  console.log('currentPage:', currentPage);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
   const brandNames = brands.map((brand, index) => ({
     name: brand.name,
@@ -58,6 +56,15 @@ const BikesPage = observer(() => {
   const currentBikes = filteredBikes.slice(indexOfFirstBike, indexOfLastBike);
   console.log('currentBikes:', currentBikes);
 
+  useEffect(() => {
+    // console.log('Setting currentPage to 1');
+    setCurrentPage(1);
+    // console.log('Current currentPage:', currentPage);
+  }, [selectedTypes, selectedBrands, selectedFrames]);
+
+  // useEffect(() => {
+  //   console.log('Current currentPage:', currentPage);
+  // }, [currentPage]);
   // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
