@@ -38,6 +38,10 @@ const BikesPage = observer(() => {
       (bike) => !selectedFrames.length || selectedFrames.includes(bike.frame)
     );
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filteredBikes]);
+
   console.log(brands);
   console.log('currentPage:', currentPage);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
@@ -55,17 +59,6 @@ const BikesPage = observer(() => {
 
   const currentBikes = filteredBikes.slice(indexOfFirstBike, indexOfLastBike);
   console.log('currentBikes:', currentBikes);
-
-  useEffect(() => {
-    // console.log('Setting currentPage to 1');
-    setCurrentPage(1);
-    // console.log('Current currentPage:', currentPage);
-  }, [selectedTypes, selectedBrands, selectedFrames]);
-
-  // useEffect(() => {
-  //   console.log('Current currentPage:', currentPage);
-  // }, [currentPage]);
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <section>

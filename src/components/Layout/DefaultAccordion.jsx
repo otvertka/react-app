@@ -32,6 +32,51 @@ const DefaultAccordion = observer(() => {
     }
   };
 
+  // const DefaultAccordion = observer(({ onFilterChange }) => {
+  //   const { bikes } = useContext(Context);
+  //   console.log(bikes);
+
+  //   const handleTypeChange = (type) => {
+  //     // console.log("Выбран тип:", type.name);
+  //     if (bikes.selectedTypes.includes(type.name)) {
+  //       bikes.removeSelectedType(type.name);
+  //     } else {
+  //       bikes.addSelectedType(type.name);
+  //     }
+  //   };
+
+  //   const handleBrandChange = (brand) => {
+  //     if (bikes.selectedBrands.includes(brand.name)) {
+  //       bikes.removeSelectedBrand(brand.name);
+  //     } else {
+  //       bikes.addSelectedBrand(brand.name);
+  //     }
+  //   };
+
+  //   const handleFrameChange = (frame) => {
+  //     if (bikes.selectedFrames.includes(frame.name)) {
+  //       bikes.removeSelectedFrame(frame.name);
+  //     } else {
+  //       bikes.addSelectedFrame(frame.name);
+  //     }
+  //   };
+
+  //   // Вызываем onFilterChange, если хотя бы один фильтр был изменен
+  //   useEffect(() => {
+  //     if (
+  //       bikes.selectedTypes.length > 0 ||
+  //       bikes.selectedBrands.length > 0 ||
+  //       bikes.selectedFrames.length > 0
+  //     ) {
+  //       onFilterChange();
+  //     }
+  //   }, [
+  //     bikes.selectedTypes,
+  //     bikes.selectedBrands,
+  //     bikes.selectedFrames,
+  //     onFilterChange,
+  //   ]);
+
   return (
     <Accordion>
       <Accordion.Panel>

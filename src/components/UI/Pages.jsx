@@ -5,7 +5,6 @@ import React from 'react';
 // import { Context } from '../..';
 
 const Pages = ({ bikesPerPage, totalBikes, setCurrentPage, currentPage }) => {
-  console.log('Pages component, currentPage:', currentPage);
   // const { bikes } = useContext(Context);
   // console.log(bikes.bikesAll.length);
   const pageNumbers = [];
