@@ -1,11 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Context } from '..';
 
 import BikesStore from '../store/BikesStore';
 import BikesList from '../components/BikesList';
 import DefaultAccordion from '../components/Layout/DefaultAccordion';
-import Pages from '../components/UI/Pages';
+import Pagination from '../components/UI/Pagination';
 // import Paginanion from "../components/UI/Paginanion";
 
 // const store = new BikesStore();
@@ -21,6 +21,8 @@ const BikesPage = observer(() => {
     selectedFrames,
     selectedTypes,
   } = bikes;
+
+  console.log('bikes:', bikes);
 
   console.log('selectedBrands:', selectedBrands);
   console.log(bikesAll);
@@ -38,12 +40,9 @@ const BikesPage = observer(() => {
       (bike) => !selectedFrames.length || selectedFrames.includes(bike.frame)
     );
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filteredBikes]);
+  console.log('currentPage:', currentPage);
 
   console.log(brands);
-  console.log('currentPage:', currentPage);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
   const brandNames = brands.map((brand, index) => ({
     name: brand.name,
@@ -71,6 +70,7 @@ const BikesPage = observer(() => {
               types: typesNames,
               frames: frameNames,
             }}
+            setCurrentPage={setCurrentPage}
           />
         </div>
 
@@ -78,9 +78,9 @@ const BikesPage = observer(() => {
           <BikesList bikes={currentBikes} />
         </div>
       </div>
-      <Pages
-        bikesPerPage={bikesPerPage}
-        totalBikes={filteredBikes.length}
+      <Pagination
+        itemsPerPage={bikesPerPage}
+        totalItems={filteredBikes.length}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />

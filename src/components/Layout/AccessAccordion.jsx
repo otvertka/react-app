@@ -1,29 +1,31 @@
-import React, { useContext } from "react";
-import { Accordion } from "flowbite-react";
-import { observer } from "mobx-react-lite";
-import { Context } from "../..";
+import React, { useContext } from 'react';
+import { Accordion } from 'flowbite-react';
+import { observer } from 'mobx-react-lite';
+import { Context } from '../..';
 
-const AccessAccordion = observer(() => {
+const AccessAccordion = observer(({ setCurrentPage }) => {
   const { accessories } = useContext(Context);
   console.log(accessories);
 
   const handleTypeChange = (type) => {
-    console.log("Выбран тип:", type.name);
+    console.log('Выбран тип:', type.name);
     if (accessories.selectedTypes.includes(type.name)) {
       accessories.removeSelectedType(type.name);
     } else {
       accessories.addSelectedType(type.name);
     }
+    setCurrentPage(1);
   };
 
   const handleBrandChange = (brand) => {
-    console.log("Выбран brand:", brand.name);
+    console.log('Выбран brand:', brand.name);
 
     if (accessories.selectedBrands.includes(brand.name)) {
       accessories.removeSelectedBrand(brand.name);
     } else {
       accessories.addSelectedBrand(brand.name);
     }
+    setCurrentPage(1);
   };
 
   return (
@@ -35,7 +37,12 @@ const AccessAccordion = observer(() => {
           <ul>
             {accessories.types.map((type) => (
               <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={type.id} type="checkbox" onChange={() => handleTypeChange(type)} />
+                <input
+                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  key={type.id}
+                  type='checkbox'
+                  onChange={() => handleTypeChange(type)}
+                />
                 {type.name}
               </li>
             ))}
@@ -48,7 +55,12 @@ const AccessAccordion = observer(() => {
           <ul>
             {accessories.brands.map((brand) => (
               <li>
-                <input className="appearance-none checked:bg-orange-500 hover:ring-black" key={brand.id} type="checkbox" onChange={() => handleBrandChange(brand)} />
+                <input
+                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  key={brand.id}
+                  type='checkbox'
+                  onChange={() => handleBrandChange(brand)}
+                />
                 {brand.name}
               </li>
             ))}

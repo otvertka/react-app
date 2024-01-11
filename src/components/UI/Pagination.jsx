@@ -1,15 +1,14 @@
 import React from 'react';
-// import { Pagination } from 'flowbite-react';
-// import { observer } from 'mobx-react-lite';
-// import { useContext } from 'react';
-// import { Context } from '../..';
 
-const Pages = ({ bikesPerPage, totalBikes, setCurrentPage, currentPage }) => {
-  // const { bikes } = useContext(Context);
-  // console.log(bikes.bikesAll.length);
+const Pagination = ({
+  itemsPerPage,
+  totalItems,
+  setCurrentPage,
+  currentPage,
+}) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalBikes / bikesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -32,4 +31,4 @@ const Pages = ({ bikesPerPage, totalBikes, setCurrentPage, currentPage }) => {
   );
 };
 
-export default Pages;
+export default Pagination;
