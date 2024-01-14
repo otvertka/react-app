@@ -31,6 +31,7 @@ import SingleEquipPage from './pages/SingleEquipPage';
 import Cart from './pages/Cart';
 import CheckoutPage from './pages/CheckoutPage';
 import FavoritesPage from './pages/FavoritesPage';
+import SignIn from './components/auth/SignIn';
 // import BikesStore from "./store/BikesStore";
 
 // import Admin from "./pages/Admin";
@@ -61,7 +62,7 @@ const router = createBrowserRouter([
       { path: '/keeping', element: <KeepingPage /> },
       { path: '/quarantees', element: <GuaranteesPage /> },
 
-      { path: '/auth', element: <AuthenticationPage />, action: authAction },
+      { path: '/auth', element: <AuthenticationPage /> },
       { path: '/favorites', element: <FavoritesPage /> },
       { path: '/cart', element: <Cart /> },
       { path: '/checkout', element: <CheckoutPage /> },
