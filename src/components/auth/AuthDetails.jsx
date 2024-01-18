@@ -1,19 +1,22 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
-  //   const navigate = useNavigate();
+
+  const [isAuthenticated, setIsAutheticated] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setAuthUser(user);
-        // navigate('/myaccaunt');
+        // setIsAutheticated(true);
       } else {
         setAuthUser(null);
+        // setIsAutheticated(false);
       }
     });
 
@@ -22,10 +25,17 @@ const AuthDetails = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Добавляем проверку на успешную авторизацию перед переходом
+    if (isAuthenticated) {
+      navigate('/myaccount');
+    }
+  }, [isAuthenticated, navigate]);
+
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
-        console.log('sign out successful');
+        console.log('Вышел successful');
       })
       .catch((error) => console.log(error));
   };
@@ -33,7 +43,7 @@ const AuthDetails = () => {
     <div>
       {authUser ? (
         <>
-          <p>{`Signed In assoul ${authUser.email}`}</p>
+          <p>{`Signed In as ${authUser.email}`}</p>
           <button onClick={userSignOut}> Sign Out</button>
         </>
       ) : (
