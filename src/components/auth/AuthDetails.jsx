@@ -1,13 +1,13 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
-const AuthDetails = () => {
+const AuthDetails = ({ userSignOut }) => {
   const [authUser, setAuthUser] = useState(null);
 
-  const [isAuthenticated, setIsAutheticated] = useState(false);
-  const navigate = useNavigate();
+  // const [isAuthenticated, setIsAutheticated] = useState(false);
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -25,26 +25,27 @@ const AuthDetails = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Добавляем проверку на успешную авторизацию перед переходом
-    if (isAuthenticated) {
-      navigate('/myaccount');
-    }
-  }, [isAuthenticated, navigate]);
+  // useEffect(() => {
+  //   // Добавляем проверку на успешную авторизацию перед переходом
+  //   if (isAuthenticated) {
+  //     navigate('/myaccount');
+  //     console.log(isAuthenticated);
+  //   }
+  // }, [isAuthenticated, navigate]);
 
-  const userSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        console.log('Вышел successful');
-      })
-      .catch((error) => console.log(error));
-  };
+  // const userSignOut = () => {
+  //   signOut(auth)
+  //     .then(() => {
+  //       console.log('Вышел successful');
+  //     })
+  //     .catch((error) => console.log(error));
+  // };
   return (
     <div>
       {authUser ? (
         <>
           <p>{`Signed In as ${authUser.email}`}</p>
-          <button onClick={userSignOut}> Sign Out</button>
+          {/* <button onClick={userSignOut}> Sign Out</button> */}
         </>
       ) : (
         <p>Signed Up</p>
