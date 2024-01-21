@@ -1,14 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import AuthDetails from '../components/auth/AuthDetails';
 import { signOut } from 'firebase/auth'; // Импортируйте функцию signOut из firebase/auth
 import { auth } from '../firebase';
 
 const MyAccauntPage = () => {
+  const navigation = useNavigate();
+
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
         console.log('Вышел successful');
+        navigation('/auth');
       })
       .catch((error) => console.log(error));
   };
