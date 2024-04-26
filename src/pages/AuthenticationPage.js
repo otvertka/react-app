@@ -1,6 +1,8 @@
 // import { json, redirect } from 'react-router-dom';
 // import AuthForm from '../components/AuthForm';
 
+<p></p>;
+
 import React from 'react';
 import SignIn from '../components/auth/SignIn';
 import SignUp from '../components/auth/SignUp';

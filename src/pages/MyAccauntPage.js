@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import AuthDetails from '../components/auth/AuthDetails';
 import { signOut } from 'firebase/auth'; // Импортируйте функцию signOut из firebase/auth
 import { auth } from '../firebase';
-
+p;
 const MyAccauntPage = () => {
   const navigation = useNavigate();
 
