@@ -11,7 +11,7 @@ export default function Cart() {
 
   return (
     <section className=''>
-      <h1 className='uppercase text-6xl font-semibold mt-32'>Корзина</h1>
+      <h1 className='uppercase text-6xl font-semibold mt-32'>Dein Warenkorb</h1>
       <section className='mt-20 border p-4'>
         <ul className='flex flex-col'>
           {cartCtx.items.map((item) => (
@@ -21,9 +21,9 @@ export default function Cart() {
         <div className='flex justify-between'>
           {cartCtx.items.length > 0 && (
             <>
-              <p>Итого: {cartTotal}</p>
+              <p>Gesamtbetrag: {cartTotal} €</p>
               <NavLink to='/checkout' className='w-44 h-12 ml-2 rounded-lg bg-orange-600 hover:bg-orange-500 active:bg-orange-700 hover:scale-110 transition-all duration-300 text-white flex items-center justify-center'>
-                Перейти к заказу
+                Zur Kasse
               </NavLink>
             </>
           )}

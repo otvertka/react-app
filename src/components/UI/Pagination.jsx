@@ -13,13 +13,13 @@ const Pagination = ({
   }
 
   return (
-    <div className='mt-20 mb-20'>
-      <ul className='flex justify-center'>
+    <div className='mt-20 pb-4'>
+      <ul className='flex justify-center gap-2'>
         {pageNumbers.map((page) => (
           <li key={page}>
             <button
-              className={`inline-block py-1 px-3 border border-gray-300 text-gray-700 hover:bg-orange-500 hover:text-white ${
-                currentPage === page ? 'bg-orange-500 text-white' : ''
+              className={`inline-block w-9 h-9 py-1 px-3 rounded bg-white border border-gray-300 text-gray-700 hover:bg-orange-500 hover:text-white ${
+                currentPage === page ? 'bg-orange-500 text-gray' : ''
               } `}
               onClick={() => setCurrentPage(page)}>
               {page}

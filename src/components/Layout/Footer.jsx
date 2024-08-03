@@ -8,17 +8,17 @@ import { NavLink } from "react-router-dom";
 
 const Footer = (props) => {
   return (
-    <footer className="bg-black py-24">
+    <footer className="bg-black pt-48">
       <div className="flex flex-col lg:flex-row text-white mx-10 lg:mx-5">
         <div className="lg:w-2/5">
           <a href="#">
             <MainSVGLogo />
           </a>
-          <p className="text-gray-500 lg:w-2/3 mt-10">Компания World-bikes специализируется на продаже товаров для велосипедного спорта.</p>
+          <p className="text-gray-500 lg:w-2/3 mt-10">Das Unternehmen Dein Fahhrad ist auf den Verkauf von Fahrradprodukten spezialisiert.</p>
         </div>
 
         <div className="hidden lg:block lg:w-1/5">
-          <h2 className="mb-9 text-2xl font-semibold">Каталог</h2>
+          <h2 className="mb-9 text-2xl font-semibold">Katalog</h2>
           <ul className="text-lg space-y-4">
             <li>
               <NavLink to="/tradein" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
@@ -27,75 +27,75 @@ const Footer = (props) => {
             </li>
             <li>
               <NavLink to="/bikes" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Велосипеды
+              Fahrräder
               </NavLink>
             </li>
             <li>
               <NavLink to="/equipments" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Экипировка
+              Bekleidung
               </NavLink>
             </li>
             <li>
               <NavLink to="/parts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Запчасти
+              Fahrradteile
               </NavLink>
             </li>
             <li>
               <NavLink to="/bicyclestands" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Велостанки
+              Fahrradständer
               </NavLink>
             </li>
             <li>
               <NavLink to="/accessorries" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Аксессуары
+              Zubehör
               </NavLink>
             </li>
           </ul>
         </div>
 
         <div className="hidden lg:block lg:w-1/5">
-          <h2 className="mb-9 text-2xl font-semibold">Для клиента</h2>
+          <h2 className="mb-9 text-2xl font-semibold">Für den Kunden</h2>
           <ul className="text-lg space-y-4">
             <li>
               <NavLink to="/about" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                О нас
+              Über uns
               </NavLink>
             </li>
             <li>
               <NavLink to="/delivery" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Доставка и оплата
+              Lieferung und Zahlung
               </NavLink>
             </li>
             <li>
               <NavLink to="/blog" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Блог
+              Blog
               </NavLink>
             </li>
             <li>
               <NavLink to="/contacts" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Контакты
+              Kontakte
               </NavLink>
             </li>
             <li>
               <NavLink to="/workshop" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Веломастерская
+              Fahrradwerkstatt
               </NavLink>
             </li>
             <li>
               <NavLink to="/keeping" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Хранение
+              Lagerung
               </NavLink>
             </li>
             <li>
               <NavLink to="/quarantees" className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" style={({ isActive }) => ({ color: isActive ? "#F57520" : "" })}>
-                Гарантии
+              Garantien
               </NavLink>
             </li>
           </ul>
         </div>
 
         <div className="lg:w-1/5">
-          <h2 className="invisible lg:visible mb-9 text-2xl font-semibold">Контакты</h2>
+          <h2 className="invisible lg:visible mb-9 text-2xl font-semibold">Kontakte</h2>
           <ul className="text-lg space-y-4 ">
             <li>
               <a className="flex items-center gap-4" href="#">
@@ -121,7 +121,7 @@ const Footer = (props) => {
               <a className="flex items-center gap-4" href="#">
                 <EmailSVG />
                 <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="mailto:order@world-bike.com">
-                  order@world-bike.com
+                  order@dein-fahrrad.com
                 </a>
               </a>
             </li>

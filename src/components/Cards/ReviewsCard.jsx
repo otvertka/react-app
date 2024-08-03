@@ -8,11 +8,11 @@ const ReviewsCard = (props) => {
       <div className=" ">
         <img className="rounded-t-xl" src={rew_1_Image} alt="review-1" />
         <div className="flex flex-col justify-around bg-black rounded-b-xl text-white py-6">
-          <span className=" pl-6 mb-2">25.01.2023</span>
-          <span className="pl-6 mb-4 text-orange-500">#обзор</span>
-          <p className="pl-6 mb-5">BMC Kaius 01 идеальный гоночный гравийный велосипед</p>
+          <span className=" pl-6 mb-2">15.06.2024</span>
+          <span className="pl-6 mb-4 text-orange-500">#Überprüfung</span>
+          <p className="pl-6 mb-5">BMC Kaius 01 das perfekte Schotterrennrad</p>
           <a className="pl-6 inline-block" href="#">
-            Подробнее
+            lies mehr
           </a>
         </div>
       </div>

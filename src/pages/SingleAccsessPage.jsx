@@ -7,7 +7,7 @@ import { observer } from 'mobx-react-lite';
 import delivImg from '../../src/Assets/images/devicePage/deliv.png';
 // import socialImg from '../../src/Assets/images/social_demo.png';
 import SocialMedia from '../components/UI/svg-components/SocialMedia';
-import prefImg from '../../src/Assets/images/prefHeart.png';
+// import prefImg from '../../src/Assets/images/prefHeart.png';
 import CartContext from '../store/CartContext';
 
 const AccsessSinglePage = observer(() => {
@@ -32,16 +32,13 @@ const AccsessSinglePage = observer(() => {
     }
     setIsFavorite(!isFavorite);
   }
-  // function handleAddToFavorites() {
-  //   cartCtx.addToFavorites(selectedAccessory);
-  // }
 
   return (
     <div className='mx-10'>
       <p>{params.id}</p>
       <section>
         <div className='grid grid-cols-1 grid-rows-1 lg:grid-cols-1 lg:grid-rows-1 pt-10'>
-          {/*див1 картинка */}
+      
           <div className='items-center row-end-2 lg:col-end-1 lg:row-span-2 lg:mr-20'>
             <img
               className='w-[790px]'
@@ -50,8 +47,6 @@ const AccsessSinglePage = observer(() => {
             />
           </div>
 
-          {/*див2 текст */}
-
           <div className='row-end-1 lg:row-end-1 lg:col-end-2'>
             <h2 className='text-3xl md:text-4xl font-medium mb-3'>
               {selectedAccessory.title}
@@ -59,13 +54,13 @@ const AccsessSinglePage = observer(() => {
             <h4 className='mb-3 text-gray-400'>{selectedAccessory.brand}</h4>
             <div className='flex justify-between mb-3'>
               <h4 className='text-gray-400'>
-                Артикул : {selectedAccessory.id}
+              Artikelnummer: {selectedAccessory.id}
               </h4>
               <SocialMedia />
             </div>
-            <h5 className='text-green-500 md:mb-10'>В наличии</h5>
+            <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>
-          {/* див 3 */}
+ 
           <div className='lg:col-end-2 lg:row-end-2'>
             <div className='flex mb-6 md:mb-10'>
               <h2 className='text-4xl font-medium mr-4'>
@@ -76,13 +71,13 @@ const AccsessSinglePage = observer(() => {
               </span>
             </div>
             <p className='mb-6 md:mb-8'>
-              Профессиональный гоночный хардтейл для кросс-кантри уровня
-              Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных
-              хардтейлов для кросс-кантри.
+            Professionelles Renn-Hardtail für Cross-Country-Niveau
+              Meisterschafts- und Weltcup-Niveau. Einer der leichtesten Rahmen unter den Renn-Hardtails
+              Cross-Country-Hardtails.
             </p>
 
             <div>
-              <h2 className='text-lg font-medium mb-6'>Размер:</h2>
+              <h2 className='text-lg font-medium mb-6'>Größe:</h2>
               <ul className='flex gap-4 mb-6'>
                 <li>
                   <a
@@ -122,7 +117,7 @@ const AccsessSinglePage = observer(() => {
               </ul>
             </div>
             <div className='mb-8'>
-              <h2 className='text-lg font-medium mb-6'>Цвет:</h2>
+              <h2 className='text-lg font-medium mb-6'>Farbe:</h2>
               <ul className='flex gap-4'>
                 <li>
                   <a
@@ -161,7 +156,7 @@ const AccsessSinglePage = observer(() => {
               <button
                 onClick={handleAddAccessToCart}
                 className=' bg-orange-500 rounded-lg w-[320px] h-[52px] text-white'>
-                В корзину
+                In den Warenkorb
               </button>
 
               <button onClick={handleToggleFavorites} className='max-w-[29px]'>
@@ -185,52 +180,52 @@ const AccsessSinglePage = observer(() => {
       </section>
       <section>
         <h1 className='uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10'>
-          Описание
+        Beschreibung
         </h1>
         <p className='mb-8 md:mb-10'>
-          Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата
-          и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов
-          для кросс-кантри. Scott Scale 700 RC — это рама из композитного
-          волокна HMX, гоночная трансмиссия Sram XX1/X01 1×11, дисковые тормоза
-          Shimano XTR M9000 и гоночные колеса Syncros XR RC. Байк Нино Шуртера
-          для шорт-трек кросс-кантри.
+        Professionelles Renn-Hardtail für Cross-Country auf Meisterschaftsebene
+          und Weltcup-Niveau. Es ist einer der leichtesten Rahmen unter den Renn-Hardtails
+          für Cross Country. Scott Scale 700 RC ist ein Rahmen aus Verbundfaser
+          HMX-Faser, Sram XX1/X01 1×11-Rennantrieb, Shimano XTR M9000 Scheibenbremsen.
+          Shimano XTR M9000 und Syncros XR RC Rennlaufräder. Das Fahrrad von Nino Schurter
+          Für Kurzstrecken-Cross Country.
         </p>
       </section>
       <section>
         <h1 className='uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10'>
-          Характеристика
+        Details
         </h1>
         <ul>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Цвет</h3>
-            <span className='text-gray-500'>Желтый</span>
+            <h3 className='font-semibold'>Farbe</h3>
+            <span className='text-gray-500'>Gelb</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Год</h3>
+            <h3 className='font-semibold'>Jahr</h3>
             <span className='text-gray-500'>2016</span>
           </li>
 
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Страна</h3>
-            <span className='text-gray-500'>Швейцария</span>
+            <h3 className='font-semibold'>Land</h3>
+            <span className='text-gray-500'>Schweiz</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Производитель</h3>
+            <h3 className='font-semibold'>Hersteller</h3>
             <span className='text-gray-500'>Scott</span>
           </li>
 
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Гарантия</h3>
-            <span className='text-gray-500'>1 год</span>
+            <h3 className='font-semibold'>Bürgschaft</h3>
+            <span className='text-gray-500'>1 Jahr</span>
           </li>
         </ul>
       </section>
       <section>
-        <h1 className='my-10 text-3xl uppercase font-semibold'>Доставка</h1>
+        <h1 className='my-10 text-3xl uppercase font-semibold'>Lieferung</h1>
         <img src={delivImg} alt='delivery' />
 
         <h3 className='mt-6 mb-10 font-semibold'>
-          Для удобства покупателей действует несколько способов доставки товаров
+        Für die Bequemlichkeit der Kunden gibt es mehrere Möglichkeiten der Lieferung von Waren.
         </h3>
         <ul>
           <li>Lieferung in Düsseldorf</li>
@@ -239,19 +234,19 @@ const AccsessSinglePage = observer(() => {
         </ul>
 
         <h3 className='bg-gray-100 rounded p-3 inline-block'>
-          Любой из способов доступен при оформление заказа через сайт
-          или у операторов
+        Jede dieser Methoden ist möglich, wenn eine Bestellung über die Website
+          oder über die Betreiber
         </h3>
         <p>
-          Велосипеды и вело-станки доставляются в собранном и настроенном виде.
+        Fahrräder und Fahrradständer werden montiert und aufgestellt geliefert.
         </p>
         <p>
-          На любые вопросы по правилам и стоимости доставки ответит оператор:{' '}
+        Fragen zu den Versandregeln und -kosten werden von einem Mitarbeiter beantwortet:{' '}
           <span> +49 055-75-86</span>
         </p>
 
         <h3 className='mt-6 mb-10 font-semibold'>
-          Для любого заказа возможен самовывоз из магазина
+        Selbstabholung im Geschäft ist für jede Bestellung möglich
         </h3>
       </section>
     </div>

@@ -29,7 +29,7 @@ const Reviews = (props) => {
 
   return (
     <section className="my-40 flex flex-col">
-      <h2 className="py-11 uppercase text-[40px]">Последние обзоры</h2>
+      <h2 className="py-11 uppercase text-[40px]">Neueste Bewertungen</h2>
       {/* <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 container mx-auto mt-10 mb-12">
         <ReviewsCard />
         <ReviewsCard />
@@ -45,7 +45,7 @@ const Reviews = (props) => {
       </Carousel>
 
       <div className="flex justify-center mt-8">
-        <button className=" text-gray-500 hover:text-black uppercase">Показать все</button>
+        <button className=" text-gray-500 hover:text-black uppercase">zeige alles</button>
       </div>
     </section>
   );

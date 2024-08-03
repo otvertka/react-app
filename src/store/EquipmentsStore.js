@@ -3,11 +3,11 @@ import { makeAutoObservable } from 'mobx';
 export default class EquipmentsStore {
   constructor() {
     this._types = [
-      { id: 1, name: 'Велошлемы' },
-      { id: 2, name: 'Велокуртки' },
-      { id: 3, name: 'Веломайки' },
-      { id: 4, name: 'Очки' },
-      { id: 5, name: 'Перчатки' },
+      { id: 1, name: 'Fahrradhelme' },
+      { id: 2, name: 'Fahrradjacken' },
+      { id: 3, name: 'Radtrikots' },
+      { id: 4, name: 'Fahrradbrillen' },
+      { id: 5, name: 'Handschuhe' },
     ];
     this._brands = [
       { id: 1, name: 'Assos' },
@@ -17,7 +17,7 @@ export default class EquipmentsStore {
     this._equipmentsAll = [
       {
         id: 301,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Assos',
         title: 'ASSOS MET TRENTA MIPS JINGO RS HELMET CE',
         price: 31,
@@ -26,7 +26,7 @@ export default class EquipmentsStore {
       },
       {
         id: 302,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Kask',
         title: 'KASK PROTONE',
         price: 32,
@@ -35,7 +35,7 @@ export default class EquipmentsStore {
       },
       {
         id: 303,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Kask',
         title: 'KASK MOJITO³ CAMO',
         price: 33,
@@ -44,7 +44,7 @@ export default class EquipmentsStore {
       },
       {
         id: 304,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Rudy Project',
         title: 'RUDY PROJECT CHRONO WINGSPAN YELLOW FLUO BLACK SHINY',
         price: 34,
@@ -54,7 +54,7 @@ export default class EquipmentsStore {
 
       {
         id: 305,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Rudy Project',
         title: 'RUDY PROJECT SYTON OPEN WHITE BLUE RED',
         price: 20,
@@ -63,7 +63,7 @@ export default class EquipmentsStore {
       },
       {
         id: 306,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Rudy Project',
         title: 'RUDY PROJECT WING57 RED FLUO WHITE SHINY',
         price: 23,
@@ -72,7 +72,7 @@ export default class EquipmentsStore {
       },
       {
         id: 307,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Rudy Project',
         title: 'RUDY PROJECT RACEMASTER WHITE STEALTH',
         price: 23,
@@ -81,7 +81,7 @@ export default class EquipmentsStore {
       },
       {
         id: 308,
-        type: 'Велошлемы',
+        type: 'Fahrradhelme',
         brand: 'Rudy Project',
         title: 'RUDY PROJECT RACEMASTER GOLD VELVET',
         price: 23,
@@ -91,7 +91,7 @@ export default class EquipmentsStore {
 
       {
         id: 309,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS MILLE GT SPRING FALL JACKET CALEUM BLUE',
         price: 23,
@@ -100,7 +100,7 @@ export default class EquipmentsStore {
       },
       {
         id: 310,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS MILLE GT WINTER JACKET VISIBILITY GREEN',
         price: 23,
@@ -109,7 +109,7 @@ export default class EquipmentsStore {
       },
       {
         id: 311,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS RS.STURMPRINZ EVO NATIONALRED',
         price: 23,
@@ -118,7 +118,7 @@ export default class EquipmentsStore {
       },
       {
         id: 312,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS UMA GT WIND JACKET C2 OPTIC YELLOW',
         price: 23,
@@ -127,7 +127,7 @@ export default class EquipmentsStore {
       },
       {
         id: 313,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS EQUIPE R HABU WINTER JACKET S9',
         price: 23,
@@ -136,7 +136,7 @@ export default class EquipmentsStore {
       },
       {
         id: 314,
-        type: 'Велокуртки',
+        type: 'Fahrradjacken',
         brand: 'Assos',
         title: 'ASSOS MILLE GT WIND JACKET LOLLYRED',
         price: 23,

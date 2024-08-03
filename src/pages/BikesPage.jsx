@@ -6,9 +6,6 @@ import BikesStore from '../store/BikesStore';
 import BikesList from '../components/BikesList';
 import DefaultAccordion from '../components/Layout/DefaultAccordion';
 import Pagination from '../components/UI/Pagination';
-// import Paginanion from "../components/UI/Paginanion";
-
-// const store = new BikesStore();
 
 const BikesPage = observer(() => {
   const { bikes } = useContext(Context);
@@ -22,12 +19,8 @@ const BikesPage = observer(() => {
     selectedTypes,
   } = bikes;
 
-  console.log('bikes:', bikes);
-
-  console.log('selectedBrands:', selectedBrands);
-  console.log(bikesAll);
   const [currentPage, setCurrentPage] = useState(1);
-  const [bikesPerPage, setBikesPerPage] = useState(4);
+  const [bikesPerPage, setBikesPerPage] = useState(6);
 
   const filteredBikes = bikesAll
     .filter(
@@ -40,30 +33,25 @@ const BikesPage = observer(() => {
       (bike) => !selectedFrames.length || selectedFrames.includes(bike.frame)
     );
 
-  console.log('currentPage:', currentPage);
-
-  console.log(brands);
   const typesNames = types.map((type, index) => ({ name: type.name, index }));
   const brandNames = brands.map((brand, index) => ({
     name: brand.name,
     index,
   }));
   const frameNames = frames.map((frame, index) => ({
-    name: frame.name,
-    index,
+    name: frame.name, index,
   }));
 
   const indexOfLastBike = currentPage * bikesPerPage;
   const indexOfFirstBike = indexOfLastBike - bikesPerPage;
 
   const currentBikes = filteredBikes.slice(indexOfFirstBike, indexOfLastBike);
-  console.log('currentBikes:', currentBikes);
 
   return (
-    <section>
-      <h1>ВСЕ ВЕЛОСИПЕДЫ</h1>
-      <div className='flex'>
-        <div className='border border-red-700 w-64'>
+    <section className='bg-gray-200 min-h-screen flex flex-col items-center'>
+      <h1 className='text-center my-4'>ALLE FAHRRÄDER</h1>
+      <div className='flex flex-col md:flex-row w-full max-w-6xl'>
+        <div className='bg-gray-50 w-full md:w-1/4'>
           <DefaultAccordion
             items={{
               brands: brandNames,
@@ -74,7 +62,7 @@ const BikesPage = observer(() => {
           />
         </div>
 
-        <div className='pl-2'>
+        <div className='ml-2 w-full md:w-3/4'>
           <BikesList bikes={currentBikes} />
         </div>
       </div>

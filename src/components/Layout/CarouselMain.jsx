@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -27,25 +28,25 @@ const CarouselMain = () => {
   return (
     <section>
       <Carousel showDots={true} responsive={responsive}>
-        <a className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
-          <h2 className="text-white mb-4 text-lg font-light">Экстремальное вождение на горном велосипеде</h2>
-          <a className="text-orange-500">Подробнее</a>
-        </a>
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+          <h2 className="text-white mb-4 text-lg font-light">Extremes Mountainbike-Fahren</h2>
+          <a className="text-orange-500">weitere...</a>
+        </NavLink>
 
-        <a className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
-          <h2 className="text-white mb-4 text-lg font-light">Велосипеды для профессионалов</h2>
-          <a className="text-orange-500">Подробнее</a>
-        </a>
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+          <h2 className="text-white mb-4 text-lg font-light">Fahrräder für Profis</h2>
+          <a className="text-orange-500">weitere...</a>
+        </NavLink>
 
-        <a className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full " href="#">
-          <h2 className="text-white mb-4 text-lg font-light">Долгая поездка на шоссейном велосипеде</h2>
-          <a className="text-orange-500">Подробнее</a>
-        </a>
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full " href="#">
+          <h2 className="text-white mb-4 text-lg font-light">Lange Fahrt mit dem Rennrad</h2>
+          <a className="text-orange-500">weitere...</a>
+        </NavLink>
 
-        <a className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
-          <h2 className="text-white mb-4 text-lg font-light">Велосипеды для профессионалов</h2>
-          <a className="text-orange-500">Подробнее</a>
-        </a>
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+          <h2 className="text-white mb-4 text-lg font-light">Fahrräder für Profis</h2>
+          <a className="text-orange-500">weitere...</a>
+        </NavLink>
       </Carousel>
     </section>
   );

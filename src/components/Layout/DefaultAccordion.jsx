@@ -1,14 +1,20 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useRef, useState, useEffect} from 'react';
 import { Accordion } from 'flowbite-react';
 import { observer } from 'mobx-react-lite';
 import { Context } from '../..';
 
 const DefaultAccordion = observer(({ setCurrentPage }) => {
   const { bikes } = useContext(Context);
-  console.log(bikes);
+  const productCategoriesRef = useRef(null);
+  const [minWidth, setMinWidth] = useState(0);
+
+  useEffect(() => {
+    if (productCategoriesRef.current) {
+      setMinWidth(productCategoriesRef.current.offsetWidth);
+    }
+  }, [productCategoriesRef.current]);
 
   const handleTypeChange = (type) => {
-    // console.log("Выбран тип:", type.name);
     if (bikes.selectedTypes.includes(type.name)) {
       bikes.removeSelectedType(type.name);
     } else {
@@ -38,55 +44,55 @@ const DefaultAccordion = observer(({ setCurrentPage }) => {
   return (
     <Accordion>
       <Accordion.Panel>
-        <Accordion.Title>Категории товара</Accordion.Title>
+        <Accordion.Title ref={productCategoriesRef}>Produkt Kategorien</Accordion.Title>
 
-        <Accordion.Content>
+        <Accordion.Content style={{ minWidth }}>
           <ul>
             {bikes.types.map((type) => (
               <li key={type.id}>
                 <input
-                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  className='appearance-none checked:bg-orange-500 '
                   key={type.id}
                   type='checkbox'
                   onChange={() => handleTypeChange(type)}
                 />
-                {type.name}
+                <span className='pl-2'>{type.name}</span>
               </li>
             ))}
           </ul>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title>Бренд</Accordion.Title>
-        <Accordion.Content>
+        <Accordion.Title>Marke</Accordion.Title>
+        <Accordion.Content style={{ minWidth }}>
           <ul>
             {bikes.brands.map((brand) => (
               <li key={brand.id}>
                 <input
-                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  className='appearance-none checked:bg-orange-500 '
                   key={brand.id}
                   type='checkbox'
                   onChange={() => handleBrandChange(brand)}
                 />
-                {brand.name}
+                <span className='pl-2'>{brand.name}</span> 
               </li>
             ))}
           </ul>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title>Материал рамы</Accordion.Title>
-        <Accordion.Content>
+        <Accordion.Title>Fahrradrahmenmaterial</Accordion.Title>
+        <Accordion.Content style={{ minWidth }}>
           <ul>
             {bikes.frames.map((frame) => (
               <li key={frame.id}>
                 <input
-                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  className='appearance-none checked:bg-orange-500 '
                   key={frame.id}
                   type='checkbox'
                   onChange={() => handleFrameChange(frame)}
                 />
-                {frame.name}
+                <span className='pl-2'>{frame.name}</span> 
               </li>
             ))}
           </ul>

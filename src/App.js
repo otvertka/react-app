@@ -20,7 +20,7 @@ import KeepingPage from './pages/KeepingPage';
 import GuaranteesPage from './pages/GuaranteesPage';
 
 import AuthenticationPage, {
-  action as authAction,
+  // action as authAction,
 } from './pages/AuthenticationPage';
 import MyAccauntPage from './pages/MyAccauntPage';
 

@@ -14,10 +14,10 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
 
   useEffect(() => {
     setIsFavorite(
-      favorites.some((item) => item.id === bikesInfo.id),
-      [favorites, bikesInfo.id]
+      favorites.some((item) => item.id === bikesInfo.id)
     );
-  });
+  }, [favorites, bikesInfo.id]);
+  
 
   const handleSelectItem = () => {
     // navigate(`/accessorries/${bikesInfo.id}`);
@@ -35,13 +35,15 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
 
   return (
     <div className='relative w-full h-[506px] md:w-[290px] md:h-[373px] bg-white rounded-md border-2 flex flex-col justify-around max-w-sm md:max-w-none transition-transform transform-gpu hover:shadow-xl' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className='flex justify-between'>
+      <div className='flex justify-between px-3'>
         <img className='h-8 w-16 md:h-6 md:w-12' src={bikesInfo.country} alt='flag' />
-        <span className='text-green-600'>В наличии</span>
+        <span className='text-green-600'>Vorrätig</span>
       </div>
       <div className='flex flex-col justify-center p-4'>
-        <img className='w-full h-48 md:h-32 object-contain mb-4' src={bikesInfo.image} alt='photo-bike' />
-        <h3 className='text-lg mb-2 '>{bikesInfo.title}</h3>
+        <img className='w-full h-48 md:h-32 object-contain pb-4' src={bikesInfo.image} alt='photo-bike' />
+        <div className='h-16 flex items-center'>
+          <h3 className='text-lg'>{bikesInfo.title}</h3>
+        </div>
         <div className='flex justify-between items-center mb-4'>
           <p className='text-gray-600 '>{bikesInfo.price} €</p>
           <button className='hover:scale-105' onClick={handleAddToFavorites}>
@@ -54,7 +56,7 @@ const DeviceCard = ({ bikesInfo, pathTo }) => {
           <div className='pb-4'>
             <button onClick={handleSelectItem} className='bg-orange-500 rounded-lg py-2 px-4 w-full text-white hover:scale-105 transition-all'>
               <div className='flex justify-center gap-1'>
-                <OneclickSVG /> В 1 клик
+                <OneclickSVG /> Mit 1 Klick
               </div>
             </button>
           </div>

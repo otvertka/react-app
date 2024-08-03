@@ -10,8 +10,8 @@ export default function ModalConfirmOrder({ onClose }) {
           <button className='self-end m-2' onClick={onClose}>
             <img src={closeSVG} alt='Close' />
           </button>
-          <h2 className='text-5xl font-semibold uppercase mb-5'>Ваш заказ подтверждён</h2>
-          <p className='text-gray-500'>На Ваш e-mail наши менеджеры пришлют всю необходимую информацию</p>
+          <h2 className='text-5xl font-semibold uppercase mb-5'>Ihre Bestellung wurde bestätigt</h2>
+          <p className='text-gray-500'>Unsere Manager senden Ihnen alle notwendigen Informationen per E-Mail.</p>
         </div>
 
         <button className='w-full items-center w-44 h-12 rounded-lg bg-orange-600 hover:bg-orange-500 active:bg-orange-700 hover:scale-110 transition-all duration-300 text-white'>Отследить заказ</button>

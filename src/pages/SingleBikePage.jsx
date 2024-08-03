@@ -51,10 +51,10 @@ const SingleBikePage = observer(() => {
             </h2>
             <h4 className='mb-3 text-gray-400'>{selectedBike.brand}</h4>
             <div className='flex justify-between mb-3'>
-              <h4 className='text-gray-400'>Артикул : {selectedBike.id}</h4>
+              <h4 className='text-gray-400'>Artikelnummer: {selectedBike.id}</h4>
               <img className='inline-block' src={socialImg} alt='soc' />
             </div>
-            <h5 className='text-green-500 md:mb-10'>В наличии</h5>
+            <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>
           {/* див 3 */}
           <div className='lg:col-end-2 lg:row-end-2'>
@@ -67,13 +67,13 @@ const SingleBikePage = observer(() => {
               </span>
             </div>
             <p className='mb-6 md:mb-8'>
-              Профессиональный гоночный хардтейл для кросс-кантри уровня
-              Чемпионата и Кубка Мира. Одна из самых лёгких рам среди гоночных
-              хардтейлов для кросс-кантри.
+            Professionelles Renn-Hardtail für Cross-Country-Niveau
+              Meisterschafts- und Weltcup-Niveau. Einer der leichtesten Rahmen unter den Renn-Hardtails
+              Cross-Country-Hardtails.
             </p>
 
             <div>
-              <h2 className='text-lg font-medium mb-6'>Размер:</h2>
+              <h2 className='text-lg font-medium mb-6'>Größe:</h2>
               <ul className='flex gap-4 mb-6'>
                 <li>
                   <a
@@ -113,7 +113,7 @@ const SingleBikePage = observer(() => {
               </ul>
             </div>
             <div className='mb-8'>
-              <h2 className='text-lg font-medium mb-6'>Цвет:</h2>
+              <h2 className='text-lg font-medium mb-6'>Farbe:</h2>
               <ul className='flex gap-4'>
                 <li>
                   <a
@@ -151,7 +151,7 @@ const SingleBikePage = observer(() => {
               <button
                 onClick={handleAddBikeToCart}
                 className=' bg-orange-500 rounded-lg w-[320px] h-[52px] text-white'>
-                В корзину
+                In den Warenkorb
               </button>
 
               <button onClick={handleToggleFavorites} className='max-w-[29px]'>
@@ -175,66 +175,65 @@ const SingleBikePage = observer(() => {
       </section>
       <section>
         <h1 className='uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10'>
-          Описание
+        Beschreibung
         </h1>
         <p className='mb-8 md:mb-10'>
-          Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата
-          и Кубка Мира. Одна из самых лёгких рам среди гоночных хардтейлов
-          для кросс-кантри. Scott Scale 700 RC — это рама из композитного
-          волокна HMX, гоночная трансмиссия Sram XX1/X01 1×11, дисковые тормоза
-          Shimano XTR M9000 и гоночные колеса Syncros XR RC. Байк Нино Шуртера
-          для шорт-трек кросс-кантри.
+        Professionelles Renn-Hardtail für Cross-Country auf Meisterschaftsebene
+          und Weltcup-Niveau. Es ist einer der leichtesten Rahmen unter den Renn-Hardtails
+          für Cross Country. Scott Scale 700 RC ist ein Rahmen aus Verbundfaser
+          HMX-Faser, Sram XX1/X01 1×11-Rennantrieb, Shimano XTR M9000 Scheibenbremsen.
+          Shimano XTR M9000 und Syncros XR RC Rennlaufräder. Das Fahrrad von Nino Schurter
+          Für Kurzstrecken-Cross Country.
         </p>
       </section>
       <section>
         <h1 className='uppercase text-3xl md:text-4xl font-medium mb-8 md:mb-10'>
-          Характеристика
+        Details
         </h1>
         <ul>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Цвет</h3>
-            <span className='text-gray-500'>Желтый</span>
+            <h3 className='font-semibold'>Farbe</h3>
+            <span className='text-gray-500'>Gelb</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Год</h3>
+            <h3 className='font-semibold'>Jahr</h3>
             <span className='text-gray-500'>2016</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Диаметр колеса</h3>
+            <h3 className='font-semibold'>Raddurchmesser</h3>
             <span className='text-gray-500'>27.5</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Материал рамы</h3>
-            <span className='text-gray-500'>Карбон</span>
+            <h3 className='font-semibold'>Rahmenmaterial</h3>
+            <span className='text-gray-500'>Carbon</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Размер</h3>
+            <h3 className='font-semibold'>Größe</h3>
             <span className='text-gray-500'>L</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Страна</h3>
-            <span className='text-gray-500'>Швейцария</span>
+            <h3 className='font-semibold'>Land</h3>
+            <span className='text-gray-500'>Schweiz</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Производитель</h3>
+            <h3 className='font-semibold'>Hersteller</h3>
             <span className='text-gray-500'>Scott</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Покрышки</h3>
+            <h3 className='font-semibold'>Reifen</h3>
             <span className='text-gray-500'>
               Schwalbe Rocket Ron EVO / 2.1 127EPI Kevlar Bead Tubeless Easy /
               PaceStar compound
             </span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Рама</h3>
+            <h3 className='font-semibold'>Rahmen</h3>
             <span className='text-gray-500'>
-              Scale Carbon / HMX-технология / технология IMP / Коническая
-              рулевая труба / BB92 / Технология SDS / Дропауты IDS SL
+              Scale Carbon / HMX-Technologie / IMP-Technologie / Tapered Lenkrohr / BB92 / SDS-Technologie / IDS SL
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Подседельный Штырь</h3>
+            <h3 className='font-semibold'>Sattelstütze</h3>
             <span className='text-gray-500'>
               Ritchey WCS 700 Series: Carbon Link FlexLogic / 31.6mm 900 Series:
               Carbon 2B SDS / 34.9mm
@@ -247,76 +246,75 @@ const SingleBikePage = observer(() => {
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Вилка</h3>
+            <h3 className='font-semibold'>Federgabel</h3>
             <span className='text-gray-500'>
-              Rock Shox SID RL3 Air / демпфер DNA3 3-режима / 15mm QR axle /
-              коническая рулевая труба / Удалённая блокировка, регулировка
-              отскока / ход 100mm
+              Rock Shox SID RL3 Air / Dämpfer DNA3 3-Mode / 15mm QR-Achse /
+ konisches Steuerrohr/Fernverriegelung, einstellbar
+ Zugstufe/Federweg 100 mm
             </span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Вынос</h3>
+            <h3 className='font-semibold'>Offset</h3>
             <span className='text-gray-500'>
               Ritchey WCS C–260 700 Series: +6° / 900 Series: -6° / 31.8mm / 1
               1/8»
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Колеса</h3>
+            <h3 className='font-semibold'>Räder</h3>
             <span className='text-gray-500'>Syncros XR RC</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Руль</h3>
+            <h3 className='font-semibold'>Lenker</h3>
             <span className='text-gray-500'>
-              Ritchey Carbon WCS / 9° / 720mm / грипсы с замком
+              Ritchey Carbon WCS / 9° / 720mm 
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Тип тормозов</h3>
-            <span className='text-gray-500'>Дисковый гидравлический</span>
+            <h3 className='font-semibold'>Bremse Typ</h3>
+            <span className='text-gray-500'>Hydraulische Scheibe</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Тормозная система</h3>
+            <h3 className='font-semibold'>Bremssystem</h3>
             <span className='text-gray-500'>
-              Shimano XTR M9000 Disc 180/F and 160/Rmm SM-RT81 IceTech CL диски
+              Shimano XTR M9000 Disc 180/F and 160/Rmm SM-RT81 IceTech CL Scheiben
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Манетки</h3>
+            <h3 className='font-semibold'>Schalthebel</h3>
             <span className='text-gray-500'>SRAM XO1 Trigger</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Система шатунов</h3>
+            <h3 className='font-semibold'>Pleuelstangen</h3>
             <span className='text-gray-500'>
               SRAM XX1 GXP PF DM Carbon crankarm / QF 156 700 Series: 34T / 900
               Series: 32T
             </span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Задний переключатель</h3>
+            <h3 className='font-semibold'>Schaltwerk</h3>
             <span className='text-gray-500'>SRAM XX1</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Цепь</h3>
+            <h3 className='font-semibold'>Kette</h3>
             <span className='text-gray-500'>SRAM PCX1</span>
           </li>
           <li className='p-4 bg-gray-100 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Количество скоростей</h3>
+            <h3 className='font-semibold'>Anzahl der Geschwindigkeiten</h3>
             <span className='text-gray-500'>11</span>
           </li>
           <li className='p-4 flex flex-col justify-around md:flex-row md:justify-between md:items-center h-[105px] '>
-            <h3 className='font-semibold'>Гарантия</h3>
-            <span className='text-gray-500'>1 год</span>
+            <h3 className='font-semibold'>Bürgschaft</h3>
+            <span className='text-gray-500'>1 Jahr</span>
           </li>
         </ul>
       </section>
       <section>
-        <h1 className='my-10 text-3xl uppercase font-semibold'>Доставка</h1>
+        <h1 className='my-10 text-3xl uppercase font-semibold'>Versandoption</h1>
         <img src={delivImg} alt='delivery' />
 
         <h3 className='mt-6 mb-10 font-semibold'>
-          Для удобства покупателей действует несколько способов доставки товаров
-        </h3>
+        Für den Komfort der Kunden gibt es verschiedene Möglichkeiten der Warenlieferung.        </h3>
         <ul>
           <li>Lieferung in Düsseldorf</li>
           <li>Lieferung in das Land NRW</li>
@@ -324,20 +322,18 @@ const SingleBikePage = observer(() => {
         </ul>
 
         <h3 className='bg-gray-100 rounded p-3 inline-block'>
-          Любой из способов доступен при оформление заказа через сайт
-          или у операторов
+        Bei einer Bestellung über die Website steht jede dieser Methoden zur Verfügung
+ oder von Betreibern
         </h3>
         <p>
-          Велосипеды и вело-станки доставляются в собранном и настроенном виде.
-        </p>
+        Fahrräder und Fahrradmaschinen werden montiert und konfiguriert geliefert.        </p>
         <p>
-          На любые вопросы по правилам и стоимости доставки ответит оператор:{' '}
+        Der Betreiber beantwortet alle Fragen zu den Regeln und Kosten der Lieferung:{' '}
           <span> +49 055-75-86</span>
         </p>
 
         <h3 className='mt-6 mb-10 font-semibold'>
-          Для любого заказа возможен самовывоз из магазина
-        </h3>
+        Eine Abholung im Geschäft ist für jede Bestellung möglich.        </h3>
       </section>
     </div>
   );

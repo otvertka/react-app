@@ -111,7 +111,7 @@ export function CartContextProvider({ children }) {
     addToFavorites: (item) => dispatchFavoritesAction({ type: 'ADD_TO_FAVORITES', item }),
     removeFromFavorites: (id) => dispatchFavoritesAction({ type: 'REMOVE_FROM_FAVORITES', id }),
   });
-  console.log(favoritesContext);
+  // console.log(favoritesContext);
 
   const cartContext = {
     items: cart.items,

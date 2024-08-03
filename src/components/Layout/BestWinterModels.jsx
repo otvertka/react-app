@@ -1,11 +1,17 @@
+import { useContext } from "react";
+import { Context } from "../..";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { NavLink } from "react-router-dom";
 
 import DeviceCard from "../Cards/DeviceCard";
 
-import winterBikesData from "../../data/winterbikes.json";
+// import winterBikesData from "../../data/winterbikes.json";
 
 const BestWinterModels = (props) => {
+  const { bikes } = useContext(Context);
+  const bestWinterBikesFromStore = bikes.bikesAll.filter((bike)=> bike.type === 'Mountainbikes');
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -29,14 +35,14 @@ const BestWinterModels = (props) => {
   return (
     <section className="bg-winter object-contain min-h-[770px]">
       <div>
-        <h2 className="lg:p-20 uppercase text-white text-4xl w-1/2">Лучшие модели для зимней езды</h2>
+        <h2 className="lg:p-20 uppercase text-white text-4xl w-1/2 ">Top-Modelle für den Winter</h2>
         <Carousel className="mx-5" responsive={responsive}>
-          {winterBikesData.map((bike) => (
+          {bestWinterBikesFromStore.map((bike) => (
             <DeviceCard key={bike.id} bikesInfo={bike} />
           ))}
         </Carousel>
         <div className="flex justify-center mt-6">
-          <button className="uppercase align-items-center text-white">Показать все</button>
+        <NavLink to='/bikes' className="text-white uppercase align-items-center hover:scale-110 transition-all duration-300">ZEIGE ALLES</NavLink>
         </div>
       </div>
     </section>

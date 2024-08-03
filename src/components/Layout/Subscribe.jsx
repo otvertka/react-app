@@ -24,18 +24,19 @@ const Subscribe = () => {
       <div className='w-full h-80 relative'>
         <img src={subsribe_backgroundImage} className='absolute z-0 left-0 top-0 w-full h-full object-cover' alt='subscribe' />
         <div className='py-10 z-20 absolute'>
-          <h1 className='text-white uppercase text-4xl sm:ml-8 z-10 pb-8'>Подпишитесь на наши новости</h1>
+          <h1 className='text-white uppercase text-4xl sm:ml-8 z-10 pb-8'>Newsletter abonnieren und auf dem Laufenden bleiben.</h1>
           <form className='relative flex flex-col gap-2 sm:flex-row max-w-full px-2' onSubmit={handleSubmit}>
-            <label htmlFor='subscribe'>E-mail</label>
-            <input className='rounded mr-4' id='email' type='email' placeholder='E-mail' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <label htmlFor='subscribe'>E-Mail</label>
+            <input className='rounded xs:mr-0 sm:mr-4 ' id='email' type='email' placeholder='E-Mail-Adresse' value={email} onChange={(e) => setEmail(e.target.value)} />
 
             <button className='bg-orange-500 rounded text-white p-2' type='submit'>
-              Подписаться
+              Abonnieren
             </button>
 
             <label className='sm:absolute sm:m-14' htmlFor='consent'>
               <input type='checkbox' id='consent' name='consent' required />
-              <span className='text-white'>Согласен(на) на обработку персональных данных </span>
+              <span className='text-white'>Tolle Angebote, News und Trends – kostenlos in deinem Postfach.<br/>
+Datenschutz: Dein Fahrrad GmbH speichert und verarbeitet Deine personenbezogenen Daten auf der Grundlage des Datenschutzhinweises. </span>
             </label>
           </form>
         </div>
@@ -45,8 +46,8 @@ const Subscribe = () => {
       {showModal && (
         <div className='fixed inset-0 flex items-center justify-center bg- bg-opacity-50'>
           <div className='bg-white p-8 rounded-md'>
-            <p className='text-xl '>Спасибо за подписку!</p>
-            <p className='mb-4'>Вы подписались</p>
+            <p className='text-xl '>Danke fürs Abonnieren!</p>
+            <p className='mb-4'>Sie haben sich für den Newsletter angemeldet</p>
             <button className='bg-orange-500 text-white rounded p-2' onClick={() => setShowModal(false)}>
               Закрыть
             </button>

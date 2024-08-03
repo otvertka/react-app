@@ -16,8 +16,7 @@ import VideoSection from "../components/Layout/VideoSection";
 
 const HomePage = (props) => {
   return (
-    <div className="max-w-screen-xl mx-auto font-main">
-      {/* <Header /> */}
+    <div className="mx-auto font-main">
       <Main />
       <NewBikes />
       <Catalog />
@@ -30,8 +29,6 @@ const HomePage = (props) => {
       <Equipment />
       <Reviews />
       <Map />
-      {/* <Subscribe /> */}
-      {/* <Footer /> */}
     </div>
   );
 };

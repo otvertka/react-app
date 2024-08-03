@@ -4,6 +4,9 @@ module.exports = {
 
   theme: {
     extend: {
+      screens : {
+        'lg': '1150px',
+      },
       colors: {
         primary: "#ff4800",
       },

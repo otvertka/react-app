@@ -13,9 +13,9 @@ const Advantages = (props) => {
           <div>
             <div className="flex gap-4 mb-4">
               <DiamondSVG />
-              <h4 className="text-lg md:text-xl whitespace-nowrap">Европейские бренды</h4>
+              <h4 className="text-lg md:text-xl whitespace-nowrap">Europäische Marken</h4>
             </div>
-            <p className="font-light">Представляем десятки европейских брендов</p>
+            <p className="font-light">Wie vertreten dutzende europäischer Marken.</p>
           </div>
         </div>
 
@@ -23,9 +23,9 @@ const Advantages = (props) => {
           <div>
             <div className="flex gap-4 mb-4">
               <GuaranteeSVG />
-              <h4 className="text-lg md:text-xl whitespace-nowrap">Вечная гарантия</h4>
+              <h4 className="text-lg md:text-xl whitespace-nowrap">Lebenslange Garantie</h4>
             </div>
-            <p className="font-light">На некоторые бренды предоставляем пожизненную гарантию</p>
+            <p className="font-light">Für einige Marken bieten wir eine lebenslange Garantie.</p>
           </div>
         </div>
       </div>
@@ -35,18 +35,18 @@ const Advantages = (props) => {
           <div>
             <div className="flex gap-4 mb-4">
               <SettingsSVG />
-              <h4 className="text-lg md:text-xl whitespace-nowrap">Предпродажная настройка</h4>
+              <h4 className="text-lg md:text-xl whitespace-nowrap">Einrichtung vor dem Verkauf</h4>
             </div>
-            <p className="font-light">Специалисты настроят ваш велосипед наилучшим образом</p>
+            <p className="font-light">Unsere Spezialisten optimieren Ihr Fahrrad für optimale Leistung.</p>
           </div>
         </div>
         <div className="pt-8 flex flex-col  text-white">
           <div>
             <div className="flex gap-4 mb-4">
               <AllDaySVG />
-              <h4 className="text-lg md:text-xl whitespace-nowrap">Доставка за 24 часа</h4>
+              <h4 className="text-lg md:text-xl whitespace-nowrap">Lieferung innerhalb von 24 Stunden.</h4>
             </div>
-            <p className="font-light">Доставляем товар всеми популярными транспортными компаниями</p>
+            <p className="font-light">Wir liefern Waren mit allen gängigen Transportunternehmen.</p>
           </div>
         </div>
       </div>

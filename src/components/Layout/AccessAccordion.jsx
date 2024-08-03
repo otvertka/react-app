@@ -8,7 +8,7 @@ const AccessAccordion = observer(({ setCurrentPage }) => {
   console.log(accessories);
 
   const handleTypeChange = (type) => {
-    console.log('Выбран тип:', type.name);
+    // console.log('Выбран тип:', type.name);
     if (accessories.selectedTypes.includes(type.name)) {
       accessories.removeSelectedType(type.name);
     } else {
@@ -18,7 +18,7 @@ const AccessAccordion = observer(({ setCurrentPage }) => {
   };
 
   const handleBrandChange = (brand) => {
-    console.log('Выбран brand:', brand.name);
+    // console.log('Выбран brand:', brand.name);
 
     if (accessories.selectedBrands.includes(brand.name)) {
       accessories.removeSelectedBrand(brand.name);
@@ -31,37 +31,37 @@ const AccessAccordion = observer(({ setCurrentPage }) => {
   return (
     <Accordion>
       <Accordion.Panel>
-        <Accordion.Title>Категории товара</Accordion.Title>
+        <Accordion.Title>Produkt Kategorien</Accordion.Title>
 
         <Accordion.Content>
           <ul>
             {accessories.types.map((type) => (
-              <li>
+              <li key={type.id} className='flex items-center'>
                 <input
-                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  className='appearance-none checked:bg-orange-500'
                   key={type.id}
                   type='checkbox'
                   onChange={() => handleTypeChange(type)}
                 />
-                {type.name}
+                <span className='pl-2'>{type.name}</span> 
               </li>
             ))}
           </ul>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title>Бренд</Accordion.Title>
+        <Accordion.Title>Marke</Accordion.Title>
         <Accordion.Content>
           <ul>
             {accessories.brands.map((brand) => (
-              <li>
+              <li key={brand.id} className='flex items-center'>
                 <input
-                  className='appearance-none checked:bg-orange-500 hover:ring-black'
+                  className='appearance-none checked:bg-orange-500'
                   key={brand.id}
                   type='checkbox'
                   onChange={() => handleBrandChange(brand)}
                 />
-                {brand.name}
+                  <span className='pl-2'>{brand.name}</span> 
               </li>
             ))}
           </ul>
