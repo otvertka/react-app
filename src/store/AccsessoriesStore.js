@@ -37,9 +37,6 @@ export default class AccessoriesStore {
   setBrands(brands) {
     this._brands = brands;
   }
-  // setAccess(accessesAll) {
-  //   this._accessesAll = accessesAll;
-  // }
 
   addSelectedType(typeName) {
     this._selectedTypes.push(typeName);
