@@ -53,10 +53,10 @@ const Catalog = (props) => {
                 </div>
               </Link>
 
-              <Link to= "/bicyclestands" className="w-full rounded bg-gray-700 relative flex flex-col justify-end items-end h-full" href="#">
+              <Link to= "/heimtrainer" className="w-full rounded bg-gray-700 relative flex flex-col justify-end items-end h-full" href="#">
                 <img className=" rounded object-cover max-h-[130px] sm:max-h-full" src={fahrradstanderImage} alt="fahrradstander-img" />
                 <div className="absolute lg:inset-0 flex items-center justify-center z-20 text-white uppercase">
-                  <h2 className="text-l font-medium xs:text-lg md:text-2xl lg:text-2xl">Fahrradständer</h2>
+                  <h2 className="text-l font-medium xs:text-lg md:text-2xl lg:text-2xl">heimtrainer</h2>
                 </div>
               </Link>
             </div>

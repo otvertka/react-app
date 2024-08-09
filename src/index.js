@@ -9,6 +9,7 @@ import PartsStore from "./store/PartsStore";
 import EquipmentsStore from "./store/EquipmentsStore";
 import { CartContextProvider } from "./store/CartContext";
 import { UserProgressContextProvider } from "./store/UserProgressContext";
+import HeimtrainerStore from "./store/HeimtrainerStore";
 // import reportWebVitals from './reportWebVitals';
 
 export const Context = createContext(null);
@@ -23,6 +24,7 @@ root.render(
           accessories: new AccessoriesStore(),
           parts: new PartsStore(),
           equipments: new EquipmentsStore(),
+          heimtrainer: new HeimtrainerStore(),
         }}>
         <App />
       </Context.Provider>

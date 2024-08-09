@@ -10,7 +10,7 @@ import TradeinPage from './pages/TradeinPage';
 import PartsPage from './pages/PartsPage';
 import EquipmentsPage from './pages/EquipmentsPage';
 import AccessoriesPage from './pages/AccessoriesPage';
-import BicyclestandsPage from './pages/BicyclestandsPage';
+import HeimtrainerPage from './pages/HeimtrainerPage';
 import AboutusPage from './pages/AboutusPage';
 import DeliveryPage from './pages/DeliveryPage';
 import BlogPage from './pages/BlogPage';
@@ -28,6 +28,7 @@ import SingleAccsessPage from './pages/SingleAccsessPage';
 import SingleBikePage from './pages/SingleBikePage';
 import SinglePartPage from './pages/SinglePartPage';
 import SingleEquipPage from './pages/SingleEquipPage';
+import SingleHeimtrainerPage from './pages/SingleHeimtrainerPage';
 import Cart from './pages/Cart';
 import CheckoutPage from './pages/CheckoutPage';
 import FavoritesPage from './pages/FavoritesPage';
@@ -53,7 +54,8 @@ const router = createBrowserRouter([
       { path: '/equipments/:id', element: <SingleEquipPage /> },
       { path: '/accessorries', element: <AccessoriesPage /> },
       { path: '/accessorries/:id', element: <SingleAccsessPage /> },
-      { path: '/bicyclestands', element: <BicyclestandsPage /> },
+      { path: '/heimtrainer', element: <HeimtrainerPage /> },
+      { path: '/heimtrainer/:id', element: <SingleHeimtrainerPage /> },
       { path: '/about', element: <AboutusPage /> },
       { path: '/delivery', element: <DeliveryPage /> },
       { path: '/blog', element: <BlogPage /> },

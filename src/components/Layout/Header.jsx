@@ -59,8 +59,8 @@ const Header = (props) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/bicyclestands' className='hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base' style={({ isActive }) => ({ color: isActive ? '#F57520' : '' })}>
-                Fahrradständer
+                <NavLink to='/heimtrainer' className='hover:text-orange-700 transition-all duration-300 hover:font-semibold hover:text-base' style={({ isActive }) => ({ color: isActive ? '#F57520' : '' })}>
+                Heimtrainer
                 </NavLink>
               </li>
             </ul>
