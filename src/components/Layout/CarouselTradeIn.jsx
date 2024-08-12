@@ -2,12 +2,10 @@ import React from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-// import CarouselItem from "./CarouselItem";
 
 const CarouselTradeIn = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 3,
     },

@@ -30,13 +30,6 @@ const Reviews = (props) => {
   return (
     <section className="my-40 flex flex-col">
       <h2 className="py-11 uppercase text-[40px]">Neueste Bewertungen</h2>
-      {/* <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 container mx-auto mt-10 mb-12">
-        <ReviewsCard />
-        <ReviewsCard />
-        <ReviewsCard />
-        <ReviewsCard />
-      </div> */}
-
       <Carousel responsive={responsive}>
         <ReviewsCard />
         <ReviewsCard />

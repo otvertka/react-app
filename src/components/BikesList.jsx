@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react-lite';
-// import { Context } from '..';
-
 import DeviceCard from './Cards/DeviceCard';
 
 const BikesList = observer(({ bikes }) => {

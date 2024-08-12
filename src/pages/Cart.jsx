@@ -1,4 +1,3 @@
-// import Modal from "../components/Layout/Modal";
 import { useContext, useState } from 'react';
 import CartContext from '../store/CartContext';
 

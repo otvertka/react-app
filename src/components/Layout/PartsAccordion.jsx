@@ -5,9 +5,7 @@ import { Context } from '../..';
 
 const PartsAccordion = observer(({ setCurrentPage }) => {
   const { parts } = useContext(Context);
-  // console.log(parts);
   const handleTypeChange = (type) => {
-    // console.log('Выбран тип:', type.name);
     if (parts.selectedTypes.includes(type.name)) {
       parts.removeSelectedType(type.name);
     } else {
@@ -16,8 +14,7 @@ const PartsAccordion = observer(({ setCurrentPage }) => {
     setCurrentPage(1);
   };
 
-  const handleBrandChange = (brand) => {
-    // console.log('Выбран brand:', brand.name);
+  const handleBrandChange = (brand) => 
     if (parts.selectedBrands.includes(brand.name)) {
       parts.removeSelectedBrand(brand.name);
     } else {

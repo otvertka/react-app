@@ -2,11 +2,8 @@ import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Context } from '..';
 import { observer } from 'mobx-react-lite';
-import Counter from '../components/Counter';
 
 import delivImg from '../../src/Assets/images/devicePage/deliv.png';
-// import socialImg from '../../src/Assets/images/social_demo.png';
-import prefImg from '../../src/Assets/images/prefHeart.png';
 import CartContext from '../store/CartContext';
 
 const SingleHeimtrainerPage = observer(() => {

@@ -7,7 +7,6 @@ const HeimtrainerAccordion = observer(({ setCurrentPage }) => {
   const { heimtrainer } = useContext(Context);
   console.log(heimtrainer);
   const handleTypeChange = (type) => {
-    // console.log('Выбран тип:', type.name);
     if (heimtrainer.selectedTypes.includes(type.name)) {
       heimtrainer.removeSelectedType(type.name);
     } else {
@@ -17,7 +16,6 @@ const HeimtrainerAccordion = observer(({ setCurrentPage }) => {
   };
 
   const handleBrandChange = (brand) => {
-    // console.log('Выбран brand:', brand.name);
     if (heimtrainer.selectedBrands.includes(brand.name)) {
       heimtrainer.removeSelectedBrand(brand.name);
     } else {

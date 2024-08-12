@@ -55,7 +55,7 @@ function cartReducer(state, action) {
     return { ...state, items: updatedItems };
   }
   if (action.type === 'CLEAR_CART') {
-    return { items: [] }; // Clear the cart by resetting items array
+    return { items: [] };
   }
 
   return state;
@@ -64,7 +64,6 @@ function cartReducer(state, action) {
 function favoritesReducer(state, action) {
   switch (action.type) {
     case 'ADD_TO_FAVORITES':
-      // добавление в избранное
       if (!state.favorites.some((item) => item.id === action.item.id)) {
         return { ...state, favorites: [...state.favorites, action.item] };
       } else {
@@ -73,7 +72,6 @@ function favoritesReducer(state, action) {
       }
 
     case 'REMOVE_FROM_FAVORITES':
-      // удаление товара из избранного
       const updatedFavorites = state.favorites.filter((item) => item.id !== action.id);
       return { ...state, favorites: updatedFavorites };
 
@@ -111,7 +109,6 @@ export function CartContextProvider({ children }) {
     addToFavorites: (item) => dispatchFavoritesAction({ type: 'ADD_TO_FAVORITES', item }),
     removeFromFavorites: (id) => dispatchFavoritesAction({ type: 'REMOVE_FROM_FAVORITES', id }),
   });
-  // console.log(favoritesContext);
 
   const cartContext = {
     items: cart.items,

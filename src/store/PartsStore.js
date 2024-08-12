@@ -42,9 +42,6 @@ export default class PartsStore {
   setBrands(brands) {
     this._brands = brands;
   }
-  // setAccess(partsAll) {
-  //   this._partsAll = partsAll;
-  // }
 
   addSelectedType(typeName) {
     this._selectedTypes.push(typeName);

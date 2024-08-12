@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { observer } from 'mobx-react-lite';
-// import { Context } from '../..';
 import DeviceCard from '../Cards/DeviceCard';
 
 const PartsList = observer(({ parts }) => {

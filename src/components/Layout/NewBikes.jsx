@@ -6,9 +6,6 @@ import "react-multi-carousel/lib/styles.css";
 import DeviceCard from "../Cards/DeviceCard";
 import { NavLink } from "react-router-dom";
 
-// import bikesData from "../../data/bikes.json";
-
-
 const NewBikes = (bikesInfo) => {
 
   const { bikes } = useContext(Context);

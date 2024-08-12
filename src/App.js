@@ -32,11 +32,6 @@ import SingleHeimtrainerPage from './pages/SingleHeimtrainerPage';
 import Cart from './pages/Cart';
 import CheckoutPage from './pages/CheckoutPage';
 import FavoritesPage from './pages/FavoritesPage';
-import SignIn from './components/auth/SignIn';
-// import BikesStore from "./store/BikesStore";
-
-// import Admin from "./pages/Admin";
-// import {BasketPage} from "./pages/BasketPage";
 
 const router = createBrowserRouter([
   {

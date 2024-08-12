@@ -9,13 +9,8 @@ const Subscribe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Сохранение в сторедж
     localStorage.setItem('subscribedEmail', email);
-
-    // Показать Модальное окно
     setShowModal(true);
-
-    // очистить поле email
     setEmail('');
   };
 
@@ -41,8 +36,7 @@ Datenschutz: Dein Fahrrad GmbH speichert und verarbeitet Deine personenbezogenen
           </form>
         </div>
       </div>
-
-      {/* Модальное окно */}
+      
       {showModal && (
         <div className='fixed inset-0 flex items-center justify-center bg- bg-opacity-50'>
           <div className='bg-white p-8 rounded-md'>

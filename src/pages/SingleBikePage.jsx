@@ -2,13 +2,10 @@ import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Context } from '..';
 import { observer } from 'mobx-react-lite';
-// import Counter from '../components/Counter';
-
 import CartContext from '../store/CartContext';
 
 import delivImg from '../../src/Assets/images/devicePage/deliv.png';
 import socialImg from '../../src/Assets/images/social_demo.png';
-// import prefImg from '../../src/Assets/images/prefHeart.png';
 
 const SingleBikePage = observer(() => {
   const params = useParams();
@@ -38,12 +35,9 @@ const SingleBikePage = observer(() => {
       <p>{params.id}</p>
       <section>
         <div className='grid grid-cols-1 grid-rows-1 lg:grid-cols-1 lg:grid-rows-1 pt-10'>
-          {/*див1 картинка */}
           <div className='items-center row-end-2 lg:col-end-1 lg:row-span-2 lg:mr-20'>
             <img className='w-[790px]' src={selectedBike.image} alt='bike' />
           </div>
-
-          {/*див2 текст */}
 
           <div className='row-end-1 lg:row-end-1 lg:col-end-2'>
             <h2 className='text-3xl md:text-4xl font-medium mb-3'>
@@ -56,7 +50,7 @@ const SingleBikePage = observer(() => {
             </div>
             <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>
-          {/* див 3 */}
+          
           <div className='lg:col-end-2 lg:row-end-2'>
             <div className='flex mb-6 md:mb-10'>
               <h2 className='text-4xl font-medium mr-4'>

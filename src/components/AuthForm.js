@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 const AuthForm = () => {
   const data = useActionData();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams(); // usSeachParams не использ.
+  const [searchParams] = useSearchParams();
   const isLogin = searchParams.get('mode') === 'login';
   const isSubmitting = navigate.state === 'submitting';
 

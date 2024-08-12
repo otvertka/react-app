@@ -121,9 +121,6 @@ export default class BikesStore {
   setPerPage(perPage) {
     this._perPage = perPage;
   }
-  // setBikes(bikesAll) {
-  //   this._bikesAll = bikesAll;
-  // }
 
   addSelectedType(typeName) {
     this._selectedTypes.push(typeName);
@@ -132,31 +129,19 @@ export default class BikesStore {
     this._selectedTypes = this._selectedTypes.filter((selectedType) => selectedType !== typeName);
   }
 
-  // clearSelectedTypes() {
-  //   this._selectedTypes = [];
-  // }
-
   addSelectedBrand(brandName) {
     this._selectedBrands.push(brandName);
   }
   removeSelectedBrand(brandName) {
     this._selectedBrands = this._selectedBrands.filter((selectedBrand) => selectedBrand !== brandName);
   }
-  // setSelectedBrand(brand) {
-  //   this._selectedBrand = brand;
-  // }
+
   addSelectedFrame(frameName) {
     this._selectedFrames.push(frameName);
   }
   removeSelectedFrame(frameName) {
     this._selectedFrames = this._selectedFrames.filter((selectedFrame) => selectedFrame !== frameName);
   }
-  // setSelectedFrame(frame) {
-  //   this._selectedFrame = frame;
-  // }
-  // setSelectedBike(bike) {
-  //   this._selectedBike = bike;
-  // }
 
   get types() {
     return this._types;
@@ -191,9 +176,6 @@ export default class BikesStore {
   get perPage() {
     return this._perPage;
   }
-  // get selectedBike() {
-  //   return this._selectedBike;
-  // }
 
   get paginatedBikes() {
     const startIndex = (this._currentPage - 1) * this._perPage;

@@ -1,5 +1,3 @@
-// import diamondImage from "../../Assets/images/video-sect-img/diamond.png";
-
 import AllDaySVG from "../UI/svg-components/AllDaySVG";
 import DiamondSVG from "../UI/svg-components/DiamondSVG";
 import GuaranteeSVG from "../UI/svg-components/GuaranteeSVG";

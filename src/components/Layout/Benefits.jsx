@@ -1,5 +1,4 @@
 import React from "react";
-
 import benefits_image from "../../Assets/images/benefits-img/benefits-img.png";
 
 const Benefits = () => {

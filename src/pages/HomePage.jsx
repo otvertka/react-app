@@ -10,7 +10,6 @@ import Map from "../components/Layout/Map";
 import MoutainBikes from "../components/Layout/MoutainBikes";
 import NewBikes from "../components/Layout/NewBikes";
 import Reviews from "../components/Layout/Reviews";
-import Subscribe from "../components/Layout/Subscribe";
 import Unstoppable from "../components/Layout/Unstoppable";
 import VideoSection from "../components/Layout/VideoSection";
 
