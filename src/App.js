@@ -1,6 +1,5 @@
 import './App.css';
-// import AppRouter from "./components/AppRouter";
-// import AppWrapper from "./components/Layout/AppWrapper";
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import BikesPage from './pages/BikesPage';
