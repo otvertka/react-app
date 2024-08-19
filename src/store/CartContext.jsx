@@ -67,7 +67,6 @@ function favoritesReducer(state, action) {
       if (!state.favorites.some((item) => item.id === action.item.id)) {
         return { ...state, favorites: [...state.favorites, action.item] };
       } else {
-        console.log('Уже в избранном');
         return state;
       }
 
