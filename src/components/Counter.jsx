@@ -15,5 +15,4 @@ const Counter = ({ quant, onDecrease, onIncrease }) => {
   );
 };
 
-
 export default Counter;
