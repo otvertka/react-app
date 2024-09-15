@@ -40,8 +40,8 @@ const AuthForm = () => {
       users.push(newUser);
       localStorage.setItem('users', JSON.stringify(users));
       alert('Регистрация успешна! Теперь можно войти');
-      //Можно добавить код для перенаправления на страницу входа
-      // navigate('?mode=login');
+      //Можно добавить если нужно код для перенаправления на страницу входа
+      // navigate('?mode=login'); 
     }
   };
 

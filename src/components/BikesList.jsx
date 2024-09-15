@@ -14,5 +14,4 @@ const BikesList = observer(({ bikes }) => {
 });
 
 export default BikesList;
-
 BikesList.displayName = "BikeListComponent";
