@@ -1,55 +1,46 @@
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import React, { useEffect, useState } from 'react';
-import { auth } from '../../firebase';
-// import { useNavigate } from 'react-router-dom';
+// 
+import React, { useEffect, useState } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 
-const AuthDetails = ({ userSignOut }) => {
+const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
 
-  // const [isAuthenticated, setIsAutheticated] = useState(false);
-  // const navigate = useNavigate();
-
   useEffect(() => {
-    const listen = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setAuthUser(user);
-        // setIsAutheticated(true);
-      } else {
-        setAuthUser(null);
-        // setIsAutheticated(false);
-      }
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setAuthUser(user || null);
     });
-
-    return () => {
-      listen();
-    };
+    return () => unsubscribe();
   }, []);
 
-  // useEffect(() => {
-  //   // Добавляем проверку на успешную авторизацию перед переходом
-  //   if (isAuthenticated) {
-  //     navigate('/myaccount');
-  //     console.log(isAuthenticated);
-  //   }
-  // }, [isAuthenticated, navigate]);
+  const userSignOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("User signed out");
+    } catch (error) {
+      console.error("Sign out error:", error);
+    }
+  };
 
-  // const userSignOut = () => {
-  //   signOut(auth)
-  //     .then(() => {
-  //       console.log('Вышел successful');
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
+  if (authUser) {
+    return (
+      <div className="flex flex-col items-center mt-4 text-center">
+        <p className="text-gray-700 text-sm md:text-base">
+          Signed in as <span className="font-semibold">{authUser.email}</span>
+        </p>
+        <button
+          onClick={userSignOut}
+          className="mt-2 px-4 py-2 bg-orange-600 hover:bg-orange-500 text-white rounded-lg transition-all duration-200"
+        >
+          Sign Out
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <div>
-      {authUser ? (
-        <>
-          <p>{`Signed In as ${authUser.email}`}</p>
-          {/* <button onClick={userSignOut}> Sign Out</button> */}
-        </>
-      ) : (
-        <p>Signed Up</p>
-      )}
+    <div className="text-center mt-4 text-gray-500 text-sm md:text-base">
+      Nicht angemeldet
     </div>
   );
 };

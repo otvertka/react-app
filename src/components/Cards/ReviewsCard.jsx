@@ -5,7 +5,7 @@ import rew_1_Image from "../../Assets/images/reviews-img/r-1.png";
 const ReviewsCard = (props) => {
   return (
     <div className="max-w-sm min-w-[289px] ">
-      <div className=" ">
+      <div>
         <img className="rounded-t-xl" src={rew_1_Image} alt="review-1" />
         <div className="flex flex-col justify-around bg-black rounded-b-xl text-white py-6">
           <span className=" pl-6 mb-2">15.06.2024</span>

@@ -10,22 +10,22 @@ const CarouselTradeIn = () => {
       items: 3,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1250 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1250, min: 850 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 850, min: 0 },
       items: 1,
     },
   };
 
   return (
     <section>
-      <Carousel className='mb-12 mx-auto px-10' showDots={true} responsive={responsive}>
+      <Carousel className='mb-12 mx-auto px-10' itemClass='md:px-3' showDots={true} responsive={responsive}>
         <div className='p-8 bg-frameBrown bg-cover bg-center object-contain w-[294px] h-[294px] md:w-[400px] h-[334px] rounded-lg '>
           <h2 className='text-white mb-4 text-2xl font-medium'>1. Überprüfung durch unseren Experten</h2>
           <p className='text-gray-300 font-light mb-8'>Unsere Experten führen in einer unserer Filialen eine gründliche Überprüfung deines Fahrrads durch. Wir bewerten den technischen Zustand und das äußere Erscheinungsbild des Fahrrads, um den aktuellen Wert genau zu bestimmen.</p>

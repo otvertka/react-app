@@ -28,22 +28,22 @@ const CarouselMain = () => {
   return (
     <section>
       <Carousel showDots={true} responsive={responsive}>
-        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full shadow-2xl border border-white" href="#">
           <h2 className="text-white mb-4 text-lg font-light">Extremes Mountainbike-Fahren</h2>
           <a className="text-orange-500">weitere...</a>
         </NavLink>
 
-        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full shadow-2xl border border-white" href="#">
           <h2 className="text-white mb-4 text-lg font-light">Fahrräder für Profis</h2>
           <a className="text-orange-500">weitere...</a>
         </NavLink>
 
-        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full " href="#">
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full shadow-2xl border border-white" href="#">
           <h2 className="text-white mb-4 text-lg font-light">Lange Fahrt mit dem Rennrad</h2>
           <a className="text-orange-500">weitere...</a>
         </NavLink>
 
-        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full" href="#">
+        <NavLink to='/bikes' className="h-52 bg-gray-800 rounded-md flex flex-col text-lg justify-center pl-5 w-full shadow-2xl border border-white" href="#">
           <h2 className="text-white mb-4 text-lg font-light">Fahrräder für Profis</h2>
           <a className="text-orange-500">weitere...</a>
         </NavLink>

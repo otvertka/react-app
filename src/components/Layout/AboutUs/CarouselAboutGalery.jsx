@@ -1,27 +1,22 @@
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-import galeryPhoto1 from "../../../Assets/images/pageAbout/about_galery/a1.png";
 import galeryPhoto2 from "../../../Assets/images/pageAbout/about_galery/a2.png";
 import galeryPhoto3 from "../../../Assets/images/pageAbout/about_galery/a3.png";
 import galeryPhoto4 from "../../../Assets/images/pageAbout/about_galery/a4.png";
-import galeryPhoto5 from "../../../Assets/images/pageAbout/about_galery/a5.png";
 
 const CarouselAboutGalery = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1250 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1250, min: 464 },
       items: 2,
     },
     mobile: {
@@ -32,7 +27,16 @@ const CarouselAboutGalery = () => {
 
   return (
     <section>
-      <Carousel className="mb-12 px-5" showDots={true} responsive={responsive}>
+     <div className="flex justify-center">
+        <div className="w-[90vw] md:w-[85vw] lg:max-w-6xl px-8">
+          <Carousel 
+            className="mb-12 px-5" 
+            showDots={true} 
+            responsive={responsive} 
+            itemClass="px-2 md:px-3"
+            infinite={false}
+            arrows
+          >
         <div className="h-[228px] md:w-[400px] md:h-[334px] rounded-lg ">
           <img src={galeryPhoto3} alt="photo1" />
         </div>
@@ -49,6 +53,8 @@ const CarouselAboutGalery = () => {
           <img src={galeryPhoto2} alt="photo5" />
         </div>
       </Carousel>
+      </div>
+      </div>
     </section>
   );
 };

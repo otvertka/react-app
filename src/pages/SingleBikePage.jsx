@@ -46,7 +46,6 @@ const SingleBikePage = observer(() => {
             <h4 className='mb-3 text-gray-400'>{selectedBike.brand}</h4>
             <div className='flex justify-between mb-3'>
               <h4 className='text-gray-400'>Artikelnummer: {selectedBike.id}</h4>
-              <img className='inline-block' src={socialImg} alt='soc' />
             </div>
             <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>

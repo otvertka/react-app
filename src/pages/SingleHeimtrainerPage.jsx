@@ -40,9 +40,7 @@ const SingleHeimtrainerPage = observer(() => {
             <h2 className='text-3xl md:text-4xl font-medium mb-3'>{selectedHeimtrainer.title}</h2>
             <h4 className='mb-3 text-gray-400'>{selectedHeimtrainer.brand}</h4>
             <div className='flex justify-between mb-3'>
-              <h4 className='text-gray-400'>Artikelnummer : {selectedHeimtrainer.id}</h4>
-              {/* <img className='inline-block' src={socialImg} alt='soc' /> */}
-            </div>
+              <h4 className='text-gray-400'>Artikelnummer : {selectedHeimtrainer.id}</h4>            </div>
             <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>
           {/* див 3 */}

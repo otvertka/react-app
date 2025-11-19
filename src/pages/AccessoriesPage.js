@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 
 import { Context } from '..';
@@ -17,6 +17,7 @@ const AccessoriesPage = observer(() => {
   const [currentPage, setCurrentPage] = useState(1);
   const [accesPerPage, setAccesPerPage] = useState(6);
 
+
   const filteredAccess = accessesAll
     .filter((acc) => !selectedTypes.length || selectedTypes.includes(acc.type))
     .filter((acc) => !selectedBrands.length || selectedBrands.includes(acc.brand));
@@ -27,7 +28,7 @@ const AccessoriesPage = observer(() => {
 
   return (
     <section className='bg-gray-200 min-h-screen flex flex-col items-center'>
-      <h1 className='text-center my-4'>ACCESSORIES PAGE</h1>
+      <h1 className='text-center my-4'>Fahrradzubehör</h1>
       <div className='flex flex-col md:flex-row w-full max-w-6xl'>
         <div className='bg-gray-50 w-full md:w-1/4 p-4'>
           <AccessAccordion

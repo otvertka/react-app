@@ -18,7 +18,9 @@ const Pagination = ({
         {pageNumbers.map((page) => (
           <li key={page}>
             <button
-              className={`inline-block w-9 h-9 py-1 px-3 rounded bg-white border border-gray-300 text-gray-700 hover:bg-orange-500 hover:text-white ${
+              className={`inline-block w-9 h-9 py-1 px-3 rounded bg-white border border-gray-300
+               text-gray-700 transition-all duration-300 ease-in-out transform
+                hover:scale-105 hover:bg-orange-500 hover:text-white ${
                 currentPage === page ? 'bg-orange-500 text-gray' : ''
               } `}
               onClick={() => setCurrentPage(page)}>

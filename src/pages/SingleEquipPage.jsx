@@ -54,7 +54,6 @@ const SingleEquipPage = observer(() => {
             </div>
             <h5 className='text-green-500 md:mb-10'>Vorrätig</h5>
           </div>
-          {/* див 3 */}
           <div className='lg:col-end-2 lg:row-end-2'>
             <div className='flex mb-6 md:mb-10'>
               <h2 className='text-4xl font-medium mr-4'>

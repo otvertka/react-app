@@ -14,7 +14,7 @@ const PartsAccordion = observer(({ setCurrentPage }) => {
     setCurrentPage(1);
   };
 
-  const handleBrandChange = (brand) => 
+  const handleBrandChange = (brand) =>  {
     if (parts.selectedBrands.includes(brand.name)) {
       parts.removeSelectedBrand(brand.name);
     } else {

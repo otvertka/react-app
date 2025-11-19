@@ -29,9 +29,22 @@ const Main = (props) => {
 
         <CarouselMain />
 
-        <section className=" py-6">
-          <img src={partnersImage} alt="partners" />
-        </section>
+        <section className="py-10 overflow-hidden bg-white relative">
+  <motion.div
+    className="flex w-[200%]" // важно — в 2 раза шире, чем видимая область
+    animate={{ x: ["0%", "-50%"] }} // плавно сдвигаем половину, потом повтор
+    transition={{
+      repeat: Infinity,
+      ease: "linear",
+      duration: 30, // увеличь для более медленного движения
+    }}
+  >
+  
+    <img src={partnersImage} alt="partners" className="w-1/2 object-cover flex-shrink-0" />
+    <img src={partnersImage} alt="partners duplicate" className="w-1/2 object-cover flex-shrink-0" />
+  </motion.div>
+</section>
+
       </main>
     </>
   );

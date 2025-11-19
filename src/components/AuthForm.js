@@ -22,7 +22,7 @@ const AuthForm = () => {
 
     const storedData = localStorage.getItem('users');
     const users = storedData ? JSON.parse(storedData) : [];
-    // Авторизация
+   
     if (isLogin) {
       const user = users.find(
         (user) => user.email === email && user.password === password

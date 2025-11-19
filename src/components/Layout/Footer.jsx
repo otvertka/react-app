@@ -11,7 +11,11 @@ const Footer = (props) => {
     <footer className="bg-black pt-48">
       <div className="flex flex-col lg:flex-row text-white mx-10 lg:mx-5">
         <div className="lg:w-2/5">
-          <a href="#">
+          <a  href="#"
+  onClick={(e) => {
+    e.preventDefault(); // предотвращает стандартное поведение ссылки
+    window.scrollTo({ top: 0, behavior: "smooth" }); // плавная прокрутка вверх
+  }}>
             <MainSVGLogo />
           </a>
           <p className="text-gray-500 lg:w-2/3 mt-10">Das Unternehmen Dein Fahhrad ist auf den Verkauf von Fahrradprodukten spezialisiert.</p>
@@ -119,8 +123,8 @@ const Footer = (props) => {
             </li>
             <li>
               <a className="flex items-center gap-4" href="#">
-                <EmailSVG />
-                <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="mailto:order@world-bike.com">
+                <EmailSVG/>
+                <a className="hover:text-orange-700 transition-all duration-300 hover:font-semibold" href="mailto:order@dein-fahrrad.com">
                   order@dein-fahrrad.com
                 </a>
               </a>

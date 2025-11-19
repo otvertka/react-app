@@ -1,12 +1,9 @@
 import React from 'react';
-
 import CarouselAboutUs from '../components/Layout/AboutUs/CarouselAboutUs';
-
 import headerImg from '../Assets/images/pageAbout/aboutHeader.png';
 import bikerImg from '../Assets/images/pageAbout/biker.png';
 import teamPhoto from '../Assets/images/pageAbout/teamPhoto.png';
 import bikerBridge from '../Assets/images/pageAbout/bikerBridge.png';
-import socImg from '../Assets/images/social_demo.png';
 import CarouselAboutGalery from '../components/Layout/AboutUs/CarouselAboutGalery';
 import Map from '../components/Layout/Map';
 import SocialMedia from '../components/UI/svg-components/SocialMedia';
